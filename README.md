@@ -2,41 +2,41 @@
 
 # Key Project Goals
 
-# User Experience
+## User Experience
 
-# User Stories
+## User Stories
 
 # Site Structure
 
-# Wireframes
+## Wireframes
 
-# Database Schema
+## Database Schema
 
-# Design Choices
+## Design Choices
 
-# Typography
+## Typography
 
-# Colour Palette
+## Colour Palette
 
 # Features
 
-# Existing Features
+## Existing Features
 
-# The Landing page And General Site Content
+## The Landing page And General Site Content
 
-# User Permissions
+## User Permissions
 
-# User Accounts
+## User Accounts
 
-# Swims
+## Swims
 
-# Register for Swims
+## Register for Swims
 
-# Future Features
+## Future Features
 
 # Technologies Used
 
-# Testing
+## Testing
 
 # Deployment and Development
 
