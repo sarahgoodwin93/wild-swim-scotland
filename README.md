@@ -56,10 +56,9 @@ To deploy this page to Heroku from its Codeanywhere repository, the following st
 8. Enter a name for the application and select the region
 9. Click 'Create App'
 10. Go to Settings and connect to GitHub - choose the correct repository
-11. Click 'Reveal config vars" and add DISABLE_COLLECTSTATIC as the key with a value of 1
-12. Go to Resources to ensure your Procfile is loaded
-13. Go back to Settings and scroll down, click on "Deploy Branch" to manually deploy
-14. Once the app has deployed, click Open App at the top of the page
+11. Click 'Reveal config vars' and add DISABLE_COLLECTSTATIC as the key with a value of 1
+12. Go to Deploy and scroll down, click on 'Deploy Branch' to manually deploy
+13. Once the app has deployed, click 'Open App' at the top of the page
 
 ## Forking the Repository
 
