@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6+nztkj95$2n@@f=c2&t6k&_bmduqt$%22*^li^1qzthydz^8='  # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-sarahgoodwin93-wild-swim-9ke47qbsif.us2.codeanyapp.com']
+ALLOWED_HOSTS = [
+    '8000-sarahgoodwin93-wild-swim-9ke47qbsif.us2.codeanyapp.com', '.herokuapp.com']  # noqa
 
 
 # Application definition
