@@ -10,8 +10,10 @@
 
 <body>
     <h1>Wild Swims</h1>
-    {% for post in object_list %}
+    {% for SwimPosts in object_list %}
     <h2>{{SwimPosts.title}}</h2>
+    <p>Location: {{SwimPosts.location}}</p>
+    <p>Date: {{SwimPosts.date}}</p>
     {% endfor %}
 </body>
 
