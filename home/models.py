@@ -11,4 +11,11 @@ class SwimPosts(models.Model):
     location = models.TextField(default='Swim Location')
 
 
-
+class Comment(models.Model):
+    post = models.ForeignKey(
+        SwimPosts, on_delete=models.CASCADE, related_name="comments")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter")
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
