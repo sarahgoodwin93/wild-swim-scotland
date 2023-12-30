@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-
+from django.views import generic
+from .models import SwimPosts
 
 # Create your views here.
-def home_page(request):
-    return HttpResponse("Hello, this will be the home page!")
+class SwimList(generic.ListView):
+    queryset = SwimPosts.objects.all()
+    template_name = "swim_posts.html"
