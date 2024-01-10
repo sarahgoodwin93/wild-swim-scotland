@@ -1,6 +1,9 @@
-# [Wild Swim Scotland]
+# [Wild Swim Scotland](https://wild-swim-scotland-47f727d45ac1.herokuapp.com/ "take you to the Wild Swim Deployed Page")
 
 # Key Project Goals
+
+- Build an interactive site with CRUD funtionality so that users can find upcoming wild swims in Scotland, comment on past swims they joined and register to join new swims.
+- Have accounts set up so that users can register to the sites and edit their details 
 
 ## User Experience
 
@@ -9,6 +12,8 @@
 # Site Structure
 
 ## Wireframes
+
+![Wireframe Image](static/images/wireframe.png "wireframe image")
 
 ## Database Schema
 
