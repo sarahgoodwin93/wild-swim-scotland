@@ -1,3 +1,5 @@
+<!-- prettier-ignore -->
+{% load static %}
 {% url 'home' as home_url %}
 
 <!DOCTYPE html>
@@ -65,5 +67,9 @@
         <i class="fab fa-youtube-square ms-3"></i>
       </p>
     </footer>
+
+    <!-- prettier-ignore -->
+    {% block extras %}
+    {% endblock %}
   </body>
 </html>
