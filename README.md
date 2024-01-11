@@ -3,7 +3,7 @@
 # Key Project Goals
 
 - Build an interactive site with CRUD funtionality so that users can find upcoming wild swims in Scotland, comment on past swims they joined and register to join new swims.
-- Have accounts set up so that users can register to the sites and edit their details 
+- Have accounts set up so that users can register to the sites and edit their details
 
 ## User Experience
 

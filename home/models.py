@@ -9,19 +9,21 @@ class SwimPosts(models.Model):
     date = models.DateField()
     time = models.TimeField()
     location = models.TextField(default='Swim Location')
-
-
-class Comment(models.Model):
-    post = models.ForeignKey(
-        SwimPosts, on_delete=models.CASCADE, related_name="comments")
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="commenter")
-    body = models.TextField()
-    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.BooleanField(default=False)
+
+
+class Review(models.Model):
+    review = models.ForeignKey(
+        SwimPosts, on_delete=models.CASCADE, related_name="reviews")
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="reviewer")
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.body} by {self.author}"
+        return f"Review {self.body} by {self.author}"
