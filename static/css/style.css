@@ -55,6 +55,15 @@ nav {
 
 /* logo */
 
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo a {
+    text-decoration: none;
+    color: white;
+}
 
 /* Footer */
 
