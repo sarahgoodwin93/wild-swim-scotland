@@ -9,19 +9,23 @@
     <h6>Image goes here</h6>
   </div>
 </div>
-<div class="col-12 mt-3 left">
+<!-- Homepage Posts -->
+<div class="container-fluid">
   <div class="row">
-    {% for SwimPosts in object_list %}
-    <div class="col-md-4">
-      <div class="card mb-4">
-        <div class="card-body">
-            <h2 class="card-title">{{SwimPosts.title}}</h2>
-            <p>Location: {{SwimPosts.location}}</p>
-            <p>Date: {{SwimPosts.date}}</p>
-            <p class="card-text">About: {{SwimPosts.description}}</p>
-            {% endfor %}
+    <div class="col-12 mt-3 left">
+      <div class="row">
+        {% for SwimPosts in object_list %}
+        <div class="col-md-4 mb-4">
+          <div class="card-border">
+            <div class="card-body">
+              <h2 class="card-title">{{SwimPosts.title}}</h2>
+              <p>Location: {{SwimPosts.location}}</p>
+              <p>Date: {{SwimPosts.date}}</p>
+              <p class="card-text">About: {{SwimPosts.description}}</p>
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
