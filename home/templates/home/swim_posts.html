@@ -6,10 +6,10 @@
 <!-- Homepage Posts -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-12 mt-3 left">
-      <div class="row">
+    <div class="col-12 mt-3">
+      <div class="row all-posts">
         {% for SwimPosts in object_list %}
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 post-style">
           <div class="card-border">
             <div class="card-body">
               <h2 class="card-title">{{SwimPosts.title}}</h2>
@@ -26,5 +26,10 @@
   </div>
 </div>
 
+<div class="more-info">
+  <button class="button-posts">
+    Click here to find out more upcoming swims
+  </button>
+</div>
 <!-- swim_posts.html content ends here -->
 {% endblock %}
