@@ -122,6 +122,6 @@ footer {
     padding-bottom: 20px;
 }
 
-@media screen and (min-width: 1400px) .all-posts {
+@media screen and (min-width: 1400px).all-posts {
     grid-template-columns: repeat(1, 1fr);
 }

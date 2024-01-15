@@ -2,6 +2,10 @@
 {% load static %}
 {% url 'home' as home_url %}
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,10 +45,28 @@
             <a href="" aria-label="">Swims</a>
           </li>
           <li>
-            <a href="" aria-label="">Register</a>
+            <a
+              class="nav-link {% if request.path == signup_url %}active{% endif %}"
+              aria-current="page"
+              href="{% url 'account_signup' %}"
+              >Register</a
+            >
           </li>
           <li>
-            <a href="" aria-label="">Login</a>
+            <a
+              class="nav-link {% if request.path == login_url %}active{% endif %}"
+              aria-current="page"
+              href="{% url 'account_login' %}"
+              >Login</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link {% if request.path == logout_url %}active{% endif %}"
+              aria-current="page"
+              href="{% url 'account_logout' %}"
+              >Logout</a
+            >
           </li>
         </ul>
       </nav>

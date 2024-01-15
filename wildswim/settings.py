@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")  # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-sarahgoodwin93-wild-swim-9ke47qbsif.us2.codeanyapp.com', '.herokuapp.com']  # noqa
