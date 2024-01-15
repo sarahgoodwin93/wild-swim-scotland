@@ -1,11 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
 class SwimPosts(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200, unique=True)
+    post_image = CloudinaryField('image', default='placeholder')
     description = models.TextField(default='Swim Description')
     date = models.DateField()
     time = models.TimeField()
