@@ -44,5 +44,4 @@ class ReviewForm(forms.ModelForm):
         fields = [
             "review",
         ]
-    
     review = forms.CharField(widget=forms.Textarea, label="Write a Review")
