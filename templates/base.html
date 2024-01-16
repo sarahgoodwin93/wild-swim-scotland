@@ -33,7 +33,11 @@
   <body>
     <!-- Logo -->
     <header>
-      <a href="index.html" aria-label="Go to homepage">
+      <a
+        class="nav-link {% if request.path == home %}active"
+        aria-current="page{% endif %}"
+        href="{% url 'home' %}"
+      >
         <h1 id="logo">Wild Swim Scotland</h1>
       </a>
       <!-- Navigation Bar -->
@@ -41,7 +45,12 @@
         <ul>
           <!-- Home Nav Link -->
           <li>
-            <a href="" aria-label="">Home</a>
+            <a
+              class="nav-link {% if request.path == home %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'home' %}"
+              >Home</a
+            >
           </li>
           <!-- Logout Nav Link only to show if logged in -->
           {% if user.is_authenticated %}
