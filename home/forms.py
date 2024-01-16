@@ -32,3 +32,17 @@ class AddSwimForm(forms.ModelForm):
         fields = [
             "title", "description", "date", "time", "location"
         ]
+
+
+class ReviewForm(forms.ModelForm):
+    """
+    FORM: Add Swim.
+    """
+
+    class Meta:
+        model = Review
+        fields = [
+            "review",
+        ]
+    
+    review = forms.CharField(widget=forms.Textarea, label="Write a Review")
