@@ -38,20 +38,24 @@
       <!-- Navigation Bar -->
       <nav id="menu">
         <ul>
+          <!-- Home Nav Link -->
           <li>
             <a href="" aria-label="">Home</a>
           </li>
+          <!-- Swims Nav Link -->
           <li>
             <a href="" aria-label="">Swims</a>
           </li>
+          <!-- Register Nav Link -->
           <li>
             <a
-              class="nav-link {% if request.path == signup_url %}active{% endif %}"
-              aria-current="page"
+              class="nav-link {% if request.path == signup_url %}active"
+              aria-current="page{% endif %}"
               href="{% url 'account_signup' %}"
               >Register</a
             >
           </li>
+          <!-- Login Nav Link -->
           <li>
             <a
               class="nav-link {% if request.path == login_url %}active{% endif %}"
@@ -60,14 +64,17 @@
               >Login</a
             >
           </li>
-          <li>
+          <!-- Logout Nav Link only to show if logged in -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
             <a
-              class="nav-link {% if request.path == logout_url %}active{% endif %}"
-              aria-current="page"
+              class="nav-link {% if request.path == logout_url %}active"
+              aria-current="page{% endif %}"
               href="{% url 'account_logout' %}"
               >Logout</a
             >
           </li>
+          {% else %}
         </ul>
       </nav>
     </header>
