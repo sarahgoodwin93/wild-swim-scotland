@@ -10,7 +10,7 @@ class AddSwimForm(forms.ModelForm):
         widget=forms.HiddenInput(attrs={"id": "title-field"}),
         label="Swim Title",
     )
-    description = forms.TextField(
+    description = forms.CharField(
         widget=forms.HiddenInput(attrs={"id": "description-field"}),
         label="Description",
     )
@@ -22,7 +22,7 @@ class AddSwimForm(forms.ModelForm):
         widget=forms.HiddenInput(attrs={"id": "time-field"}),
         label="Time",
     )
-    location = forms.TextField(
+    location = forms.CharField(
         widget=forms.HiddenInput(attrs={"id": "location-field"}),
         label="Location",
     )

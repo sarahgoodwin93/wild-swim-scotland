@@ -2,10 +2,6 @@ from django.contrib import admin
 from .models import SwimPosts, Review
 
 
-admin.site.register(SwimPosts)
-admin.site.register(Review)
-
-
 @admin.register(SwimPosts)
 class SwimAdmin(admin.ModelAdmin):
     swim_post_list = ("title", "description", "created_on", "contributer")
