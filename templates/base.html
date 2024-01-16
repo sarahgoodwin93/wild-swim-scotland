@@ -43,10 +43,6 @@
           <li>
             <a href="" aria-label="">Home</a>
           </li>
-          <!-- Swims Nav Link -->
-          <li>
-            <a href="" aria-label="">Swims</a>
-          </li>
           <!-- Logout Nav Link only to show if logged in -->
           {% if user.is_authenticated %}
           <li class="nav-item">
@@ -81,9 +77,9 @@
           {% if user.is_staff %}
           <li class="nav-item">
             <a
-              class="nav-link {% if request.path == swim_url %}active"
+              class="nav-link {% if request.path == add_swim %}active"
               aria-current="page{% endif %}"
-              href="{% url 'account_logout' %}"
+              href="{% url 'add_swim' %}"
               >Add Swim</a
             >
           </li>
