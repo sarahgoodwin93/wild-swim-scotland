@@ -46,6 +46,17 @@
           <li>
             <a href="" aria-label="">Swims</a>
           </li>
+          <!-- Logout Nav Link only to show if logged in -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == logout_url %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'account_logout' %}"
+              >Logout</a
+            >
+          </li>
+          {% else %}
           <!-- Register Nav Link -->
           <li>
             <a
@@ -64,21 +75,11 @@
               >Login</a
             >
           </li>
-          <!-- Logout Nav Link only to show if logged in -->
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if request.path == logout_url %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'account_logout' %}"
-              >Logout</a
-            >
-          </li>
-          {% else %}
+          {% endif %}
         </ul>
       </nav>
     </header>
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0">
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
