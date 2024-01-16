@@ -122,6 +122,16 @@ footer {
     padding-bottom: 20px;
 }
 
-@media screen and (min-width: 1400px).all-posts {
-    grid-template-columns: repeat(1, 1fr);
+.join-swim-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3%;
+    color: var(--light-grey);
+    background-color: white;
+    border: none;
+}
+
+.fav-btn {
+    font-size: 1rem;
 }
