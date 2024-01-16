@@ -1,6 +1,7 @@
 <!-- prettier-ignore -->
 {% load static %}
 {% url 'home' as home_url %}
+{% url 'swim' as swim_url %}
 
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -73,6 +74,17 @@
               aria-current="page"
               href="{% url 'account_login' %}"
               >Login</a
+            >
+          </li>
+          {% endif %}
+          <!-- Add Swim Nav Link only to show if logged in -->
+          {% if user.is_staff %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == swim_url %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'account_logout' %}"
+              >Add Swim</a
             >
           </li>
           {% endif %}
