@@ -10,4 +10,25 @@ class AddSwimForm(forms.ModelForm):
         widget=forms.HiddenInput(attrs={"id": "title-field"}),
         label="Swim Title",
     )
-    
+    description = forms.TextField(
+        widget=forms.HiddenInput(attrs={"id": "description-field"}),
+        label="Description",
+    )
+    date = forms.DateField(
+        widget=forms.HiddenInput(attrs={"id": "date-field"}),
+        label="Date",
+    )
+    time = forms.TimeField(
+        widget=forms.HiddenInput(attrs={"id": "time-field"}),
+        label="Time",
+    )
+    location = forms.TextField(
+        widget=forms.HiddenInput(attrs={"id": "location-field"}),
+        label="Location",
+    )
+
+    class Meta:
+        model = SwimPosts
+        fields = [
+            "title", "description", "date", "time", "location"
+        ]
