@@ -8,7 +8,7 @@ class AddSwimForm(forms.ModelForm):
     """
     class Meta:
         model = SwimPosts
-        fields = ['title', 'description', 'date', 'time', 'location', 'post_image']
+        fields = ['title', 'description', 'date', 'time', 'location', 'post_image']  # noqa
 
 
 class ReviewForm(forms.ModelForm):

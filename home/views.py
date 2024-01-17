@@ -49,4 +49,4 @@ class AddSwimView(CreateView):
 
     def form_invalid(self, form):
         messages.error(self.request, "There was an error with the form.")
-        return self.render_to_response(self.get_context_data(form=form, heading='Add Swim'))
+        return self.render_to_response(self.get_context_data(form=form, heading='Add Swim'))  # noqa
