@@ -30,16 +30,23 @@ class AddSwimView(CreateView):
     form_class = AddSwimForm
     success_url = reverse_lazy('home')
 
+    """
+    This method sets the contributer to the current user making the request
+    It adds a success message from the messages framework however if the form
+    is successful it will be redirector to home as outlined by the success_url
+    above so the message is not often shown.
+    """
+
     def form_valid(self, form):
         form.instance.contributer = self.request.user
         messages.success(self.request, "Thanks for adding a new swim")
         return super().form_valid(form)
 
+    """
+    If the form is not valid you will recieve an error message, it also renders
+    the response using the form and heading when the form is invalid. 
+    """
+
     def form_invalid(self, form):
         messages.error(self.request, "There was an error with the form.")
         return self.render_to_response(self.get_context_data(form=form, heading='Add Swim'))
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['heading'] = 'Add Swim'
-        return context
