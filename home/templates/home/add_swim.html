@@ -8,7 +8,30 @@
 
 <!-- Add Swim Posts -->
 
-<p>Hello World</p>
+<main>
+  <div class="add-swim-form-html">
+    <div class="fill-screen container">
+      <div class="row">
+        <div class="col-lg-9 col-12 below-nav mx-auto">
+          <h1>{{ heading }}</h1>
+          <hr />
+          <div class="form">
+            <form class="mb-5" method="POST" enctype="multipart/form-data">
+              {{ form.as_p }}
+              <!-- crispyform -->
+              {% csrf_token %}
+              <!-- input button --><input
+                class="btn btn-success"
+                type="submit"
+                name="submit"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
 <!-- add_swim.html content ends here -->
 {% endblock %}
