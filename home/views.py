@@ -5,7 +5,7 @@ from django.views import generic
 from django.http import HttResponseRedirect
 from .models import SwimPosts
 from .forms import AddSwimForm
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, DeleteView
 
 
 # Swim List View
@@ -51,3 +51,17 @@ class AddSwimView(CreateView):
     def form_invalid(self, form):
         messages.error(self.request, "There was an error with the form.")
         return self.render_to_response(self.get_context_data(form=form, heading='Add Swim'))  # noqa
+
+
+class SwimDeleteView(DeleteView):
+    """
+    Shows the delete swim page so that the authenticated user can delete 
+    their own swims
+    """
+    model = SwimPosts
+    template_name = "home/delete_swim.html"
+    success_url = reverse_lazy('home')
+
+    def swim_delete(self, request):
+        messages.success(self, request, "Swim has been deleted")
+        return super().delete(request)

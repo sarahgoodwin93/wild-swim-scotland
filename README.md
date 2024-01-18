@@ -49,6 +49,8 @@
 
 ## User Permissions
 
+
+
 ## User Accounts
 
 ## Swims
@@ -90,5 +92,9 @@ To deploy this page to Heroku from its Codeanywhere repository, the following st
 ## The ElephantSQL Database
 
 # Credits
+
+https://docs.djangoproject.com/en/5.0/topics/db/queries/
+
+<https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/#django.views.generic.edit.DeleteView>
 
 # Acknoledgements
