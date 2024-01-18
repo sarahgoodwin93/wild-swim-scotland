@@ -55,7 +55,7 @@ class AddSwimView(CreateView):
 
 class SwimDeleteView(DeleteView):
     """
-    Shows the delete swim page so that the authenticated user can delete 
+    Shows the delete swim page so that the authenticated user can delete
     their own swims
     """
     model = SwimPosts

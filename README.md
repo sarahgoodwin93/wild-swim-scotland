@@ -13,9 +13,9 @@
 
 - Join a swim
 
-- Write a review on a swim 
+- Write a review on a swim
 
-- Register an account 
+- Register an account
 
 - View swim list
 
@@ -48,8 +48,6 @@
 ## The Landing page And General Site Content
 
 ## User Permissions
-
-
 
 ## User Accounts
 
