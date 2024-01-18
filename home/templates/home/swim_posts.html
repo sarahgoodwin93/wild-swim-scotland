@@ -25,7 +25,10 @@
                   <p class="card-text">About: {{SwimPosts.description}}</p>
                   <button class="button-posts">Join this swim</button>
                   {% if user.is_authenticated and SwimPosts.author == user %}
-                  <button class="btn btn-delete" post_id=""
+                  <button class="btn btn-delete" post_id="swimposts.id">
+                    Delete
+                  </button>
+                  {% endif %}
                 </div>
               </div>
             </div>

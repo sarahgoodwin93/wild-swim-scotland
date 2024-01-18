@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, reverse
 from django.urls import reverse_lazy
 from django.views import generic
-from django.http import HttResponseRedirect
+from django.http import HttpResponse
 from .models import SwimPosts
 from .forms import AddSwimForm
 from django.views.generic.edit import CreateView, DeleteView
