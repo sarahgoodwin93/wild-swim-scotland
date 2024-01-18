@@ -73,6 +73,7 @@ footer {
 .row.all-posts {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .container-fluid {

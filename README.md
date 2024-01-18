@@ -9,6 +9,24 @@
 
 ## User Stories
 
+# General Users
+
+- Join a swim
+
+- Write a review on a swim 
+
+- Register an account 
+
+- View swim list
+
+# Staff Users
+
+- Add a swim to the page
+
+- Edit a swim
+
+- Delete a swim
+
 # Site Structure
 
 ## Wireframes

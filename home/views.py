@@ -1,7 +1,8 @@
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse
 from django.urls import reverse_lazy
 from django.views import generic
+from django.http import HttResponseRedirect
 from .models import SwimPosts
 from .forms import AddSwimForm
 from django.views.generic.edit import CreateView
@@ -44,7 +45,7 @@ class AddSwimView(CreateView):
 
     """
     If the form is not valid you will recieve an error message, it also renders
-    the response using the form and heading when the form is invalid. 
+    the response using the form and heading when the form is invalid.
     """
 
     def form_invalid(self, form):
