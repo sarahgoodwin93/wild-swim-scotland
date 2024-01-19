@@ -6,7 +6,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 class SwimPosts(models.Model):
-    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='swim_post')  # noqa
     post_image = CloudinaryField('image', default='placeholder')
