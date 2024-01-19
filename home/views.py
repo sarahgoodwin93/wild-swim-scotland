@@ -5,7 +5,7 @@ from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import SwimPosts
 from .forms import AddSwimForm
-from django.views.generic.edit import CreateView, DeleteView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 
 # Swim List View
@@ -53,6 +53,7 @@ class AddSwimView(CreateView):
         return self.render_to_response(self.get_context_data(form=form, heading='Add Swim'))  # noqa
 
 
+# Delete Swim View
 class SwimDeleteView(DeleteView):
     """
     Shows the delete swim page so that the authenticated user can delete
@@ -65,3 +66,18 @@ class SwimDeleteView(DeleteView):
     def swim_delete(self, request):
         messages.success(self, request, "Swim has been deleted")
         return super().delete(request)
+
+
+# Edit Swim View
+class EditSwimView(UpdateView):
+    """
+    Shows the edit swim page so that the authenticated user can edit
+    their own swims
+    """
+    model = SwimPosts
+    template_name = "home/edit_swim.html"
+    success_url = reverse_lazy('home')
+
+    def swim_edit(self, request):
+        messages.success(self, request, "Swim has been updated")
+        return response
