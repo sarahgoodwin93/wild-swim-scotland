@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'crispy_bootstrap5',
+    'star_ratings',
     'cloudinary',
     'home',
 ]
@@ -93,6 +94,10 @@ TEMPLATES = [
         },
     },
 ]
+
+
+TEMPLATE_CONTEXT_PROCESSORS = 'django.core.context_processors.request'
+
 
 WSGI_APPLICATION = 'wildswim.wsgi.application'
 
