@@ -4,8 +4,8 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import SwimPosts
-from .forms import AddSwimForm
-from django.views.generic.edit import ListVIew, CreateView, DeleteView, UpdateView  # noqa
+from .forms import AddSwimForm, EditSwimForm
+from django.views.generic.edit import CreateView, DeleteView, UpdateView  # noqa
 
 
 # Swim List View
