@@ -39,7 +39,7 @@ class AddSwimView(CreateView):
     """
 
     def form_valid(self, form):
-        form.instance.contributer = self.request.user
+        form.instance.author = self.request.user
         messages.success(self.request, "Thanks for adding a new swim")
         return super().form_valid(form)
 

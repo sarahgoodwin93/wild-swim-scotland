@@ -101,4 +101,6 @@ https://studygyaan.com/django/how-to-implement-validators-in-django-models?utm_c
 
 https://www.youtube.com/watch?v=1x0Zdukpjrs - Validators
 
+https://www.youtube.com/watch?v=8NPOwmtupiI&t=580s - Delete Posts
+
 # Acknoledgements
