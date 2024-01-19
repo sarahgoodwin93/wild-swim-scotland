@@ -8,12 +8,13 @@
 
 <!-- Delete Post -->
 
-<form method="POST">
+<div>
+  <form method="POST">
     {% csrf_token %}
     <p>Are you use you want to delete this swim?</p>
-    {{ form }}
-    <input type="submit" value="Delete">
-</form>
+    <button class="btn btn-delete">Delete Swim</button>
+  </form>
+</div>
 
 <!-- delete_swim.html content ends here -->
 {% endblock %}
