@@ -24,6 +24,11 @@
                   <p>Date: {{SwimPosts.date}}</p>
                   <p class="card-text">{{SwimPosts.description}}</p>
                   <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
+                  {% if user.is_authenticated and SwimPosts.author == user %}
+                  <button class="btn btn-edit" post_id="swimposts.id">
+                    Edit
+                  </button>
+                  {% endif %}
                   <button class="button-posts">Join this swim</button>
                   {% if user.is_authenticated and SwimPosts.author == user %}
                   <button class="btn btn-delete" post_id="swimposts.id">
