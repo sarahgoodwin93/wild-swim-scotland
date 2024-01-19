@@ -93,6 +93,12 @@ To deploy this page to Heroku from its Codeanywhere repository, the following st
 
 https://docs.djangoproject.com/en/5.0/topics/db/queries/
 
-<https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/#django.views.generic.edit.DeleteView>
+https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/#django.views.generic.edit.DeleteView
+
+https://django-star-ratings.readthedocs.io/en/latest/?badge=latest/
+
+https://studygyaan.com/django/how-to-implement-validators-in-django-models?utm_content=cmp-true
+
+https://www.youtube.com/watch?v=1x0Zdukpjrs - Validators
 
 # Acknoledgements
