@@ -10,10 +10,10 @@ class SwimPosts(models.Model):
     title = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='swim_post')  # noqa
     post_image = CloudinaryField('image', default='placeholder')
-    description = models.TextField(default='Swim Description')
+    description = models.TextField(max_length=250)
     date = models.DateField()
     time = models.TimeField()
-    location = models.TextField(default='Swim Location')
+    location = models.TextField(max_length=300)
     swim_difficulty = models.IntegerField(default=0, validators=[MaxValueValidator(5), MinValueValidator(0),])  # noqa
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)
