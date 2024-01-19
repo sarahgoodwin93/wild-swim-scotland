@@ -6,7 +6,6 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-{% load ratings %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,11 +28,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <title>Wild Swim Scotland</title>
-    <!-- Star Rating -->
-    <link
-      rel="stylesheet"
-      href="{% static 'star-ratings/css/star-ratings.css' %}"
-    />
   </head>
 
   <body>
@@ -122,12 +116,7 @@
     </footer>
 
     <!-- prettier-ignore -->
-    {% ratings object %}
     {% block extras %}
     {% endblock %}
-    <script
-      type="text/javascript"
-      src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"
-    ></script>
   </body>
 </html>
