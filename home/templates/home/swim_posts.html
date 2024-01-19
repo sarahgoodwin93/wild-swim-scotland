@@ -22,7 +22,8 @@
                   <h2 class="card-title">{{SwimPosts.title}}</h2>
                   <p>Location: {{SwimPosts.location}}</p>
                   <p>Date: {{SwimPosts.date}}</p>
-                  <p class="card-text">About: {{SwimPosts.description}}</p>
+                  <p class="card-text">{{SwimPosts.description}}</p>
+                  <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
                   <button class="button-posts">Join this swim</button>
                   {% if user.is_authenticated and SwimPosts.author == user %}
                   <button class="btn btn-delete" post_id="swimposts.id">
