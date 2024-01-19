@@ -24,10 +24,12 @@
                   <p>Date: {{SwimPosts.date}}</p>
                   <p class="card-text">{{SwimPosts.description}}</p>
                   <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
+                <a href="{% url 'edit_swim' SwimPosts.pk %}">
                   {% if user.is_authenticated and SwimPosts.author == user %}
                   <button class="btn btn-edit" post_id="swimposts.id">
                     Edit
                   </button>
+                </a>
                   {% endif %}
                   <button class="button-posts">Join this swim</button>
                   {% if user.is_authenticated and SwimPosts.author == user %}

@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-from .views import (SwimList, AddSwimView, SwimDeleteView)
+from .views import (SwimList, AddSwimView, SwimDeleteView, EditSwimView)
 
 
 urlpatterns = [
