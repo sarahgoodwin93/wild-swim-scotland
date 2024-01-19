@@ -5,7 +5,7 @@ from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import SwimPosts
 from .forms import AddSwimForm
-from django.views.generic.edit import CreateView, DeleteView, UpdateView
+from django.views.generic.edit import ListVIew, CreateView, DeleteView, UpdateView  # noqa
 
 
 # Swim List View
@@ -76,6 +76,7 @@ class EditSwimView(UpdateView):
     """
     model = SwimPosts
     template_name = "home/edit_swim.html"
+    form_class = EditSwimForm
     success_url = reverse_lazy('home')
 
     def swim_edit(self, request):

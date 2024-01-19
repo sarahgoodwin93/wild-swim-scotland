@@ -8,7 +8,18 @@ class AddSwimForm(forms.ModelForm):
     """
     class Meta:
         model = SwimPosts
-        fields = ['title', 'description', 'date', 'time', 'swim_difficulty', 'location', 'post_image']  # noqa
+        fields = ['title', 'description', 'date', 'time',
+                  'swim_difficulty', 'location', 'post_image']
+
+
+class EditSwimForm(forms.ModelForm):
+    """
+    FORM: Edit Swim.
+    """
+    class Meta:
+        model = SwimPosts
+        fields = ['title', 'description', 'date', 'time',
+                  'swim_difficulty', 'location', 'post_image']
 
 
 class ReviewForm(forms.ModelForm):
