@@ -120,8 +120,8 @@ footer {
     box-shadow: 6px 6px 12px 0 rgba(13, 25, 50, 0.3),
         0 0 0 4px rgba(13, 26, 50, 0.1);
     overflow: hidden;
-    height: 350px;
-    width: 300px;
+    height: 550px;
+    width: 320px;
 }
 
 .more-info {
@@ -146,6 +146,12 @@ footer {
 
 .image-container {
     position: relative;
+}
+
+.card-img-top {
+    display: flex;
+    width: 100%;
+    height: 200px;
 }
 
 /* Login Page */
