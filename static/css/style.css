@@ -159,3 +159,12 @@ footer {
 .login {
     align-items: center;
 }
+
+/* Reigster Page */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
