@@ -62,6 +62,14 @@
               >Logout</a
             >
           </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == joined_swims %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'joined_swims' %}"
+              >Your Upcoming Swims</a
+            >
+          </li>
           {% else %}
           <!-- Register Nav Link -->
           <li>

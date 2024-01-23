@@ -82,3 +82,15 @@ class EditSwimView(UpdateView):
     def swim_edit(self, request):
         messages.success(self, request, "Swim has been updated")
         return response
+
+
+# Join Swim View
+class JoinSwimView(generic.ListView):
+    """
+    Shows the user the swims they have chosen to join
+    """
+    def get(self, request, swim_id):
+        swim = get_object_or_404(SwimPosts, pk=swim_id)
+        if not JoinSwim.objects.filter(user=request.user, swim=swim).exists():
+            JoinSwim.objects.create(user=request.user, swim=swim)
+        return response

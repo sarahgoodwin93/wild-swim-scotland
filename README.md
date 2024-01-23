@@ -103,4 +103,6 @@ https://www.youtube.com/watch?v=1x0Zdukpjrs - Validators
 
 https://www.youtube.com/watch?v=8NPOwmtupiI&t=580s - Delete Posts
 
+<https://docs.djangoproject.com/en/5.0/topics/i18n/timezones/>
+
 # Acknoledgements
