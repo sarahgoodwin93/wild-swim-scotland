@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    color: #0d1a32;
+    margin: 0;
+    border: none;
+}
+
+/* Navigation menu */
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    font-size: large;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 8%);
+    background-color: #0d1a32;
+    color: white;
+}
+
+#menu li {
+    flex-grow: 1;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+}
+
+#menu a:hover {
+    color: #b5e2e0;
+}
+
+/* logo */
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    margin-top: auto;
+}
+
+/* Posts */
+
+.row.all-posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-fluid {
+    text-align: center;
+}
+
+.button-posts {
+    background-color: #0d1a32;
+    color: white;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-posts:hover,
+.button-posts:focus {
+    background-color: #7bbce1;
+    color: #0d1a32;
+}
+
+.post-style {
+    border-radius: 3px;
+    margin: 30px 30px 30px 30px;
+    padding: 1.5%;
+    position: relative;
+    box-shadow: 6px 6px 12px 0 rgba(13, 25, 50, 0.3),
+        0 0 0 4px rgba(13, 26, 50, 0.1);
+    overflow: hidden;
+    height: 550px;
+    width: 320px;
+}
+
+.more-info {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.join-swim-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3%;
+    color: var(--light-grey);
+    background-color: white;
+    border: none;
+}
+
+.fav-btn {
+    font-size: 1rem;
+}
+
+.image-container {
+    position: relative;
+}
+
+.card-img-top {
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+/* Login Page */
+
+.login {
+    align-items: center;
+}
+
+/* Reigster Page */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add Swim Page */
+
+.add-swim-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Log out page */
+
+.log-out-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
