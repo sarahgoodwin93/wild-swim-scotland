@@ -32,7 +32,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")  # noqa
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-sarahgoodwin93-wild-swim-9ke47qbsif.us2.codeanyapp.com', '.herokuapp.com']  # noqa
+    '8000-sarahgoodwin93-wild-swim-9ke47qbsif.us2.codeanyapp.com',
+    '.herokuapp.com',
+    'wild-swim-scotland.herokuapp.com',]  # noqa
 
 
 # Application definition
@@ -68,6 +70,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -154,7 +157,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
