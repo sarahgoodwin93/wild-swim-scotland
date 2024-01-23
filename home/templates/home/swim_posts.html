@@ -1,6 +1,6 @@
 <!-- prettier-ignore -->
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
 <!-- Homepage Posts -->
@@ -13,40 +13,42 @@
           <div class="card-border">
             <div class="card-body">
               <div class="image-container">
-                <img
-                  class="swim-image"
-                  src=" {{ post.featured_image.url }}"
-                  alt="image of loch"
-                />
+                <!-- prettier-ignore -->
+                {% if "placeholder" in SwimPosts.post_image.url %}
+                <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.jpg' %}" alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ SwimPosts.post_image.url }}" alt="image of loch">
+                {% endif %}
                 <div class="image-flash">
-                  <h2 class="card-title">{{SwimPosts.title}}</h2>
-                  <p>Location: {{SwimPosts.location}}</p>
-                  <p>Date: {{SwimPosts.date}}</p>
-                  <p class="card-text">{{SwimPosts.description}}</p>
-                  <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
-                  {% if user.is_authenticated and SwimPosts.author == user %}
-                  <a href="{% url 'edit_swim' SwimPosts.pk %}">
-                    <button class="btn btn-edit" post_id="swimposts.id">
-                      Edit
-                    </button>
-                  </a>
-                  {% endif %}
-                  <button class="button-posts">Join this swim</button>
-                  {% if user.is_authenticated and SwimPosts.author == user %}
-                  <a href="{% url 'delete_swim' SwimPosts.pk %}">
-                    <button class="btn btn-delete">Delete</button>
-                  </a>
-                  {% endif %}
+                    <h2 class="card-title">{{SwimPosts.title}}</h2>
+                    <p>Location: {{SwimPosts.location}}</p>
+                    <p>Date: {{SwimPosts.date}}</p>
+                    <p class="card-text">{{SwimPosts.description}}</p>
+                    <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
+                    {% if user.is_authenticated and SwimPosts.author == user %}
+                    <a href="{% url 'edit_swim' SwimPosts.pk %}">
+                      <button class="btn btn-edit" post_id="SwimPosts.id">
+                        Edit
+                      </button>
+                    </a>
+                    {% endif %}
+                    <button class="button-posts">Join this swim</button>
+                    {% if user.is_authenticated and SwimPosts.author == user %}
+                    <a href="{% url 'delete_swim' SwimPosts.pk %}">
+                      <button class="btn btn-delete">Delete</button>
+                    </a>
+                    {% endif %}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
-</div>
 
-<!-- swim_posts.html content ends here -->
-{% endblock %}
+  <!-- swim_posts.html content ends here -->
+  {% endblock %}
+</div>
