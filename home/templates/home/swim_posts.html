@@ -6,6 +6,12 @@
 <!-- Homepage Posts -->
 <div class="container-fluid">
   <div class="row">
+    <div>
+        <h3>Welcome to Wild Swim Scotland.</h3>
+        <p>Please see our upcoming swims, with times, dates and difficulty level.</p>
+        <p>Register an account with us and let us know your interest in joining a specific swim</p>
+        <p>Leave a review on places you have been before.</p>
+    </div>
     <div class="col-12 mt-3">
       <div class="row all-posts">
         {% for SwimPosts in object_list %}
@@ -15,7 +21,7 @@
               <div class="image-container">
                 <!-- prettier-ignore -->
                 {% if "placeholder" in SwimPosts.post_image.url %}
-                <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.jpg' %}" alt="placeholder image">
+                <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.png' %}" alt="placeholder image">
                 {% else %}
                 <img class="card-img-top" src=" {{ SwimPosts.post_image.url }}" alt="image of loch">
                 {% endif %}
@@ -32,7 +38,11 @@
                       </button>
                     </a>
                     {% endif %}
+                    <!-- prettier-ignore -->
+                    {% if user.is_authenticated %}
                     <button class="button-posts">Join this swim</button>
+                    {% endif %}
+                    <!-- prettier-ignore -->
                     {% if user.is_authenticated and SwimPosts.author == user %}
                     <a href="{% url 'delete_swim' SwimPosts.pk %}">
                       <button class="btn btn-delete">Delete</button>
