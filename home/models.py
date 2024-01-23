@@ -12,7 +12,7 @@ class SwimPosts(models.Model):
     description = models.TextField(max_length=250)
     date = models.DateField()
     time = models.TimeField()
-    location = models.TextField(max_length=300)
+    location = models.CharField(max_length=300)
     swim_difficulty = models.IntegerField(default=0, validators=[MaxValueValidator(5), MinValueValidator(0),])  # noqa
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)
