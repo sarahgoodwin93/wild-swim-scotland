@@ -10,5 +10,5 @@ class SwimAdmin(admin.ModelAdmin):
 
 @admin.register(Review)
 class RegisterAdmin(admin.ModelAdmin):
-    swim_post_list = ("title", "review", "author", "created_on")
-    search_fields = ("title", "review", "author", "created_on")
+    swim_post_list = ("title", "review", "creator", "created_on")
+    search_fields = ("title", "review", "creator", "created_on")

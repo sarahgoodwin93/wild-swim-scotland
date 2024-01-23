@@ -31,7 +31,7 @@
                     <p>Date: {{SwimPosts.date}}</p>
                     <p class="card-text">{{SwimPosts.description}}</p>
                     <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
-                    {% if user.is_authenticated and SwimPosts.author == user %}
+                    {% if user.is_authenticated and SwimPosts.creator == user %}
                     <a href="{% url 'edit_swim' SwimPosts.pk %}">
                       <button class="btn btn-edit" post_id="SwimPosts.id">
                         Edit
@@ -43,7 +43,7 @@
                     <button class="button-posts">Join this swim</button>
                     {% endif %}
                     <!-- prettier-ignore -->
-                    {% if user.is_authenticated and SwimPosts.author == user %}
+                    {% if user.is_authenticated and SwimPosts.creator == user %}
                     <a href="{% url 'delete_swim' SwimPosts.pk %}">
                       <button class="btn btn-delete">Delete</button>
                     </a>

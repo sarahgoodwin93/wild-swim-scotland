@@ -7,7 +7,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 class SwimPosts(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='swim_post')  # noqa
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='swim_post')  # noqa
     post_image = CloudinaryField('image', default='placeholder')
     description = models.TextField(max_length=250)
     date = models.DateField()
@@ -34,4 +34,4 @@ class Review(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Review {self.body} by {self.author}"
+        return f"Review {self.body} by {self.creator}"
