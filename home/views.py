@@ -93,4 +93,4 @@ class JoinSwimView(generic.ListView):
         swim = get_object_or_404(SwimPosts, pk=swim_id)
         if not JoinSwim.objects.filter(user=request.user, swim=swim).exists():
             JoinSwim.objects.create(user=request.user, swim=swim)
-        return response
+        return render(request, 'join_swim.html', {'swim': swim})

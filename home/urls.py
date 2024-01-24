@@ -8,5 +8,5 @@ urlpatterns = [
     path("swim/add", AddSwimView.as_view(), name="add_swim"),
     path("article/delete/<int:pk>/", SwimDeleteView.as_view(), name="delete_swim"),  # noqa
     path("article/edit/<int:pk>/", EditSwimView.as_view(), name="edit_swim"),  # noqa
-    path("swim/join/<int:swim_id>/", JoinSwimView.as_view(), name="join_swim"),  # noqa
+    path("swim/joined_swims/", views.JoinSwimView.as_view(), name="joined_swims"),  # noqa
 ]

@@ -40,7 +40,9 @@
                     {% endif %}
                     <!-- prettier-ignore -->
                     {% if user.is_authenticated %}
+                    <a href="{% url 'joined_swims' SwimPosts.pk %}">
                     <button class="button-posts">Join this swim</button>
+                    </a>
                     {% endif %}
                     <!-- prettier-ignore -->
                     {% if user.is_authenticated and SwimPosts.creator == user %}
