@@ -40,7 +40,7 @@
                     {% endif %}
                     <!-- prettier-ignore -->
                     {% if user.is_authenticated %}
-                    <form method="POST" action="{{% url 'joined_swims' SwimPosts.pk %}}">
+                    <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
                     <button class="button-posts">Join this swim</button>
                   </form>
                     {% endif %}
