@@ -94,10 +94,22 @@ class JoinSwimView(generic.ListView):
     model = JoinSwim
 
     def get(self, request):
-        print('JoinSwimView called')
         return super().get(request)
 
     def get_queryset(self):
         return JoinSwim.objects.filter(user=self.request.user)
-        print('JoinSwimView querset', queryset)
         return queryset
+
+
+def join_swim(request, pk):
+    swim = get_object_or_404(SwimPost, pk=pk)
+    user = request.user
+
+    if JoinSwim.objects.filter(user=user, swim=swim).exists():
+        message.warning(request, "You have already joined this swim")
+    else:
+        JoinSwim.objects.create(user=user, swim=swim)
+        message.success(request, "You have joined this swim")
+    
+    return HttpResponseRedirect(reverse("joined_swim"))
+
