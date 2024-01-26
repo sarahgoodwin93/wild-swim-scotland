@@ -68,7 +68,7 @@ footer {
     margin-top: auto;
 }
 
-/* Posts */
+/* Swim Cards */
 
 .row.all-posts {
     display: flex;
@@ -112,7 +112,18 @@ footer {
     color: #0d1a32;
 }
 
+.card-buttons {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
 .post-style {
+    position: relative;
     border-radius: 3px;
     margin: 30px 30px 30px 30px;
     padding: 1.5%;
