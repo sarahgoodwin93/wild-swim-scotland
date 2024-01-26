@@ -1,9 +1,9 @@
 from django.contrib import messages
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 from django.http import HttpResponseRedirect
-from .models import SwimPosts
+from .models import SwimPosts, JoinSwim
 from .forms import AddSwimForm, EditSwimForm
 from django.views.generic.edit import CreateView, DeleteView, UpdateView  # noqa
 
@@ -89,8 +89,8 @@ class JoinSwimView(generic.ListView):
     """
     Shows the user the swims they have chosen to join
     """
-    def get(self, request, swim_id):
-        swim = get_object_or_404(SwimPosts, pk=swim_id)
-        if not JoinSwim.objects.filter(user=request.user, swim=swim).exists():
-            JoinSwim.objects.create(user=request.user, swim=swim)
-        return render(request, 'join_swim.html', {'swim': swim})
+    template_name = 'home/joined_swims.html'
+    context_object_name = 'joined_swims'
+
+    def get_queryset(self):
+        return JoinSwim.objects.filter(user=self.request.user)
