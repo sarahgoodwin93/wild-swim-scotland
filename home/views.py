@@ -91,6 +91,13 @@ class JoinSwimView(generic.ListView):
     """
     template_name = 'home/joined_swims.html'
     context_object_name = 'joined_swims'
+    model = JoinSwim
+
+    def get(self, request):
+        print('JoinSwimView called')
+        return super().get(request)
 
     def get_queryset(self):
         return JoinSwim.objects.filter(user=self.request.user)
+        print('JoinSwimView querset', queryset)
+        return queryset
