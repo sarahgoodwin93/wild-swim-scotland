@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.urls import reverse_lazy
 from django.views import generic
 from django.http import HttpResponseRedirect
@@ -102,14 +102,14 @@ class JoinSwimView(generic.ListView):
 
 
 def join_swim(request, pk):
-    swim = get_object_or_404(SwimPost, pk=pk)
+    swim = get_object_or_404(SwimPosts, pk=pk)
     user = request.user
 
     if JoinSwim.objects.filter(user=user, swim=swim).exists():
-        message.warning(request, "You have already joined this swim")
+        messages.warning(request, "You have already joined this swim")
     else:
         JoinSwim.objects.create(user=user, swim=swim)
-        message.success(request, "You have joined this swim")
+        messages.success(request, "You have joined this swim")
     
-    return HttpResponseRedirect(reverse("joined_swim"))
+    return HttpResponseRedirect(reverse("joined_swims"))
 
