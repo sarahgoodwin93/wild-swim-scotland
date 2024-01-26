@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")  # noqa
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-sarahgoodwin93-wild-swim-9ke47qbsif.us2.codeanyapp.com',
+    '8000-sarahgoodwin-p4wildswim-6jflfzmcfo4.ws-eu107.gitpod.io',
     '.herokuapp.com',
     'wild-swim-scotland.herokuapp.com',]  # noqa
 
