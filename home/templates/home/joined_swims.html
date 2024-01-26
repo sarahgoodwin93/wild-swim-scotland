@@ -1,1 +1,46 @@
-<h1>Hello</h1>
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Joined Swims Page -->
+
+<div class="container-fluid">
+    <div class="row">
+      <div>
+          <h3></h3>Your Joined Swims</h3>
+      </div>
+      <div class="col-12 mt-3">
+        <div class="row all-posts">
+          {% for joined_swims in joined_swims %}
+          <div class="col-md-4 mb-4 post-style">
+            <div class="card-border">
+              <div class="card-body">
+                <div class="image-container">
+                  <!-- prettier-ignore -->
+                  {% if "placeholder" in joined_swims.post_image.url %}
+                  <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.png' %}" alt="placeholder image">
+                  {% else %}
+                  <img class="card-img-top" src=" {{ joined_swims.post_image.url }}" alt="image of loch">
+                  {% endif %}
+                  <div class="image-flash">
+                      <h2 class="card-title">{{joined_swims.title}}</h2>
+                      <p>Location: {{joined_swims.location}}</p>
+                      <p>Date: {{joined_swims.date}}</p>
+                      <p class="card-text">{{joined_swims.description}}</p>
+                      <p>Swim Difficulity: {{joined_swims.swim_difficulty}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  <!-- joined_swims.html content ends here -->
+  {% endblock %}
+</div>
