@@ -167,8 +167,16 @@ footer {
 
 /* Login Page */
 
-.login {
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 21px;
+}
+
+.username-password-signin {
+    margin-top: 20px;
 }
 
 /* Reigster Page */
@@ -186,6 +194,10 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 10px;
+}
+
+#signup_form button {
+    margin-top: 10px;
 }
 
 /* Add Swim Page */
