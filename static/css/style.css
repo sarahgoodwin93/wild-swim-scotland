@@ -180,6 +180,14 @@ footer {
     align-items: center;
 }
 
+#signup_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 /* Add Swim Page */
 
 .add-swim-form {
