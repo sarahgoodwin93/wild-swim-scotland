@@ -8,15 +8,10 @@
 {% block content %}
 
 <div class="container">
-    <div class="sign-in-form">
-        <div class="row login">
-                <h1>{% trans "Sign In" %}</h1>
-                    <p>{% blocktrans %}Welcome to Wild Swim Scotland, we are excited you are here!
-                    <hr>
-                    In order to join a swim or leave a review you must be registered with us first.
-                    <hr> 
-                    If you have not created an account yet, then please
-                    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+    <div class="login-form">
+        <div class="row login account-form">
+                <h1>{% trans "Welcome Back!" %}</h1>
+                <h3>It's nice to see you again.</h3>
                 <form class="login username-password-signin" method="POST" action="{% url 'account_login' %}">
                     {% csrf_token %}
                     {{ form.as_p }}
@@ -26,6 +21,9 @@
                     <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                     <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
                 </form>
+                <hr>
+                <p>{% blocktrans %}In order to join a swim or leave a review you must be registered with us first.</p>
+                <p>If you have not created an account yet, then please<a href="{{ signup_url }}"> sign up</a> first.{% endblocktrans %}</p>
         </div>
     </div>
 </div>
