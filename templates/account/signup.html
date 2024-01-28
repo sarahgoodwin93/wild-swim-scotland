@@ -21,12 +21,12 @@
         action="{% url 'account_signup' %}"
       >
         {% csrf_token %}
-        {{ form.username.label_tag }}
-        {{ form.username }}
-        {{ form.password1.label_tag }}
-        {{ form.password1 }}
-        {{ form.password2.label_tag }}
-        {{ form.password2 }}
+      <p>{{ form.username.label_tag }}
+        {{ form.username }}</p>
+      <p>{{ form.password1.label_tag }}
+        {{ form.password1 }}</p>
+      <p>{{ form.password2.label_tag }}
+        {{ form.password2 }}</p>
         {% if redirect_field_value %}
         <input
           type="hidden"

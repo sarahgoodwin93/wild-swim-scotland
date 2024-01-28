@@ -190,6 +190,10 @@ footer {
     flex-direction: column;
 }
 
+#signup_form input {
+    width: 72%;
+}
+
 /* Add Swim Page */
 
 .add-swim-form {

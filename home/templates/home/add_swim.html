@@ -13,13 +13,46 @@
     <div class="fill-screen container">
       <div class="row">
         <div class="col-lg-9 col-12 below-nav mx-auto">
+          <div class="form add-swim-form">
           <h1>Add New Swim</h1>
           <hr />
-          <div class="form add-swim-form">
             <form class="mb-5" method="POST" enctype="multipart/form-data">
-              {{ form.as_p }}
-              <!-- crispyform -->
               {% csrf_token %}
+              <p>
+                {{ form.title.label_tag}}
+                {{ form.title }}
+                {{ form.title.errors}}
+              </p>
+              <p>
+                {{ form.description.label_tag }}
+                {{ form.description }}
+                {{ form.description.errors }}
+              </p>
+              <p>
+                {{ form.date.label_tag }}
+                {{ form.date }}
+                {{ form.date.errors }}
+              </p>
+              <p>
+                {{ form.time.label_tag }}
+                {{ form.time }}
+                {{ form.time.errors}}
+              </p>
+              <p>
+                {{ form.swim_difficulty.label_tag }}
+                {{ form.swim_difficulty }}
+                {{ form.swim_difficulty.errors }}
+              </p>
+              <p>
+                {{ form.location.label_tag }}
+                {{ form.location }}
+                {{ form.location.errors }}
+              </p>
+              <p>
+                {{ form.post_image.label_tag }}
+                {{ form.post_image }}
+                {{ form.post_image.errors }}
+              </p>
               <!-- input button --><input
                 class="btn btn-success"
                 type="submit"
