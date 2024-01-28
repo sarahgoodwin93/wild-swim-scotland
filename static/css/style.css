@@ -204,6 +204,27 @@ footer {
     margin-bottom: 50px;
 }
 
+.add-swim-form label {
+    margin-bottom: 5px;
+}
+
+.add-swim-form input[type="text"],
+.add-swim-form input[type="date"],
+.add-swim-form input[type="time"],
+.add-swim-form input[type="number"]
+.add-swim-form select,
+.add-swim-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.add-swim-form textarea {
+    resize: vertical;
+}
+
 /* Log out page */
 
 .log-out-page {
