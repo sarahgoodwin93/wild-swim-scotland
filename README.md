@@ -1,4 +1,15 @@
-# [Wild Swim Scotland](https://wild-swim-scotland-47f727d45ac1.herokuapp.com/ "take you to the Wild Swim Deployed Page")
+# Wild Swim Scotland
+
+![am-i-responsive-image](static/images/am-i-responsive.png "am-i-responsive-image")
+
+# Introduction
+
+Wild Swim Scotland is a site for the staff members of Wild Swim Scotland to let their community know about the upcoming wild swims that are happening around Scotland, and for users to sign up for a swim, view their upcoming swims and connect with each other through reviews. 
+
+The site is aimed at the wild swimming community of Scotland and hopes to help build a sense of community for these lovers of the cold!
+
+[Live Site Here](https://wild-swim-scotland-47f727d45ac1.herokuapp.com/ "take you to the Wild Swim Deployed Page")
+
 
 # Key Project Goals
 
