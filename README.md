@@ -105,4 +105,8 @@ https://www.youtube.com/watch?v=8NPOwmtupiI&t=580s - Delete Posts
 
 <https://docs.djangoproject.com/en/5.0/topics/i18n/timezones/>
 
+https://docs.djangoproject.com/en/5.0/ref/contrib/auth/
+
+https://stackoverflow.com/questions/7769805/editing-django-form-as-p - form editing
+
 # Acknoledgements

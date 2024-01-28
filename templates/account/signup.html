@@ -21,7 +21,14 @@
     method="post"
     action="{% url 'account_signup' %}"
   >
-    {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+    {% csrf_token %}
+    {{ form.username.label_tag }}
+    {{ form.username }}
+    {{ form.password1.label_tag }}
+    {{ form.password1 }}
+    {{ form.password2.label_tag }}
+    {{ form.password2 }}
+    {% if redirect_field_value %}
     <input
       type="hidden"
       name="{{ redirect_field_name }}"
