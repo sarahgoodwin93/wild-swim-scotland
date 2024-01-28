@@ -56,18 +56,29 @@
           {% if user.is_authenticated %}
           <li class="nav-item">
             <a
-              class="nav-link {% if request.path == logout_url %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'account_logout' %}"
-              >Logout</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
               class="nav-link {% if request.path == joined_swims %}active"
               aria-current="page{% endif %}"
               href="{% url 'joined_swims' %}"
               >Your Upcoming Swims</a
+            >
+          </li>
+          <!-- Add Swim Nav Link only to show if logged in -->
+          {% if user.is_staff %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == add_swim %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'add_swim' %}"
+              >Add Swim</a
+            >
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == logout_url %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'account_logout' %}"
+              >Logout</a
             >
           </li>
           {% else %}
@@ -87,17 +98,6 @@
               aria-current="page"
               href="{% url 'account_login' %}"
               >Login</a
-            >
-          </li>
-          {% endif %}
-          <!-- Add Swim Nav Link only to show if logged in -->
-          {% if user.is_staff %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if request.path == add_swim %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'add_swim' %}"
-              >Add Swim</a
             >
           </li>
           {% endif %}
