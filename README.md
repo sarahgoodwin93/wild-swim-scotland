@@ -13,8 +13,20 @@ The site is aimed at the wild swimming community of Scotland and hopes to help b
 
 # Key Project Goals
 
-- Build an interactive site with CRUD funtionality so that users can find upcoming wild swims in Scotland, comment on past swims they joined and register to join new swims.
-- Have accounts set up so that users can register to the sites and edit their details
+The goals of the sites functionality are:
+
+- List View: users can see all the swim cards, even if they have not registered or logged in
+- Register: users can register to the site so that they can use the sites functionality 
+- Logged In: users have the ability to join a swim and view their upcoming joined swims
+- Logged Out: users are asked if they wish to sign out of the site
+- Staff login: staff users can add new swims, read edit and delete the swims they have created from their staff account
+- Reviews: users can write a review on the swim location to let other users know what their experience was, users can read, edit and delete the reviews they personally write from their account
+
+# Agile Development
+
+A Kaban board was used in GitHub to create the agile development process – see the board [here]( https://github.com/users/sarahgoodwin93/projects/3 "Kaban board for Wild Swim Scotland Project")
+
+User stories were labelled using the MoSCoW method.
 
 ## User Experience
 
