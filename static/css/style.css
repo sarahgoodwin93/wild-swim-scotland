@@ -237,7 +237,7 @@ footer {
     resize: vertical;
 }
 
-.row {
+.add-swim-row {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,6 +246,15 @@ footer {
 /* Log out page */
 
 .log-out-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Delete Swim */
+
+.delete-swim {
     display: flex;
     flex-direction: column;
     align-items: center;
