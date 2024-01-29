@@ -39,14 +39,14 @@
                                 </li>
                                 <div class="card-buttons">
                                     {% if user.is_authenticated and Review.user == user %}
-                                      <a href="{% url 'edit_swim' review.pk %}">
+                                      <a href="{% url 'edit_review' review.pk %}">
                                         <button class="btn btn-edit" post_id="Review.id">
                                           Edit
                                         </button>
                                       </a>
                                     {% endif %}
                                     {% if user.is_authenticated and Review.user == user %}
-                                      <a href="{% url 'delete_swim' Review.pk %}">
+                                      <a href="{% url 'delete_review' Review.pk %}">
                                         <button class="btn btn-delete">Delete</button>
                                       </a>
                                       {% endif %}
