@@ -31,38 +31,38 @@
                     <p>Date: {{SwimPosts.date}}</p>
                     <p class="card-text">{{SwimPosts.description}}</p>
                     <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
-                      <div class="card-buttons">
-                      {% if user.is_authenticated and SwimPosts.creator == user %}
-                      <a href="{% url 'edit_swim' SwimPosts.pk %}">
-                        <button class="btn btn-edit" post_id="SwimPosts.id">
-                          Edit
-                        </button>
-                      </a>
-                      {% endif %}
-                      <!-- prettier-ignore -->
-                      {% if user.is_authenticated %}
-                      <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
-                        {% csrf_token %}
+                </div>
+                <div class="card-buttons">
+                  {% if user.is_authenticated and SwimPosts.creator == user %}
+                    <a href="{% url 'edit_swim' SwimPosts.pk %}">
+                      <button class="btn btn-edit" post_id="SwimPosts.id">
+                        Edit
+                      </button>
+                    </a>
+                  {% endif %}
+                  <!-- prettier-ignore -->
+                  {% if user.is_authenticated %}
+                    <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
+                      {% csrf_token %}
                       <button class="button-posts">Join this swim</button>
                     </form>
-                      {% endif %}
-                      <!-- prettier-ignore -->
-                      {% if user.is_authenticated and SwimPosts.creator == user %}
-                      <a href="{% url 'delete_swim' SwimPosts.pk %}">
-                        <button class="btn btn-delete">Delete</button>
-                      </a>
-                      {% endif %}
-                    </div>
-                  </div>
+                  {% endif %}
+                  <!-- prettier-ignore -->
+                  {% if user.is_authenticated and SwimPosts.creator == user %}
+                    <a href="{% url 'delete_swim' SwimPosts.pk %}">
+                      <button class="btn btn-delete">Delete</button>
+                    </a>
+                    {% endif %}
                 </div>
               </div>
             </div>
           </div>
-          {% endfor %}
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
+</div>
 
   <!-- swim_posts.html content ends here -->
   {% endblock %}

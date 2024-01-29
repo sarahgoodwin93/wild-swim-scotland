@@ -260,3 +260,31 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* Edit Swim */
+
+.edit-swim-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.edit-swim-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.edit-swim-form textarea {
+    resize: vertical;
+}
+
+.edit-swim-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
