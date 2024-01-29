@@ -191,7 +191,19 @@ footer {
 }
 
 #signup_form input {
-    width: 72%;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#login_form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 /* Add Swim Page */
@@ -223,6 +235,12 @@ footer {
 
 .add-swim-form textarea {
     resize: vertical;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Log out page */

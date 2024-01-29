@@ -12,7 +12,11 @@
         <div class="row login account-form">
                 <h1>{% trans "Welcome Back!" %}</h1>
                 <h3>It's nice to see you again.</h3>
-                <form class="login username-password-signin" method="POST" action="{% url 'account_login' %}">
+                <form 
+                class="login username-password-signin" 
+                id="login_form"
+                method="POST" 
+                action="{% url 'account_login' %}">
                     {% csrf_token %}
                     {{ form.as_p }}
                     {% if redirect_field_value %}
