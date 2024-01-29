@@ -12,15 +12,16 @@
         <div class="container-fluid">
             <div class="row">
                 <div>
-                <h3>Have you joined us for a swim?</h3>
-                <p>We'd love to hear your feedback!</p>
-                <p>Let others know what you thought of a specific swim location.</p>
-                <p>Connect with each other and build the community</p>
+                    <h3>Have you joined us for a swim?</h3>
+                    <p>We'd love to hear your feedback!</p>
+                    <p>Let others know what you thought of a specific swim location.</p>
+                    <p>Connect with each other and build the community</p>
                 </div>
                 <div class="col-12 mt-3">
                     <div class="review-list">
                         <ul>
                             {% for review in reviews %}
+                            <div class="single-reivew">
                                 <li>
                                     {{ review.review_title }}
                                 </li>
@@ -33,10 +34,7 @@
                                 <li>
                                     {{ review.created_on }}
                                 </li>
-                                    {% empty %}
-                                <li>
-                                    No reviews yet.
-                                </li>
+                            </div>
                             {% endfor %}
                         </ul>
                     </div>
