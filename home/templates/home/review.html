@@ -26,6 +26,9 @@
                                     {{ review.review_title }}
                                 </li>
                                 <li>
+                                    {{ review.review_location }}
+                                </li>
+                                <li>
                                     {{ review.body }}
                                 </li>
                                 <li>
@@ -70,6 +73,11 @@
                                 {{ form.review_title.label_tag}}
                                 {{ form.review_title }}
                                 {{ form.review_title.errors}}
+                            </p>
+                            <p>
+                                {{ form.review_location.label_tag}}
+                                {{ form.review_location }}
+                                {{ form.review_location.errors}}
                             </p>
                             <p>
                                 {{ form.body.label_tag}}
