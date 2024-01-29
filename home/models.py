@@ -26,6 +26,7 @@ class Review(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="reviewer")
     review_title = models.CharField(max_length=200, default="New Review")
+    review_location = models.CharField(max_length=300, default="Where did you swim?")
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)
