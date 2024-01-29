@@ -55,6 +55,11 @@
                             <form class="mb-5" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             <p>
+                                {{ form.review_title.label_tag}}
+                                {{ form.review_title }}
+                                {{ form.review_title.errors}}
+                            </p>
+                            <p>
                                 {{ form.body.label_tag}}
                                 {{ form.body }}
                                 {{ form.body.errors}}
