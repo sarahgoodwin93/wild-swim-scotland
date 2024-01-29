@@ -44,7 +44,7 @@
                   {% if user.is_authenticated %}
                     <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
                       {% csrf_token %}
-                      <button class="button-posts">Join this swim</button>
+                      <button id="join-swim-btn-{{ joined_swim.swim.pk }}" class="button-posts">Join this swim</button>
                     </form>
                   {% endif %}
                   <!-- prettier-ignore -->
