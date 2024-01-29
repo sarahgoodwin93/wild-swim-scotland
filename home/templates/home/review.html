@@ -27,26 +27,37 @@
                                             <div class="image-container">
                                                 <li>
                                                     {{ review.user.username }}
+                                                </li>
+                                                <li>
                                                     {{ review.body }}
+                                                </li>
+                                                <li>
+                                                    {{ review.created_on }}
+                                                </li>
+                                                <li>
+                                                    {{ review.updated_on }}
                                                 </li>
                                                 {% empty %}
                                                 <li>
-                                                No reviews yet.
+                                                    No reviews yet.
                                                 </li>
-                                                <div class="card-buttons">
-                                                {% if user.is_authenticated and Review.creator == user %}
-                                                    <a href="{% url 'edit_swim' Review.pk %}">
-                                                    <button class="btn btn-edit" post_id="SwimPosts.id">
-                                                    Edit
-                                                    </button>
+                                            </div>
+                                            <div class="card-buttons">
+                                                {% if user.is_authenticated and review.user == user %}
+                                                    <a href="{% url 'edit_swim' review.pk %}">
+                                                        <button class="btn btn-edit" post_id="{{ review.id }}">
+                                                            Edit
+                                                        </button>
                                                     </a>
                                                 {% endif %}
-                                                {% if user.is_authenticated and Review.creator == user %}
-                                                    <a href="{% url 'delete_swim' Review.pk %}">
-                                                    <button class="btn btn-delete">Delete</button>
+                                                {% if user.is_authenticated and review.user == user %}
+                                                    <a href="{% url 'delete_swim' review.pk %}">
+                                                        <button class="btn btn-delete" post_id="{{ review.id }}">
+                                                            Delete
+                                                        </button>
                                                     </a>
                                                 {% endif %}
-                                                </div>
+                                            </div>
                                             </div>
                                         </div>
                                     </div>

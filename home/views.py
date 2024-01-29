@@ -109,7 +109,7 @@ def JoinSwimList(request, pk):
 
 
 class ReviewView(CreateView):
-    model = SwimPosts
+    model = Review
     template_name = "home/review.html"
     form_class = ReviewForm
     success_url = reverse_lazy('review_list')
@@ -135,6 +135,6 @@ class ReviewList(generic.ListView):
     context_object_name = "reviews"
 
     def get_queryset(self):
-        return super().get_queryset().filter(review__isnull=False)
+        return Review.objects.all()
 
 
