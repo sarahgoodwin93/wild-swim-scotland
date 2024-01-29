@@ -20,7 +20,7 @@
                 <div class="col-12 mt-3">
                     <div class="review-list">
                         <ul>
-                            {% for review in reviews %}
+                            {% for review in object_list %}
                             <div class="reivews">
                                 <div class="single-review">
                                     <li>
@@ -45,7 +45,7 @@
                                             </button>
                                         </a>
                                         <a href="{% url 'delete_review' review.pk %}">
-                                            <button class="btn btn-delete">Delete</button>
+                                            <button class="btn btn-delete" post_id="Review.id">Delete</button>
                                         </a>
                                     </div>
                                     {% endfor %}

@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import SwimPosts, JoinSwim, Review
@@ -112,16 +112,14 @@ class ReviewView(CreateView):
     model = Review
     template_name = "home/review.html"
     form_class = ReviewForm
-    success_url = reverse_lazy('review_list')
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         messages.success(self.request, "Thanks for adding a review")
         return super().form_valid(form)
 
-    def form_invalid(self, form):
-        messages.error(self.request, "There was an error with the form.")
-        return self.render_to_response(self.get_context_data(form=form))  # noqa
+    def get_success_url(self):
+        return reverse('review_list')
 
 
 class ReviewList(generic.ListView):
@@ -133,6 +131,7 @@ class ReviewList(generic.ListView):
     template_name = "home/review.html"
     ordering = "created_on"
     context_object_name = "reviews"
+    queryset = Review.objects.all()
 
     def get_queryset(self):
         return Review.objects.all()

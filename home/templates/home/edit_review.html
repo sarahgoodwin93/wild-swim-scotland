@@ -19,19 +19,19 @@
             <form class="mb-5" method="POST" enctype="multipart/form-data">
               {% csrf_token %}
               <p>
-                {{ review.review_title.label_tag}}
-                {{ review.review_title }}
-                {{ review.review_title.errors}}
+                {{ object.review_title.label_tag}}
+                {{ object.review_title }}
+                {{ object.review_title.errors}}
               </p>
               <p>
-                {{ review.body.label_tag }}
-                {{ review.body }}
-                {{ review.body.errors }}
+                {{ object.body.label_tag }}
+                {{ object.body }}
+                {{ object.body.errors }}
               </p>
               <p>
-                {{ review.review_location.label_tag }}
-                {{ review.review_location }}
-                {{ review.review_location.errors }}
+                {{ object.review_location.label_tag }}
+                {{ object.review_location }}
+                {{ object.review_location.errors }}
               </p>
               <input
                 class="btn btn-secondary"
