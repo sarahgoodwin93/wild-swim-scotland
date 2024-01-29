@@ -126,9 +126,16 @@ class ReviewView(CreateView):
 
 class ReviewList(generic.ListView):
     """
-    Returns swim list in :model:`home.SwimPosts``
+    Returns review list in :model:`home.Review``
     and displays them to the page
     """
     queryset = Review.objects.all()
     model = Review
     template_name = "home/review.html"
+    ordering = "created_on"
+    context_object_name = "reviews"
+
+    def get_queryset(self):
+        return super().get_queryset().filter(review__isnull=False)
+
+
