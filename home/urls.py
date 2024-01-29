@@ -18,4 +18,5 @@ urlpatterns = [
     path("swim/join/<int:pk>/", JoinSwimList, name="join_swim"),
     path("swim/joined_swims/", JoinSwimView.as_view(), name="joined_swims"),  # noqa
     path("swim/review", ReviewView.as_view(), name="review"),
+    path("swim/reviews", ReviewList.as_view(), name="review_list"),
 ]
