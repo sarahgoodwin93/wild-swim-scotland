@@ -33,7 +33,7 @@ class Review(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Review {self.body} by {self.creator}"
+        return f"Review {self.body} by {self.user}"
 
 
 class JoinSwim(models.Model):

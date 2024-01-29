@@ -30,4 +30,3 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ['body']
-    review = forms.CharField(widget=forms.Textarea, label="Write a Review")

@@ -18,50 +18,22 @@
                 <p>Connect with each other and build the community</p>
                 </div>
                 <div class="col-12 mt-3">
-                    <div class="row all-posts">
+                    <div class="review-list">
                         <ul>
                             {% for review in reviews %}
-                                <div class="col-md-4 mb-4 post-style">
-                                    <div class="card-border">
-                                        <div class="card-body swim-card">
-                                            <div class="image-container">
-                                                <li>
-                                                    {{ review.user.username }}
-                                                </li>
-                                                <li>
-                                                    {{ review.body }}
-                                                </li>
-                                                <li>
-                                                    {{ review.created_on }}
-                                                </li>
-                                                <li>
-                                                    {{ review.updated_on }}
-                                                </li>
-                                                {% empty %}
-                                                <li>
-                                                    No reviews yet.
-                                                </li>
-                                            </div>
-                                            <div class="card-buttons">
-                                                {% if user.is_authenticated and review.user == user %}
-                                                    <a href="{% url 'edit_swim' review.pk %}">
-                                                        <button class="btn btn-edit" post_id="{{ review.id }}">
-                                                            Edit
-                                                        </button>
-                                                    </a>
-                                                {% endif %}
-                                                {% if user.is_authenticated and review.user == user %}
-                                                    <a href="{% url 'delete_swim' review.pk %}">
-                                                        <button class="btn btn-delete" post_id="{{ review.id }}">
-                                                            Delete
-                                                        </button>
-                                                    </a>
-                                                {% endif %}
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <li>
+                                    {{ review.user }}
+                                </li>
+                                <li>
+                                    {{ review.body }}
+                                </li>
+                                <li>
+                                    {{ review.created_on }}
+                                </li>
+                                    {% empty %}
+                                <li>
+                                    No reviews yet.
+                                </li>
                             {% endfor %}
                         </ul>
                     </div>
