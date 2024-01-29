@@ -23,8 +23,6 @@ class SwimPosts(models.Model):
 
 
 class Review(models.Model):
-    review = models.ForeignKey(
-        SwimPosts, on_delete=models.CASCADE, related_name="reviews")
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="reviewer")
     body = models.TextField()

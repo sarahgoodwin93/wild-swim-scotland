@@ -112,16 +112,16 @@ class ReviewView(CreateView):
     model = SwimPosts
     template_name = "home/review.html"
     form_class = ReviewForm
-    success_url = reverse_lazy('review')
+    success_url = reverse_lazy('review_list')
 
     def form_valid(self, form):
-        form.instance.creator = self.request.user
+        form.instance.user = self.request.user
         messages.success(self.request, "Thanks for adding a review")
         return super().form_valid(form)
 
     def form_invalid(self, form):
         messages.error(self.request, "There was an error with the form.")
-        return self.render_to_response(self.get_context_data(form=form, heading='Review'))  # noqa
+        return self.render_to_response(self.get_context_data(form=form))  # noqa
 
 
 class ReviewList(generic.ListView):
@@ -129,10 +129,9 @@ class ReviewList(generic.ListView):
     Returns review list in :model:`home.Review``
     and displays them to the page
     """
-    queryset = Review.objects.all()
     model = Review
     template_name = "home/review.html"
-    ordering = "created_on"
+    ordering = "-created_on"
     context_object_name = "reviews"
 
     def get_queryset(self):
