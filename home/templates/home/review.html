@@ -18,17 +18,20 @@
           </div>
             <div class="col-12 mt-3">
                 <div class="row all-posts">
-                {% for Review in object_list %}
+                {% for Review in reviews %}
                     <div class="col-md-4 mb-4 post-style">
                         <div class="card-border">
                             <div class="card-body swim-card">
                                 <div class="image-container">
-                                    <div class="image-flash">
-                                        <h2 class="card-title">{{Review.title}}</h2>
-                                        <p>Location: {{Review.location}}</p>
-                                        <p>Date: {{Review.date}}</p>
-                                        <p class="card-text">{{Review.body}}</p>
-                                    </div>
+                                    <li>
+                                        {{ review.user.username }}
+                                        {{ review.body }}
+                                    </li>
+                                    {% empty %}
+                                    <li>
+                                        No reviews yet.
+                                    </li>
+                                    {% endfor %}
                                     <div class="card-buttons">
                                     {% if user.is_authenticated and SwimPosts.creator == user %}
                                         <a href="{% url 'edit_swim' SwimPosts.pk %}">
@@ -47,7 +50,6 @@
                             </div>
                         </div>
                     </div>
-                {% endfor %}
             </div>
         </div>
     </div>
