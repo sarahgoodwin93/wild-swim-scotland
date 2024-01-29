@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<!-- Review Swims -->
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+          <div>
+              <h3>Have you joined us for a swim?</h3>
+              <p>We'd love to hear your feedback!</p>
+              <p>Let others know what you thought of a specific swim location.</p>
+              <p>Connect with each other and build the community</p>
+          </div>
+            <div class="col-12 mt-3">
+                <div class="row all-posts">
+                {% for Review in object_list %}
+                    <div class="col-md-4 mb-4 post-style">
+                        <div class="card-border">
+                            <div class="card-body swim-card">
+                                <div class="image-container">
+                                    <div class="image-flash">
+                                        <h2 class="card-title">{{Review.title}}</h2>
+                                        <p>Location: {{Review.location}}</p>
+                                        <p>Date: {{Review.date}}</p>
+                                        <p class="card-text">{{Review.body}}</p>
+                                    </div>
+                                    <div class="card-buttons">
+                                    {% if user.is_authenticated and SwimPosts.creator == user %}
+                                        <a href="{% url 'edit_swim' SwimPosts.pk %}">
+                                        <button class="btn btn-edit" post_id="SwimPosts.id">
+                                        Edit
+                                        </button>
+                                        </a>
+                                    {% endif %}
+                                    {% if user.is_authenticated and SwimPosts.creator == user %}
+                                        <a href="{% url 'delete_swim' SwimPosts.pk %}">
+                                        <button class="btn btn-delete">Delete</button>
+                                        </a>
+                                    {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="review-form-html">
+            <div class="fill-screen container">
+                <div class="row review-row">
+                    <div class="col-lg-9 col-12 below-nav mx-auto">
+                        <div class="form review-form">
+                            <h1>Add Your Review</h1>
+                            <hr />
+                            <form class="mb-5" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <p>
+                                {{ form.title.label_tag}}
+                                {{ form.title }}
+                                {{ form.title.errors}}
+                            </p>
+                            <p>
+                                {{ form.body.label_tag}}
+                                {{ form.body }}
+                                {{ form.body.errors}}
+                            </p>
+                            <!-- input button -->
+                            <input
+                                class="btn btn-success"
+                                type="submit"
+                                name="submit"
+                            />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- review.html content ends here -->
+{% endblock %}
