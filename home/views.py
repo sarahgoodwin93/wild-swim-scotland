@@ -5,7 +5,7 @@ from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import SwimPosts, JoinSwim, Review
 from .forms import AddSwimForm, EditSwimForm, ReviewForm, EditReviewForm
-from django.views.generic.edit import CreateView, DeleteView, UpdateView  # noqa
+from django.views.generic.edit import CreateView, DeleteView, UpdateView, View  # noqa
 
 
 # Swim List View
@@ -95,6 +95,7 @@ class JoinSwimView(generic.ListView):
         return queryset
 
 
+# Join Swim List
 def JoinSwimList(request, pk):
     swim = get_object_or_404(SwimPosts, pk=pk)
     user = request.user
@@ -106,6 +107,15 @@ def JoinSwimList(request, pk):
         messages.success(request, "You have joined this swim")
     
     return HttpResponseRedirect(reverse("joined_swims"))
+
+
+# Remove Joined Swim
+class RemoveJoinedSwimView(View):
+    def post(self, request, pk):
+        join_swim = JoinSwim.objects.filter(user=request.user, swim__pk=pk).first()  # noqa
+        if join_swim:
+            join_swim.delete()
+        return HttpResponseRedirect(reverse("joined_swims"))
 
 
 class ReviewView(CreateView):
