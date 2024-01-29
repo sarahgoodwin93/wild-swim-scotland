@@ -22,10 +22,13 @@
                         <ul>
                             {% for review in reviews %}
                                 <li>
-                                    {{ review.user }}
+                                    {{ review.review_title }}
                                 </li>
                                 <li>
                                     {{ review.body }}
+                                </li>
+                                <li>
+                                    {{ review.user }}
                                 </li>
                                 <li>
                                     {{ review.created_on }}
