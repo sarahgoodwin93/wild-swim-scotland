@@ -271,7 +271,16 @@ footer {
     margin-bottom: 50px;
 }
 
-.edit-swim-form input {
+.edit-swim-form label {
+    margin-bottom: 5px;
+}
+
+.edit-swim-form input[type="text"],
+.edit-swim-form input[type="date"],
+.edit-swim-form input[type="time"],
+.edit-swim-form input[type="number"]
+.edit-swim-form select,
+.edit-swim-form textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid;
