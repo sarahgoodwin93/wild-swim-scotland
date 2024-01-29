@@ -1,15 +1,9 @@
 from . import views
 from django.urls import path
 from .views import (SwimList, 
-AddSwimView, 
-SwimDeleteView, 
-EditSwimView, 
-JoinSwimView, 
-JoinSwimList, 
-ReviewView, 
-ReviewList,
-EditReviewView,
-DeleteReviewView)  # noqa
+AddSwimView, SwimDeleteView, EditSwimView, 
+JoinSwimView, JoinSwimList, 
+ReviewView, ReviewList, EditReviewView, DeleteReviewView)  # noqa
 
 
 urlpatterns = [

@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import SwimPosts, JoinSwim, Review
-from .forms import AddSwimForm, EditSwimForm, ReviewForm
+from .forms import AddSwimForm, EditSwimForm, ReviewForm, EditReviewForm
 from django.views.generic.edit import CreateView, DeleteView, UpdateView  # noqa
 
 
@@ -131,10 +131,39 @@ class ReviewList(generic.ListView):
     """
     model = Review
     template_name = "home/review.html"
-    ordering = "-created_on"
+    ordering = "created_on"
     context_object_name = "reviews"
 
     def get_queryset(self):
         return Review.objects.all()
 
 
+# Delete Review View
+class DeleteReviewView(DeleteView):
+    """
+    Shows the delete review page so that the authenticated user can delete
+    their own reviews
+    """
+    model = Review
+    template_name = "home/delete_review.html"
+    success_url = reverse_lazy('review_list')
+
+    def review_delete(self, request):
+        messages.success(self, request, "Review has been deleted")
+        return super().delete(request)
+
+
+# Edit Review View
+class EditReviewView(UpdateView):
+    """
+    Shows the edit review page so that the authenticated user can edit
+    their own reviews
+    """
+    model = Review
+    template_name = "home/edit_review.html"
+    form_class = EditReviewForm
+    success_url = reverse_lazy('review_list')
+
+    def review_edit(self, request):
+        messages.success(self, request, "Review has been updated")
+        return response

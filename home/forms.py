@@ -30,3 +30,13 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ['review_title', 'review_location', 'body']
+
+
+class EditReviewForm(forms.ModelForm):
+    """
+    FORM: Edit Review.
+    """
+
+    class Meta:
+        model = Review
+        fields = ['review_title', 'review_location', 'body']
