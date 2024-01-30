@@ -12,7 +12,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView, View  
 class SwimList(generic.ListView):
     """
     Returns swim list in :model:`home.SwimPosts``
-    and displays them to the page
+    and displays them to the home page
     """
     queryset = SwimPosts.objects.all()
     model = SwimPosts
@@ -22,15 +22,15 @@ class SwimList(generic.ListView):
 # AddSwim View
 class AddSwimView(CreateView):
     """
-    Shows the AddSwimForm so that staff users can make new posts
-    once the post is added it will take you back to the homepage
-    so that you can view your new post.
-    This method sets the contributer to the current user making the request
+    Shows the AddSwimForm so that staff users can make new posts, once the post is added,
+    it will take you back to the homepage so that you can view your new post.
     It adds a success message from the messages framework however if the form
     is successful it will be redirector to home as outlined by the success_url
     above so the message is not often shown.
     If the form is not valid you will recieve an error message, it also renders
-    the response using the form and heading when the form is invalid.
+    the response using the form and heading when the form is invalid, however there is
+    error handling with the form to now allow an invalid form to be submitted so this
+    error message is not often shown. 
     """
     model = SwimPosts
     template_name = "home/add_swim.html"
@@ -51,7 +51,8 @@ class AddSwimView(CreateView):
 class SwimDeleteView(DeleteView):
     """
     Shows the delete swim page so that the authenticated user can delete
-    their own swims
+    their own swims. Once the swim has been delete it will redirect back 
+    to the homepage using the success_url
     """
     model = SwimPosts
     template_name = "home/delete_swim.html"
@@ -66,7 +67,8 @@ class SwimDeleteView(DeleteView):
 class EditSwimView(UpdateView):
     """
     Shows the edit swim page so that the authenticated user can edit
-    their own swims
+    their own swims, once the user has edited the swim sucssefully it will
+    redirect back to the homepage using the success_url
     """
     model = SwimPosts
     template_name = "home/edit_swim.html"
@@ -81,7 +83,9 @@ class EditSwimView(UpdateView):
 # Join Swim View
 class JoinSwimView(generic.ListView):
     """
-    Shows the user the swims they have chosen to join
+    Shows the user the swims they have chosen to join by taking them to
+    the joined_swims.html page. It filters the swims that only the user has 
+    requested to join.
     """
     template_name = 'home/joined_swims.html'
     context_object_name = 'joined_swims'
@@ -96,21 +100,37 @@ class JoinSwimView(generic.ListView):
 
 
 # Join Swim List
-def JoinSwimList(request, pk):
-    swim = get_object_or_404(SwimPosts, pk=pk)
-    user = request.user
+class JoinSwimList(View):
+    """
+    This view handles the process of a user joining a swim and 
+    redirects them to the 'joined_swims' page by using the primary key of
+    the user that wants to join the swim. It checks if the user has already joined
+    the swim, if the user has not yet joined they will be taken to the joined_swims.html
+    page to see their joined swim.
+    """
+    def get(self,request, pk):
+        pass
 
-    if JoinSwim.objects.filter(user=user, swim=swim).exists():
-        messages.warning(request, "You have already joined this swim")
-    else:
-        JoinSwim.objects.create(user=user, swim=swim)
-        messages.success(request, "You have joined this swim")
+    def post(self, request, pk):
+        swim = get_object_or_404(SwimPosts, pk=pk)
+        user = request.user
+
+        if JoinSwim.objects.filter(user=user, swim=swim).exists():
+            messages.warning(request, "You have already joined this swim")
+        else:
+            JoinSwim.objects.create(user=user, swim=swim)
+            messages.success(request, "You have joined this swim")
     
-    return HttpResponseRedirect(reverse("joined_swims"))
+        return HttpResponseRedirect(reverse("joined_swims"))
 
 
 # Remove Joined Swim
 class RemoveJoinedSwimView(View):
+    """
+    Allows users to removew a swim from their joined swims list.
+    When a user clicks on the 'Remove this swim' button, it triggers a POST request
+    to this view, which then removes the specified swim from the user's list.
+    """
     def post(self, request, pk):
         join_swim = JoinSwim.objects.filter(user=request.user, swim__pk=pk).first()  # noqa
         if join_swim:
@@ -119,6 +139,11 @@ class RemoveJoinedSwimView(View):
 
 
 class ReviewView(CreateView):
+    """
+    Allows users to add a reivew to the site. It calls the ReviewForm 
+    When the form is submitted with valid data, the review is created.
+    A success message is displayed to the user upon successful submission.
+    """
     model = Review
     template_name = "home/review.html"
     form_class = ReviewForm
@@ -134,8 +159,9 @@ class ReviewView(CreateView):
 
 class ReviewList(generic.ListView):
     """
-    Returns review list in :model:`home.Review``
-    and displays them to the page
+    Shows the list of reviews to users by retrieving all review objects from 
+    the database and then showin them on the 'home/review.html' template. The reviews 
+    are ordered by their creation date ('created_on').
     """
     model = Review
     template_name = "home/review.html"
@@ -150,8 +176,7 @@ class ReviewList(generic.ListView):
 # Delete Review View
 class DeleteReviewView(DeleteView):
     """
-    Shows the delete review page so that the authenticated user can delete
-    their own reviews
+    
     """
     model = Review
     template_name = "home/delete_review.html"
@@ -165,8 +190,7 @@ class DeleteReviewView(DeleteView):
 # Edit Review View
 class EditReviewView(UpdateView):
     """
-    Shows the edit review page so that the authenticated user can edit
-    their own reviews
+    
     """
     model = Review
     template_name = "home/edit_review.html"
