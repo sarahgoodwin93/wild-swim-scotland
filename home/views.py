@@ -176,3 +176,4 @@ class EditReviewView(UpdateView):
     def review_edit(self, request):
         messages.success(self, request, "Review has been updated")
         return response
+

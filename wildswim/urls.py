@@ -16,17 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import views
+from . import handle404View, handle500View
 
 
 urlpatterns = [
     path("", include("home.urls"), name="home-urls"),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
+    path('404/', views.handle404View, name='handle404'),
+    path('500/', views.handle500View, name='handle500'),
 ]
-
-# custom error handling views
-handle400 = 'home.views.handle404View'
-handle500 = 'home.view.handle500View'
-
-

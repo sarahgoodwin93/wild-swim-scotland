@@ -34,7 +34,7 @@
                                     <div>
                                         <form method="POST" action="{% url 'remove_joined_swim' joined_swim.swim.pk %}">
                                         {% csrf_token %}
-                                        <button id="join-swim-btn-{{ joined_swim.swim.pk }}" class="button-posts">Remove this swim</button>
+                                        <button class="button-posts">Remove this swim</button>
                                         </form>
                                     </div>
                                 </div>
