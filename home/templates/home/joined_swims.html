@@ -7,15 +7,17 @@
 
 <div class="container-fluid">
     <div class="row">
-      <div>
-          <h3>Thank you for joining us, we can't wait to see you there!<h3>
+      <div class="headings">
+          <h1>Thank you for joining us, we can't wait to see you there!</h1>
       </div>
+      <!-- Joined Swim Cards -->
         <div class="col-12 mt-3">
             <div class="row all-posts">
                 {% for joined_swim in joined_swims %}
                     <div class="col-md-4 mb-4 post-style">
                         <div class="card-border">
                             <div class="card-body">
+                                <!-- Joined Swim Images -->
                                 <div class="image-container">
                                 <!-- prettier-ignore -->
                                     {% if "placeholder" in joined_swim.swim.post_image.url %}
@@ -24,12 +26,14 @@
                                     <img class="card-img-top" src=" {{ joined_swim.swim.post_image.url }}" alt="image of loch">
                                     {% endif %}
                                     <div class="image-flash">
+                                        <!-- Joined Swim card details -->
                                         <h2 class="card-title">{{ joined_swim.swim.title }}</h2>
                                         <p>Location: {{ joined_swim.swim.location }}</p>
                                         <p>Date: {{ joined_swim.swim.date }}</p>
                                         <p>Time: {{ joined_swim.swim.time }}</p>
                                         <p class="card-text">{{ joined_swim.swim.description }}</p>
                                         <p>Swim Difficulity: {{ joined_swim.swim.swim_difficulty }}</p>
+                                        <!-- Remove swim button -->
                                         <form method="POST" action="{% url 'remove_joined_swim' joined_swim.swim.pk %}">
                                         {% csrf_token %}
                                         <button class="button-posts">Remove this swim</button>

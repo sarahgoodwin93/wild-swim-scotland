@@ -16,6 +16,7 @@
           <div class="form edit-swim-form">
             <h1>Edit Swim</h1>
             <hr />
+            <!-- Edit Swim Form -->
             <form class="mb-5" method="POST" enctype="multipart/form-data">
               {% csrf_token %}
               <p>
@@ -33,6 +34,7 @@
                 {{ object.review_location }}
                 {{ object.review_location.errors }}
               </p>
+              <!-- Edit Swim Button -->
               <input
                 class="btn btn-secondary"
                 type="submit"

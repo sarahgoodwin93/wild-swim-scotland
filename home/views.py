@@ -176,7 +176,7 @@ class ReviewList(generic.ListView):
 # Delete Review View
 class DeleteReviewView(DeleteView):
     """
-    
+    Allows user who created the review to delete it from the site
     """
     model = Review
     template_name = "home/delete_review.html"
@@ -190,7 +190,7 @@ class DeleteReviewView(DeleteView):
 # Edit Review View
 class EditReviewView(UpdateView):
     """
-    
+    Allows user who created the review to edit it
     """
     model = Review
     template_name = "home/edit_review.html"
