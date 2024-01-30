@@ -52,21 +52,15 @@ nav {
 
 /* logo */
 
-#logo {
-    display: flex;
-    justify-content: center;
-}
-
-#logo a {
+.logo a {
     text-decoration: none;
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
 .logo img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
+    width: 40%;
     text-align: center;
 }
 
