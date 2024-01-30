@@ -1,6 +1,5 @@
 """
 URL configuration for wildswim project.
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
@@ -16,13 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import handle404View, handle500View
-
 
 urlpatterns = [
     path("", include("home.urls"), name="home-urls"),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
-    path('404/', handle404View.as_view(), name='handle404'),
-    path('500/', handle500View.as_view(), name='handle500'),
 ]

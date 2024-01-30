@@ -176,15 +176,3 @@ class EditReviewView(UpdateView):
     def review_edit(self, request):
         messages.success(self, request, "Review has been updated")
         return response
-
-
-# Handle 404 Error
-class Handle404View(View):
-    def get(self, request, exception):
-        return render(request, '404.html', status=404)
-
-
-# Handle 500 Error
-class Handle500View(View):
-    def get(self, request):
-        return render(request, '500.html', status=500)
