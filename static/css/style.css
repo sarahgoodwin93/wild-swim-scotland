@@ -62,6 +62,11 @@ nav {
     color: white;
 }
 
+.logo img {
+    width: 30%;
+    text-align: center;
+}
+
 /* Footer */
 
 footer {
