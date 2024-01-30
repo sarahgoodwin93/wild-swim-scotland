@@ -196,9 +196,12 @@ When clicking the delete swim buttton the user is asked if they are sure they wa
 
 ## Testing
 
+Testing detail can be found [here](TESTING.md)
+
 # Deployment
 
-This project was developed using [Codeanywhere](https://app.codeanywhere.com/ "Link to Codeanywhere login"), which was then committed and pushed to GitHub using the Codeanywehere terminals.
+This project was developed using [Codeanywhere](https://app.codeanywhere.com/ "Link to Codeanywhere login") at the start until issues with codeanywhere occured. It was committed and pushed to GitHub using the Codeanywehere terminals.
+After the issues with codeanywhere the project was moved to [GitPod](https://www.gitpod.io/ "link to gitpod homepage") and continuted from there. The projected had deployed at the start so the following is a step by step of how it was first deployed.
 
 ## Deploying on GitHub Pages
 
@@ -261,3 +264,6 @@ To gain more understanding of how to created CRUD functionality, these sources w
 # Acknoledgements
 
 [Back to Top](#wild-swim-scotland)
+
+
+[def]: #register
