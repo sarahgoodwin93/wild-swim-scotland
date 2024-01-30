@@ -68,33 +68,48 @@ This is why I chose to display the swims as swim cards which have a very clean l
 
 ![Swim Card](static/images/swimcard.png " Swim Card Image ")
 
-## User Stories
-
-# General Users
-
-- Join a swim
-
-- Write a review on a swim
-
-- Register an account
-
-- View swim list
-
-# Staff Users
-
-- Add a swim to the page
-
-- Edit a swim
-
-- Delete a swim
-
 # Site Structure
+
+
 
 # Features
 
 ## Existing Features
 
 ## The Landing page And General Site Content
+
+![Homepage](static/images/home.png " Home page image ")
+
+The landing page of the site shows a non logged in / non registered user the upcoming swims and gives and explination of what Wild Swim Scotland is about. 
+The text 
+*Please see our upcoming swims, with times, dates and difficulty level.
+Register an account with us and let us know your interest in joining a specific swim or 
+leave a review on places you have been before.*
+Gives users a clear indication on what the site offers them and what actions they should next perform.
+
+It has 2 call to actions, Reigster and Login. 
+
+The landing page is responsive for different screen sizes and scales down for easy mobile or tablet use. 
+
+## Login
+
+![login](static/README-images/login.png " login image ")
+
+The login page welcomes the user back to the site and has 2 clear options, username and password.
+The design is friendly and approacable by using rounded corners on the input boxes
+
+The text at the bottom of the login section lets users know they must be logged into the site to use the full functions, it offers them an action if they have not yet registered by using the sign up link.
+
+## Register
+
+![register](static/README-images/register.png " register image ")
+
+The register page welcomes users to the site with a friendly greeting. It lets users know that in order to use the site functions they must reigster an account.
+
+It offers them space for a username, password and then rechecks the password to ensure it matches and there were no errors.
+
+The text at the bottom lets users know who already have an account that they can sign in using the login page.
+
 
 ## User Permissions
 
