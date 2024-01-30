@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 
 urlpatterns = [
@@ -23,3 +24,9 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
 ]
+
+# custom error handling views
+handle400 = 'home.views.handle404View'
+handle500 = 'home.view.handle500View'
+
+
