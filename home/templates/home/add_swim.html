@@ -16,6 +16,7 @@
           <div class="form add-swim-form">
           <h1>Add New Swim</h1>
           <hr />
+          <!-- Add Swim Form -->
             <form class="mb-5" method="POST" enctype="multipart/form-data">
               {% csrf_token %}
               <p>
@@ -62,7 +63,7 @@
                 {{ form.post_image }}
                 {{ form.post_image.errors }}
               </p>
-              <!-- input button --><input
+              <!-- Add Swim button --><input
                 class="btn btn-success"
                 type="submit"
                 name="submit"

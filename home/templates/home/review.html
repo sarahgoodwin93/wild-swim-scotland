@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -19,6 +20,7 @@
                 </div>
                 <div class="col-12 mt-3">
                     <div class="review-list">
+                        <!-- Review List -->
                         <ul>
                             {% for review in object_list %}
                             <div class="reivews">
@@ -38,6 +40,7 @@
                                     <li>
                                         {{ review.created_on }}
                                     </li>
+                                    <!-- Review edit/ delete buttons -->
                                     <div class="review-buttons">
                                         <a href="{% url 'edit_review' review.pk %}">
                                             <button class="btn btn-edit" post_id="Review.id">
@@ -57,6 +60,7 @@
             </div>
         </div>
     </section>
+    <!-- Review Form -->
     <section>
         <div class="review-form-html">
             <div class="fill-screen container">

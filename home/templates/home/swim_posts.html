@@ -11,6 +11,7 @@
         <p>Register an account with us and let us know your interest in joining a specific swim or</p>
         <p>leave a review on places you have been before.</p>
     </div>
+    <!-- Posts Cards -->
     <div class="col-12 mt-3">
       <div class="row all-posts">
         {% for SwimPosts in object_list %}
@@ -18,6 +19,7 @@
           <div class="card">
             <div class="card-border">
               <div class="card-body swim-card">
+                <!-- Post image -->
                 <div class="image-container">
                   {% if "placeholder" in SwimPosts.post_image.url %}
                     <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.png' %}" alt="placeholder image">
@@ -25,6 +27,7 @@
                     <img class="card-img-top" src=" {{ SwimPosts.post_image.url }}" alt="image of loch">
                     {% endif %}
                       <div class="image-flash">
+                        <!-- Post details -->
                         <div class="card-content">
                           <h2 class="card-title">{{SwimPosts.title}}</h2>
                           <p>Location: {{SwimPosts.location}}</p>
@@ -32,6 +35,7 @@
                           <p class="card-text">{{SwimPosts.description}}</p>
                           <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
                         </div>
+                        <!-- Post buttons -->
                         <div class="card-buttons">
                           {% if user.is_authenticated and SwimPosts.creator == user %}
                             <a href="{% url 'edit_swim' SwimPosts.pk %}">
