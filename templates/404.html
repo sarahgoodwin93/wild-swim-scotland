@@ -1,0 +1,24 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- 404 Error Page -->
+
+<main>
+    <div class="page-error">
+      <h1>404 Error</h1>
+          <p>404 Error: Page not found</p>
+          <br>
+          <p>Let's get you back to the right place</p>
+          <a
+              class="nav-link {% if request.path == home %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'home' %}"
+              >Home</a
+            >
+    </div>
+  </main>
+
+<!-- 404.html content ends here -->
+{% endblock %}
