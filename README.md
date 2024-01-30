@@ -10,6 +10,41 @@ The site is aimed at the wild swimming community of Scotland and hopes to help b
 
 [Live Site Here](https://wild-swim-scotland-47f727d45ac1.herokuapp.com/ "take you to the Wild Swim Deployed Page")
 
+# Table of Contents
+
+- [Key Project Goals](#key-project-goals)
+- [Agile Development](#agile-development)
+- [User Experience](#user-experience)
+    - [Wireframes](#wireframes)
+    - [Database Schema](#database-schema)
+    - [Typography](#typography)
+    - [Colour Palette](#colour-palette)
+    - [Design Choices](#design-choices)
+- [Site Structure](#site-structure)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+        -[Non logged in user](#non-logged-in-user)
+            - [The Landing page And General Site Content](#the-landing-page-and-general-site-content)
+            - [Login](#login)
+            - [Register](#register)
+        - [Logged in User](#logged-in-user)
+            - [Logout](#logout)
+            - [Your Upcoming Swims](#your-upcoming-swims)
+        - [Staff User](#staff-user)
+            - [Add Swim](#add-swim)
+            - [Edit and Delete buttons](#edit-and-delete-buttons)
+    - [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+    - [Deploying on GitHub Pages](#deploying-on-github-pages)
+    - [Forking the Repository](#forking-the-repository)
+    - [Cloning the Repository](#cloning-the-repository)
+    - [The ElephantSQL Database](#the-elephantsql-database)
+- [Credits](#credits)
+- [Acknowledgements](#acknoledgements)
+
+[Back to Top](#wild-swim-scotland)
 
 # Key Project Goals
 
@@ -27,6 +62,8 @@ The goals of the sites functionality are:
 A Kaban board was used in GitHub to create the agile development process – see the board [here]( https://github.com/users/sarahgoodwin93/projects/3 "Kaban board for Wild Swim Scotland Project")
 
 User stories were labelled using the MoSCoW method.
+
+[Back to Top](#wild-swim-scotland)
 
 # User Experience
 
@@ -68,15 +105,15 @@ This is why I chose to display the swims as swim cards which have a very clean l
 
 ![Swim Card](static/README-images/swimcard.png " Swim Card Image ")
 
+[Back to Top](#wild-swim-scotland)
+
 # Site Structure
-
-
 
 # Features
 
 ## Existing Features
 
-Non-Logged in User
+# Non-Logged in User
 
 ### The Landing page And General Site Content
 
@@ -151,15 +188,9 @@ When clicking the delete swim buttton the user is asked if they are sure they wa
 
 ![delete warning](static/README-images/delete-swim.png " delete swim image ")
 
-## User Permissions
-
-## User Accounts
-
-## Swims
-
-## Register for Swims
-
 ## Future Features
+
+[Back to Top](#wild-swim-scotland)
 
 # Technologies Used
 
@@ -192,6 +223,8 @@ To deploy this page to Heroku from its Codeanywhere repository, the following st
 ## Cloning the Repository
 
 ## The ElephantSQL Database
+
+[Back to Top](#wild-swim-scotland)
 
 # Credits
 
@@ -226,3 +259,5 @@ To gain more understanding of how to created CRUD functionality, these sources w
 - [Adding Error Pages, 404 & 500](https://www.makeuseof.com/create-custom-404-error-page-django/ 'make use of us webpage')
 
 # Acknoledgements
+
+[Back to Top](#wild-swim-scotland)

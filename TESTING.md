@@ -21,9 +21,17 @@ After testing all errors were fixed and document checking complete was shown for
 
 ## W3C CSS Validation Results
 
+No errors were found when running css through w3c validator
+
+![css w3c]((static/README-images/css-errors.png) "w3c css errors")
+
 ## JSHint Validation Results
 
+![js hint]((static/README-images/js-hint.png) "js hint no errors")
+
 ## CI Python Linter Validation Results
+
+![CI Python Linter]((static/README-images/linter-no-errors.png) "CI Python Linter no errors")
 
 # Manaul Testing
 

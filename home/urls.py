@@ -1,7 +1,7 @@
 from . import views
 from django.urls import path
-from .views import (SwimList, 
-AddSwimView, SwimDeleteView, EditSwimView, 
+from .views import (SwimList,
+AddSwimView, SwimDeleteView, EditSwimView,
 JoinSwimView, JoinSwimList, RemoveJoinedSwimView,
 ReviewView, ReviewList, EditReviewView, DeleteReviewView)  # noqa
 

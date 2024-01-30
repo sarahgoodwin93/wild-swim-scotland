@@ -8,8 +8,9 @@ from django.utils import timezone
 # Create your models here.
 class SwimPosts(models.Model):
     """
-    Swim Post Model stores information about the swim post, including its title, creator,
-    image, description, date, time, location, swim difficulty, and timestamps.
+    Swim Post Model stores information about the swim post, including
+    its title, creator, image, description, date, time, location,
+    swim difficulty, and timestamps.
     """
     title = models.CharField(max_length=200, unique=True)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='swim_post')  # noqa
@@ -28,13 +29,14 @@ class SwimPosts(models.Model):
 
 class Review(models.Model):
     """
-    The revivew model stores information about a review, including the user who wrote it,
-    the review title, location, body, and timestamps.
+    The revivew model stores information about a review,
+    including the user who wrote it, the review title, location,
+    body, and timestamps.
     """
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="reviewer")
     review_title = models.CharField(max_length=200, default="New Review")
-    review_location = models.CharField(max_length=300, default="Where did you swim?")
+    review_location = models.CharField(max_length=300, default="Where did you swim?")  # noqa
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)
@@ -48,8 +50,9 @@ class Review(models.Model):
 
 class JoinSwim(models.Model):
     """
-    The Join Swim Model stores information about a user joining a swim post, including
-    the swim post they joined, the user who joined, and the timestamp when they joined.
+    The Join Swim Model stores information about a user
+    joining a swim post, including the swim post they joined,
+    the user who joined, and the timestamp when they joined.
 
     """
     swim = models.ForeignKey('SwimPosts', on_delete=models.CASCADE, related_name='swims_joined')  # noqa
