@@ -34,13 +34,15 @@
   <body>
     <!-- Logo -->
     <header>
-      <a
-        class="nav-link {% if request.path == home %}active"
-        aria-current="page{% endif %}"
-        href="{% url 'home' %}"
-      >
-      <img src="{% static 'images/logo.png' %}">
-      </a>
+      <div class="logo">
+        <a
+          class="nav-link {% if request.path == home %}active"
+          aria-current="page{% endif %}"
+          href="{% url 'home' %}"
+        >
+        <img src="{% static 'images/logo.png' %}">
+        </a>
+    </div>
       <!-- Navigation Bar -->
       <nav id="menu">
         <ul>

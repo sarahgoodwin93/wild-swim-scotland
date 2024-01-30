@@ -63,7 +63,10 @@ nav {
 }
 
 .logo img {
-    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     text-align: center;
 }
 
