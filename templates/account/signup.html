@@ -21,12 +21,24 @@
         action="{% url 'account_signup' %}"
       >
         {% csrf_token %}
-      <p>{{ form.username.label_tag }}
-        {{ form.username }}</p>
-      <p>{{ form.password1.label_tag }}
-        {{ form.password1 }}</p>
-      <p>{{ form.password2.label_tag }}
-        {{ form.password2 }}</p>
+      <p>
+        {{ form.username.label_tag }}
+        {{ form.username }}
+        <p>150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
+      </p>
+      <p>
+        {{ form.password1.label_tag }}
+        {{ form.password1 }}
+        <p>Your password can’t be too similar to your other personal information.</p>
+        <p>Your password must contain at least 8 characters.</p>
+        <p>Your password can’t be a commonly used password.</p>
+        <p>Your password can’t be entirely numeric.</p>
+      </p>
+      <p>
+        {{ form.password2.label_tag }}
+        {{ form.password2 }}
+        <p>Your passwords must match</p>
+      </p>
         {% if redirect_field_value %}
         <input
           type="hidden"

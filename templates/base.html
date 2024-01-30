@@ -36,9 +36,10 @@
     <header>
       <div class="logo">
         <a
-          class="nav-link {% if request.path == home %}active"
+          class="nav-link {% if request.path == home %}active site-logo"
           aria-current="page{% endif %}"
           href="{% url 'home' %}"
+          aria-label="wild swim scotland logo image"
         >
         <img src="{% static 'images/logo.png' %}">
         </a>

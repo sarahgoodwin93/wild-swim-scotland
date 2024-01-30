@@ -20,6 +20,12 @@ Return to [README.md](README.md)
 
 ## User Testing
 
+A user testing form was sent to friends and family to test the site on their devices and get real world feedback from people who had not been involved in the creation of the site.
+
+You can view their responses here:
+
+![user testing image](static/README-images/user-testing-form.png "user testing form screenshot")
+
 # Automated Testing
 
 # Accessibility Testing
