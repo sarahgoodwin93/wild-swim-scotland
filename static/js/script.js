@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let joinButton = document.getElementById(join-swim-btn);
+    let joinButton = document.querySelectorAll(".join-swim-btn");
 
     joinButton.forEach(function(button) {
         button.addEventListener("click", function() {
-            let swimID = button.getAttribute("id").split("-").pop();
+            let swimId = button.getAttribute("id").split("-").pop();
             let joined = button.classList.contains("joined");
 
             if(!joined) {
