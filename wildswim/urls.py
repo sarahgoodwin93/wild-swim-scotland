@@ -23,6 +23,6 @@ urlpatterns = [
     path("", include("home.urls"), name="home-urls"),
     path("accounts/", include("allauth.urls")),
     path('admin/', admin.site.urls),
-    path('404/', views.handle404View, name='handle404'),
-    path('500/', views.handle500View, name='handle500'),
+    path('404/', handle404View.as_view(), name='handle404'),
+    path('500/', handle500View.as_view(), name='handle500'),
 ]

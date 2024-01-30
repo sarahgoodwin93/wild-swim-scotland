@@ -3,7 +3,8 @@ from django.urls import path
 from .views import (SwimList, 
 AddSwimView, SwimDeleteView, EditSwimView, 
 JoinSwimView, JoinSwimList, RemoveJoinedSwimView,
-ReviewView, ReviewList, EditReviewView, DeleteReviewView)  # noqa
+ReviewView, ReviewList, EditReviewView, DeleteReviewView,
+Handle404View, Handle500View)  # noqa
 
 
 urlpatterns = [
@@ -18,5 +19,9 @@ urlpatterns = [
     path("swim/reviews", ReviewList.as_view(), name="review_list"),
     path("article/delete_review/<int:pk>/", DeleteReviewView.as_view(), name="delete_review"),  # noqa
     path("article/edit_review/<int:pk>/", EditReviewView.as_view(), name="edit_review"),  # noqa
-    path()
 ]
+
+# Error handling urls
+handler404 = Handle404View.as_view()
+handle500 = Handle500View.as_view()
+
