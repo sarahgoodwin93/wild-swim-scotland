@@ -151,7 +151,6 @@ When clicking the delete swim buttton the user is asked if they are sure they wa
 
 ![delete warning](static/README-images/delete-swim.png " delete swim image ")
 
-
 ## User Permissions
 
 ## User Accounts

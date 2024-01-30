@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
@@ -16,54 +15,55 @@
       <div class="row all-posts">
         {% for SwimPosts in object_list %}
         <div class="col-md-4 mb-4 post-style">
-          <div class="card-border">
-            <div class="card-body swim-card">
-              <div class="image-container">
-                <!-- prettier-ignore -->
-                {% if "placeholder" in SwimPosts.post_image.url %}
-                <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.png' %}" alt="placeholder image">
-                {% else %}
-                <img class="card-img-top" src=" {{ SwimPosts.post_image.url }}" alt="image of loch">
-                {% endif %}
-                <div class="image-flash">
-                    <h2 class="card-title">{{SwimPosts.title}}</h2>
-                    <p>Location: {{SwimPosts.location}}</p>
-                    <p>Date: {{SwimPosts.date}}</p>
-                    <p class="card-text">{{SwimPosts.description}}</p>
-                    <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
-                </div>
-                <div class="card-buttons">
-                  {% if user.is_authenticated and SwimPosts.creator == user %}
-                    <a href="{% url 'edit_swim' SwimPosts.pk %}">
-                      <button class="btn btn-edit" post_id="SwimPosts.id">
-                        Edit
-                      </button>
-                    </a>
-                  {% endif %}
-                  <!-- prettier-ignore -->
-                  {% if user.is_authenticated %}
-                    <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
-                      {% csrf_token %}
-                      <button id="join-swim-btn-{{ joined_swim.swim.pk }}" class="button-posts">Join this swim</button>
-                    </form>
-                  {% endif %}
-                  <!-- prettier-ignore -->
-                  {% if user.is_authenticated and SwimPosts.creator == user %}
-                    <a href="{% url 'delete_swim' SwimPosts.pk %}">
-                      <button class="btn btn-delete">Delete</button>
-                    </a>
+          <div class="card">
+            <div class="card-border">
+              <div class="card-body swim-card">
+                <div class="image-container">
+                  {% if "placeholder" in SwimPosts.post_image.url %}
+                    <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.png' %}" alt="placeholder image">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ SwimPosts.post_image.url }}" alt="image of loch">
                     {% endif %}
+                      <div class="image-flash">
+                        <div class="card-content">
+                          <h2 class="card-title">{{SwimPosts.title}}</h2>
+                          <p>Location: {{SwimPosts.location}}</p>
+                          <p>Date: {{SwimPosts.date}}</p>
+                          <p class="card-text">{{SwimPosts.description}}</p>
+                          <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
+                        </div>
+                        <div class="card-buttons">
+                          {% if user.is_authenticated and SwimPosts.creator == user %}
+                            <a href="{% url 'edit_swim' SwimPosts.pk %}">
+                              <button class="btn btn-edit" post_id="SwimPosts.id">
+                                Edit
+                              </button>
+                            </a>
+                          {% endif %}
+                          <!-- prettier-ignore -->
+                          {% if user.is_authenticated %}
+                            <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
+                              {% csrf_token %}
+                              <button id="join-swim-btn-{{ joined_swim.swim.pk }}" class="button-posts">Join this swim</button>
+                            </form>
+                          {% endif %}
+                          <!-- prettier-ignore -->
+                          {% if user.is_authenticated and SwimPosts.creator == user %}
+                            <a href="{% url 'delete_swim' SwimPosts.pk %}">
+                              <button class="btn btn-delete">Delete</button>
+                            </a>
+                            {% endif %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
         {% endfor %}
       </div>
     </div>
   </div>
-</div>
-
 </div>
 
   <!-- swim_posts.html content ends here -->
