@@ -329,3 +329,10 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* Footer */
+
+.fa-github {
+    text-decoration: none;
+    color: #0d1a32
+}
