@@ -89,20 +89,21 @@ Final testing showed:
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| Registration Form | Clicked on reigster nav link | Register form is displaying | -----------| ------- |
+| Registration Form | Clicked on reigster nav link | Register form is displaying | Worked as expected | N/A |
 | Username | Typed in @£$%^ as username | Warning will show | Warning showed 'Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.' | Worked as expected |
 | Password 1 | Typed in password same as username | Warning will show | Warning showed 'The password is too similar to the username.' | Worked as expected |
-| Password 2 | ---------- | --------------- | -----------| ------- |
-| Register Button | ---------- | --------------- | -----------| ------- |
-| Login Button | ---------- | --------------- | -----------| ------- |
+| Password 2 | Typed in password different to password1 | Warning will show | Warning showed 'You must type the same password each time.' | Worked as expected |
+| Register Button | Click Register | Button takes user to logged in dashboard on homepage | Worked as expected | N/A |
+| Login Button | Clicked on login link | Get taken to login page | Worked as expected | N/A |
 
 ## Login Page
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Username | Typed in random username | Warning will show | Warned showed 'The username and/or password you specified are not correct.' | Worked as expected |
+| Password | Typed in incorrect password | Warning will show | Warned showed 'The username and/or password you specified are not correct.' | Worked as expected |
+| Sign In | Typed in correct username and password, pressed sign up | Button takes user to logged in dashboard on homepage | Worked as expected | N/A |
+| Sign Up | Clicked on Sign Up link | Get taken to register page | Worked as expected | N/A |
 
 ## Homepage as Logged in user
 

@@ -174,7 +174,19 @@ nav {
 }
 
 .username-password-signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
+}
+
+#id_remember {
+    display: none;
+}
+
+#id_remember input {
+    display: none;
 }
 
 
