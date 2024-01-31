@@ -12,7 +12,7 @@ class SwimPosts(models.Model):
     its title, creator, image, description, date, time, location,
     swim difficulty, and timestamps.
     """
-    title = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=100, unique=True)
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='swim_post')  # noqa
     post_image = CloudinaryField('image', default='placeholder')
     description = models.TextField(max_length=250)
