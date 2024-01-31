@@ -6,16 +6,22 @@ Return to [README.md](README.md)
 
 ## W3C HTML Validation Results
 
+All HTML code has been run through the [W3C HTML Validator](https://validator.w3.org/).
+
+<details>
+<summary> W3C HTML Errors Found and fixed</summary>
+
 ![joined_swms errors](documentation/testing-images/join-swim-errors.png "")
 
 ![add_swim errors](documentation/testing-images/add-swim-errors.png "")
 
 ![register errors](documentation/testing-images/register-errors.png "")
 
+</details>
+
 After testing all errors were fixed and document checking complete was shown for all pages
 
 ![document checking complete](documentation/testing-images/document-ok.png "")
-
 
 ## W3C CSS Validation Results
 
@@ -33,7 +39,16 @@ No errors were found when running css through w3c validator
 
 # Manaul Testing
 
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+
 ## Responsivness testing
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
 
 ## Browser Compatibility
 
