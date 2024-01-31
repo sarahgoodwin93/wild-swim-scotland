@@ -12,7 +12,8 @@ class AddSwimForm(forms.ModelForm):
         fields = ['title', 'description', 'date', 'time',
                   'swim_difficulty', 'location', 'post_image']
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd'})
+            'date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd'}),
+            'time': forms.TimeInput(attrs={'placeholder': '00:00:00'})
         }
 
 
@@ -24,6 +25,10 @@ class EditSwimForm(forms.ModelForm):
         model = SwimPosts
         fields = ['title', 'description', 'date', 'time',
                   'swim_difficulty', 'location', 'post_image']
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd'}),
+            'time': forms.TimeInput(attrs={'placeholder': '00:00:00'})
+        }
 
 
 class ReviewForm(forms.ModelForm):
