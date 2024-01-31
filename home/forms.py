@@ -1,5 +1,6 @@
 from django import forms
 from .models import SwimPosts, Review
+from datetime import date
 
 
 class AddSwimForm(forms.ModelForm):
@@ -10,6 +11,9 @@ class AddSwimForm(forms.ModelForm):
         model = SwimPosts
         fields = ['title', 'description', 'date', 'time',
                   'swim_difficulty', 'location', 'post_image']
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd'})
+        }
 
 
 class EditSwimForm(forms.ModelForm):
