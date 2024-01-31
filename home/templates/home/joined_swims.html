@@ -33,11 +33,13 @@
                                         <p>Time: {{ joined_swim.swim.time }}</p>
                                         <p class="card-text">{{ joined_swim.swim.description }}</p>
                                         <p>Swim Difficulity: {{ joined_swim.swim.swim_difficulty }}</p>
-                                        <!-- Remove swim button -->
-                                        <form method="POST" action="{% url 'remove_joined_swim' joined_swim.swim.pk %}">
-                                        {% csrf_token %}
-                                        <button class="button-posts">Remove this swim</button>
-                                        </form>
+                                        <div class="remove-swim-btn">
+                                            <!-- Remove swim button -->
+                                            <form method="POST" action="{% url 'remove_joined_swim' joined_swim.swim.pk %}">
+                                            {% csrf_token %}
+                                            <button class="button-posts">Remove this swim</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
