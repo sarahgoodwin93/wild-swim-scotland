@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from .models import SwimPosts, JoinSwim, Review
 from .forms import AddSwimForm, EditSwimForm, ReviewForm, EditReviewForm
 from django.views.generic.edit import CreateView, DeleteView, UpdateView, View  # noqa
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 # Swim List View
@@ -20,7 +21,7 @@ class SwimList(generic.ListView):
 
 
 # AddSwim View
-class AddSwimView(CreateView):
+class AddSwimView(LoginRequiredMixin, CreateView):
     """
     Shows the AddSwimForm so that staff users can make new posts, once the post is added,
     it will take you back to the homepage so that you can view your new post.
@@ -48,7 +49,7 @@ class AddSwimView(CreateView):
 
 
 # Delete Swim View
-class SwimDeleteView(DeleteView):
+class SwimDeleteView(LoginRequiredMixin, DeleteView):
     """
     Shows the delete swim page so that the authenticated user can delete
     their own swims. Once the swim has been delete it will redirect back 
@@ -64,7 +65,7 @@ class SwimDeleteView(DeleteView):
 
 
 # Edit Swim View
-class EditSwimView(UpdateView):
+class EditSwimView(LoginRequiredMixin, UpdateView):
     """
     Shows the edit swim page so that the authenticated user can edit
     their own swims, once the user has edited the swim sucssefully it will
