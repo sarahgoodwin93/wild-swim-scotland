@@ -4,9 +4,9 @@
 
 # Introduction
 
-Wild Swim Scotland is a site for the staff members of Wild Swim Scotland to let their community know about the upcoming wild swims that are happening around Scotland, and for users to sign up for a swim, view their upcoming swims and connect with each other through reviews. 
+Wild Swim Scotland is a site for the community of wild swimmers within Scotland to connect and to organise group swim. The staff users will post upcoming swims so that their community can sign up for a swim, view their upcoming swims and connect with each other through reviews. 
 
-The site is aimed at the wild swimming community of Scotland and hopes to help build a sense of community for these lovers of the cold!
+The site is aimed at all wild swimmers around Scotland and hopes to help build a sense of community for these lovers of the cold!
 
 [Live Site Here](https://wild-swim-scotland-47f727d45ac1.herokuapp.com/ "take you to the Wild Swim Deployed Page")
 
@@ -81,13 +81,13 @@ Logo was moved to middle of page to have more impact.
 
 For this project the Django User Model was used for user account and two custom models with full CRUD were created for creating swims and leaving reviews. A third custom model was created for joining a swim, however due to the function of the site this does not have full CRUD as users can only edit and delete their joined swim, rather than create and update.
 
-The data schema was created using [drawSQL](https://drawsql.app/ “drawsql website homepage”) before the project was started to get the flow and function of the models. Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
+The data schema was created using [drawSQL]( https://drawsql.app/ “drawsql website homepage”) before the project was started to get the flow and function of the models. Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
 
 ![Data Schema Image](static/README-images/data-schema.png " Data Schema Image ")
 
 ## Typography
 
-The google font [Oswald](https://fonts.google.com/specimen/Oswald “oswald font”) was used throughout the site with different weights for different heading and paragraphs.
+The google font [Oswald]( https://fonts.google.com/specimen/Oswald “oswald font”) was used throughout the site with different weights for different heading and paragraphs.
 
 I chose this font for its tall height and wide proportions, making it a great choice for readability and also mimicking the swim cards height, making the site flow nicely. Oswald has rounded corners which give it a friendly appearance while still remaining bold and strong.  
 
@@ -95,7 +95,7 @@ I chose this font for its tall height and wide proportions, making it a great ch
 
 I chose the colour #0d1a32 to remind people of the water and paired this with a white background for contrast and for a clean look and finish. As the swims will all have an image of a wild swim, either uploaded by the creator or using the default image, the blues in images from the water will match with #0d1a32 as the primary colour. 
 
-![Color Hexa Image](static/README-images/color-hexa-0d1a32.png " Color Hexa Image ")
+![Color Hexa Image](static/README-images/color-hexa.png " Color Hexa Image ")
 
 ## Design Choices
 
@@ -117,7 +117,7 @@ This is why I chose to display the swims as swim cards which have a very clean l
 
 ### The Landing page And General Site Content
 
-![Homepage](static/README-images/home.png " Home page image ")
+![Homepage](static/README-images/homepage.png " Home page image ")
 
 The landing page of the site shows a non logged in / non registered user the upcoming swims and gives and explination of what Wild Swim Scotland is about. 
 The text 
@@ -135,13 +135,17 @@ The landing page is responsive for different screen sizes and scales down for ea
 ![login](static/README-images/login.png " login image ")
 
 The login page welcomes the user back to the site and has 2 clear options, username and password.
-The design is friendly and approacable by using rounded corners on the input boxes
+The design is friendly and approacable by using rounded corners on the input boxes.
 
 The text at the bottom of the login section lets users know they must be logged into the site to use the full functions, it offers them an action if they have not yet registered by using the sign up link.
 
+If the username and password are not correct this error will show.
+
+![username error](static/README-images/username-error.png " username error image ")
+
 ### Register
 
-![register](static/README-images/register.png " register image ")
+![register](static/README-images/register-form.png " register form image ")
 
 The register page welcomes users to the site with a friendly greeting. It lets users know that in order to use the site functions they must reigster an account.
 
@@ -158,6 +162,8 @@ The text at the bottom lets users know who already have an account that they can
 The logout page checks if the user does wish to sign out of the site.
 
 ### Your Upcoming Swims
+
+![joined swims](static/README-images/joined-swim-page.png " joined-swim-page image ")
 
 The 'Your Upcoming Swims' page lets users know what swims they have joined previously and allows them to remove swims from their swim list. 
 
