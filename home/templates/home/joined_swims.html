@@ -8,7 +8,11 @@
 <div class="container-fluid">
     <div class="row">
       <div class="headings">
+        {% if joined_swims %}
           <h1>Thank you for joining us, we can't wait to see you there!</h1>
+        {% else %}
+        <h1>No swims joined yet</h1>
+        {% endif %}
       </div>
       <!-- Joined Swim Cards -->
         <div class="col-12 mt-3">
