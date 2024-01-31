@@ -11,10 +11,13 @@ All HTML code has been run through the [W3C HTML Validator](https://validator.w3
 <details>
 <summary> W3C HTML Errors Found and fixed</summary>
 
-![joined_swms errors](documentation/testing-images/join-swim-errors.png "")
+joined_swims.html
+![joined_swmis errors](documentation/testing-images/join-swim-errors.png "")
 
+add_swim.html
 ![add_swim errors](documentation/testing-images/add-swim-errors.png "")
 
+signup.html
 ![register errors](documentation/testing-images/register-errors.png "")
 
 </details>
@@ -22,6 +25,16 @@ All HTML code has been run through the [W3C HTML Validator](https://validator.w3
 After testing all errors were fixed and document checking complete was shown for all pages
 
 ![document checking complete](documentation/testing-images/document-ok.png "")
+
+| **SOURCE CODE TEMPLATE** | **RUN THROUGH W3C VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
+| swim_posts.html | Yes | No | N/A |
+| joined_swims.html | Yes | Yes - detailed image above | Yes, retested and all passed |
+| edit_swims.html | Yes | Yes - detailed image above | XXXX |
+| delete_swims.html | Yes | No | N/A |
+| add_swim.html | Yes | Yes - detailed image above | XXXX |
+| signup.html | Yes | Yes - detailed image above | Yes, retested and all passed |
+| login.html | Yes | No | N/A |
+| logout.html | Yes | No | N/A |
 
 ## W3C CSS Validation Results
 

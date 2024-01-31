@@ -7,9 +7,8 @@
 {% block content %}
 
 <!-- Delete Post -->
-<main>
-  <div class="delete-swim">
-    <h1>Delete Swim</h1>
+<div class="delete-swim">
+  <h1>Delete Swim</h1>
     <!-- Delete Swim Form -->
       <form class="delete-swim" method="POST">
         {% csrf_token %}
@@ -17,8 +16,7 @@
         <!-- Delete Swim Button -->
         <button class="btn btn-delete">Delete</button>
       </form>
-  </div>
-</main>
+</div>
 
 <!-- delete_swim.html content ends here -->
 {% endblock %}
