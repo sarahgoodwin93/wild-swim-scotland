@@ -309,3 +309,15 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+/* Mobile Adjustments */
+
+@media screen and (max-width: 767px) {
+    .welcome-text {
+      font-size: 14px;
+    }
+  
+    .logo img {
+      width: 80%;
+    }
+  }

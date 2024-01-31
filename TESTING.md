@@ -73,6 +73,8 @@ All python code that was written for this project by Sarah Goodwin was developed
 | admin.py | Yes | All clear, no errors found | N/A |
 | settings.py | Yes | 1 trailing white space | All clear, re-run and no error found |
 
+Final testing showed:
+
 ![CI Python Linter](documentation/testing-images/linter-no-errors.png "python linter image")
 
 # Manaul Testing
