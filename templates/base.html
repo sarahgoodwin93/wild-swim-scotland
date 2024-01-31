@@ -65,14 +65,6 @@
               >Your Upcoming Swims</a
             >
           </li>
-<!--           <li class="nav-item">
-            <a
-              class="nav-link {% if request.path == review %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'review' %}"
-              >Reviews</a
-            >
-          </li> -->
           <!-- Add Swim Nav Link only to show if logged in -->
           {% if user.is_staff %}
           <li class="nav-item">
