@@ -12,13 +12,22 @@ All HTML code has been run through the [W3C HTML Validator](https://validator.w3
 <summary> W3C HTML Errors Found and fixed</summary>
 
 joined_swims.html
-![joined_swmis errors](documentation/testing-images/join-swim-errors.png "")
+
+![joined_swmis errors](documentation/testing-images/join-swim-errors.png "join swim error image")
 
 add_swim.html
-![add_swim errors](documentation/testing-images/add-swim-errors.png "")
+
+![add_swim errors](documentation/testing-images/add-swim-errors.png "add swim error image")
+
+![add_swim errors2](documentation/testing-images/add-swim2-error.png "add swim 2nd error image")
+
+edit_swim.html
+
+![edit_swim errors](documentation/testing-images/edit-swim-error.png "edit swim error image")
 
 signup.html
-![register errors](documentation/testing-images/register-errors.png "")
+
+![register errors](documentation/testing-images/register-errors.png "register swim error image")
 
 </details>
 
@@ -27,6 +36,7 @@ After testing all errors were fixed and document checking complete was shown for
 ![document checking complete](documentation/testing-images/document-ok.png "")
 
 | **SOURCE CODE TEMPLATE** | **RUN THROUGH W3C VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
+| -------- | ---------- | --------------- | -----------|
 | swim_posts.html | Yes | No | N/A |
 | joined_swims.html | Yes | Yes - detailed image above | Yes, retested and all passed |
 | edit_swims.html | Yes | Yes - detailed image above | XXXX |
@@ -38,17 +48,23 @@ After testing all errors were fixed and document checking complete was shown for
 
 ## W3C CSS Validation Results
 
+All custom CSS has been run through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "jigsaw w3 page")
+
 No errors were found when running css through w3c validator
 
-![css w3c](documentation/testing-images/css-errors.png "")
+![css w3c](documentation/testing-images/css-errors.png "css validator image")
 
 ## JSHint Validation Results
 
-![js hint](documentation/testing-images/js-hint.png "")
+All custom javascript code has been run through [JSHint](https://jshint.com/ "js hint page").
+
+![js hint](documentation/testing-images/js-hint.png "js hint image")
 
 ## CI Python Linter Validation Results
 
-![CI Python Linter](documentation/testing-images/linter-no-errors.png "")
+All python code that was written for this project by Sarah Goodwin was developed following PEP8 guidelines and was run through the [CI Python Linter](https://pep8ci.herokuapp.com/ "ci python linter page")
+
+![CI Python Linter](documentation/testing-images/linter-no-errors.png "python linter image")
 
 # Manaul Testing
 
