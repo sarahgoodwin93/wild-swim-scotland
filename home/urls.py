@@ -2,8 +2,7 @@ from . import views
 from django.urls import path
 from .views import (SwimList,
 AddSwimView, SwimDeleteView, EditSwimView,
-JoinSwimView, JoinSwimList, RemoveJoinedSwimView,
-ReviewView, ReviewList, EditReviewView, DeleteReviewView)  # noqa
+JoinSwimView, JoinSwimList, RemoveJoinedSwimView)  # noqa
 
 urlpatterns = [
     path('', views.SwimList.as_view(), name='home'),
@@ -13,8 +12,4 @@ urlpatterns = [
     path("swim/join/<int:pk>/", JoinSwimList.as_view(), name="join_swim"),
     path("swim/joined_swims/", JoinSwimView.as_view(), name="joined_swims"),  # noqa
     path("swim/remove/<int:pk>/", RemoveJoinedSwimView.as_view(), name="remove_joined_swim"),  # noqa
-    path("swim/review", ReviewView.as_view(), name="review"),
-    path("swim/reviews", ReviewList.as_view(), name="review_list"),
-    path("article/delete_review/<int:pk>/", DeleteReviewView.as_view(), name="delete_review"),  # noqa
-    path("article/edit_review/<int:pk>/", EditReviewView.as_view(), name="edit_review"),  # noqa
 ]
