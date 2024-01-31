@@ -1,5 +1,5 @@
 from django import forms
-from .models import SwimPosts, Review
+from .models import SwimPosts
 from datetime import date
 
 
@@ -30,22 +30,3 @@ class EditSwimForm(forms.ModelForm):
             'time': forms.TimeInput(attrs={'placeholder': '00:00:00'})
         }
 
-
-class ReviewForm(forms.ModelForm):
-    """
-    FORM: Review.
-    """
-
-    class Meta:
-        model = Review
-        fields = ['review_title', 'review_location', 'body']
-
-
-class EditReviewForm(forms.ModelForm):
-    """
-    FORM: Edit Review.
-    """
-
-    class Meta:
-        model = Review
-        fields = ['review_title', 'review_location', 'body']

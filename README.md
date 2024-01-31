@@ -37,8 +37,6 @@ The site is aimed at all wild swimmers around Scotland and hopes to help build a
 - [Testing](#testing)
 - [Deployment](#deployment)
     - [Deploying on GitHub Pages](#deploying-on-github-pages)
-    - [Forking the Repository](#forking-the-repository)
-    - [Cloning the Repository](#cloning-the-repository)
     - [The ElephantSQL Database](#the-elephantsql-database)
 - [Credits](#credits)
 - [Acknowledgements](#acknoledgements)
@@ -257,6 +255,17 @@ Testing detail can be found [here](TESTING.md)
 This project was developed using [Codeanywhere](https://app.codeanywhere.com/ "Link to Codeanywhere login") at the start until issues with codeanywhere occured. It was committed and pushed to GitHub using the Codeanywehere terminals.
 After the issues with codeanywhere the project was moved to [GitPod](https://www.gitpod.io/ "link to gitpod homepage") and continuted from there. The projected had deployed at the start so the following is a step by step of how it was first deployed.
 
+## Cloning The Repository
+
+To clone the repository using GitHub the following steps were taken:
+
+1. In the repository, select the "code" tab.
+2. Select "HTTPS" in the dropdown menu.
+3. Click the 'copy URL to dashboard button.
+4. Open your chosen IDE
+5. Create a new workspace and paste in the copied URL
+6. Press enter
+
 ## Deploying on GitHub Pages
 
 To deploy this page to Heroku from its Codeanywhere repository, the following steps were taken:
@@ -275,11 +284,27 @@ To deploy this page to Heroku from its Codeanywhere repository, the following st
 12. Go to Deploy and scroll down, click on 'Deploy Branch' to manually deploy
 13. Once the app has deployed, click 'Open App' at the top of the page
 
-## Forking the Repository
-
-## Cloning the Repository
-
 ## The ElephantSQL Database
+ElephantSQL PostgreSQL Database was used for this project, to set up a database the following steps were taken:
+
+1. Sign up or log in to ElephantSQL with your GitHub account.
+2. Click on "Create New Instance".
+3. Enter a name for the instance
+4. Select "Tiny Turtle (Free)" free plan.
+5. Click "Select Region".
+6. Select a data center near you.
+7. Click "Review".
+8. Ensure that all details are correct and then click "Create instance".
+9. Copy the database URL
+10. Add the database into the setting.py file
+
+You will also need to add the database to your Django settings.py file:
+
+DATABASES = {
+
+'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+
+}
 
 [Back to Top](#wild-swim-scotland)
 
@@ -319,9 +344,6 @@ To gain more understanding of how to created CRUD functionality, these sources w
 *Error Pages*
 - [Adding Error Pages, 404 & 500](https://www.makeuseof.com/create-custom-404-error-page-django/ 'make use of us webpage')
 
-# Acknoledgements
+# Acknowledgements
 
 [Back to Top](#wild-swim-scotland)
-
-
-[def]: #register
