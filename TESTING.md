@@ -91,6 +91,7 @@ Final testing showed:
 | -------- | ---------- | --------------- | -----------| ------- |
 | Registration Form | Clicked on reigster nav link | Register form is displaying | Worked as expected | N/A |
 | Username | Typed in @£$%^ as username | Warning will show | Warning showed 'Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.' | Worked as expected |
+| Username | Typed in admin as username | Warning will show | Warning showed 'A user with that username already exists.' | Worked as expected |
 | Password 1 | Typed in password same as username | Warning will show | Warning showed 'The password is too similar to the username.' | Worked as expected |
 | Password 2 | Typed in password different to password1 | Warning will show | Warning showed 'You must type the same password each time.' | Worked as expected |
 | Register Button | Click Register | Button takes user to logged in dashboard on homepage | Worked as expected | N/A |
@@ -109,55 +110,71 @@ Final testing showed:
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Join Swim Button | Clicked Join Swim | Swim added to upcoming swims page | Worked as expected | N/A |
+| Your Upcoming Swims | Left page and re-clicked on upcoming swims | Previous swims that had been added still there | Worked as expected | N/A |
+| Logout | Logout button replaced login button | No login button | Worked as expected | N/A |
+| Register | Register button no longer avaliable | No register button | Worked as expected | N/A |
 
 ## Upcoming Swims
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| No Swims Joined | Click on upcoming swims without joining a swim | Message 'No swims joined yet' will show | Worked as expected | N/A |
+| Joined Swim | Click on join swim button | Swim will be put onto upcoming swim page and redirected | New message showed saying 'Thank you for joining us, we can't wait to see you there!' | Worked as expected |
+| Remove Swim | Click remove swim button | Swim will disappear | Swim removed and stayed on upcoming swim page | Worked as expected |
 
 ## Logout
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Logout | Clicked logout from nav bar | Message asking 'Are you sure you want to sign out?' | Worked as expected | N/A |
+| Sign Out button | Clicked sign out | Redirected to homepage as non logged in user | Worked as expected | N/A |
 
 ## Homepage as staff user
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Can see edit and delete buttons | As staff user I can see the edit and delete buttons for only swims I created | Edit and delete buttons appear | Worked as expected | N/A |
+
 
 ## Add Swim
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Add Swim | Clicked Add Swim nav link | Add swim form showed | -----------| ------- |
+| Title | ---------- | --------------- | -----------| ------- |
+| Description | ---------- | --------------- | -----------| ------- |
+| Date | ---------- | --------------- | -----------| ------- |
+| Time | ---------- | --------------- | -----------| ------- |
+| Swim Difficulty | ---------- | --------------- | -----------| ------- |
+| Location | ---------- | --------------- | -----------| ------- |
+| With image | ---------- | --------------- | -----------| ------- |
+| No image | ---------- | --------------- | -----------| ------- |
+| Submit | ---------- | --------------- | -----------| ------- |
+| New swim added to homepage | ---------- | --------------- | -----------| ------- |
 
 ## Edit Swim
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Data prefilled | ---------- | --------------- | -----------| ------- |
+| Submit | ---------- | --------------- | -----------| ------- |
+| Title | ---------- | --------------- | -----------| ------- |
+| Description | ---------- | --------------- | -----------| ------- |
+| Date | ---------- | --------------- | -----------| ------- |
+| Time | ---------- | --------------- | -----------| ------- |
+| Swim Difficulty | ---------- | --------------- | -----------| ------- |
+| Location | ---------- | --------------- | -----------| ------- |
+| With image | ---------- | --------------- | -----------| ------- |
+| No image | ---------- | --------------- | -----------| ------- |
+| Submit | ---------- | --------------- | -----------| ------- |
+| New swim added to homepage | ---------- | --------------- | -----------| ------- |
 
 ## Delete Swim
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Delete Swim | ---------- | --------------- | -----------| ------- |
 | -------- | ---------- | --------------- | -----------| ------- |
 | -------- | ---------- | --------------- | -----------| ------- |
 
@@ -166,8 +183,6 @@ Final testing showed:
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | 404 Error | ---------- | --------------- | -----------| ------- |
 | URL Access | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
 
 ## Responsivness testing
 
