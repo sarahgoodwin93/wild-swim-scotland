@@ -1,4 +1,4 @@
-# Wild Swim Scotland
+# [Wild Swim Scotland](https://wild-swim-scotland-47f727d45ac1.herokuapp.com/ "take you to the Wild Swim Deployed Page")
 
 ![am-i-responsive-image](documentation/readme-images/am-i-responsive.png "am-i-responsive-image")
 
@@ -178,6 +178,8 @@ If the user has not yet joined an upcoming swim they will see the message "No sw
 
 ![no swims joined](documentation/readme-images/no-swims-yet.png " no-swims-joined image ")
 
+The page is soley for the user themselves and does not link to the staff user section of the site. As stated on the homepage, there is no limit to the number of people who can join a swim so therefore staff do not need to know who exactly will be attending. This section of the site is so that users can come back and quickly see what swims they were interested in and check the details easily. 
+
 ## Staff User
 
 ### Add Swim
@@ -341,6 +343,8 @@ To gain more understanding of making queries for my django modules this page was
 I wanted to encorporate star ratings in the review section of the site so this page was used to learn about star ratings in Django. This has been kept in for future implimentation
 
 - [Django Validators](https://studygyaan.com/django/how-to-implement-validators-in-django-models?utm_content=cmp-true 'how to use django validators')
+How to use Django validators for the swim difficulity feature 
+
 - [BuyBytes Youtube video on Validators](https://www.youtube.com/watch?v=1x0Zdukpjrs 'BugBytes youtube on Django ORM - Model Field Validators')
 To add a 'swim difficulty' to the SwimPost model I used django validators and the above two sources were used to gain that understanding.
 
@@ -352,20 +356,27 @@ To create the logout, upcoming swims and add swim pages, the above page was used
 
 *Django forms additonal learning:*
 - [Editing an inbuilt django form](https://stackoverflow.com/questions/7769805/editing-django-form-as-p 'stack overflow on how to edit dajngo form')
+How to edit inbuilt django forms to be able to style the templates to suit the site better
 
 - [Form Helper](https://django-crispy-forms.readthedocs.io/en/latest/crispy_tag_forms.html 'read-the-docs page on crispy forms')
+Reading on form helpers, decieded to use placeholder function instead for time and date in forms
 
 - [Date Picker](https://www.letscodemore.com/blog/how-to-add-date-input-widget-in-django-forms/#:~:text=In%20this%20case%2C%20we%20are,is%20rendered%20in%20the%20template. 'letscodemore date widget page')
 To gain more understanding of how to add a date picker widget this site was used
 
 *Django views additional learning:*
-- [Editing Views](https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/#django.views.generic.edit.DeleteView 'django docoumentation for editing views')
+- [UpdateViews](https://docs.djangoproject.com/en/5.0/ref/class-based-views/generic-editing/#django.views.generic.edit.DeleteView 'django docoumentation for editing views')
+More info on views, how they work and how to use the UpdateView speciffically 
+
 - [Code.my Youtube video using the DeleteView](https://www.youtube.com/watch?v=8NPOwmtupiI&t=580s 'code.my youtube video on deleting blog posts')
 To gain more understanding of how to created CRUD functionality, these sources were used, especially for the AddSwimView, EditSwimView and DeleteSwimView
+
 - [Restrict access via url](https://docs.djangoproject.com/en/5.0/topics/auth/default/ "Using the Django authentication system")
+How to restrict user from accessing content via the url, for example by typing swim/add to the url without being logged in as a staff member.
 
 *Error Pages*
 - [Adding Error Pages, 404 & 500](https://www.makeuseof.com/create-custom-404-error-page-django/ 'make use of us webpage')
+How to add 404 and 500 pages
 
 *Additional Education*
 - [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow webpage")
