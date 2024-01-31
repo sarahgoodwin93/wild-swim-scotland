@@ -1,6 +1,6 @@
 # Wild Swim Scotland
 
-![am-i-responsive-image](static/README-images/am-i-responsive.png "am-i-responsive-image")
+![am-i-responsive-image](documentation/readme-images/am-i-responsive.png "am-i-responsive-image")
 
 # Introduction
 
@@ -65,7 +65,7 @@ User stories were labelled using the MoSCoW method.
 
 ## Wireframes
 
-![Wireframe Image](static/README-images/wireframe.png "wireframe image")
+![Wireframe Image](documentation/readme-images/wireframe.png "wireframe image")
 
 Site structure was created before the site was created to test layout idea.
 After testing UX a different approach was taken for better flow of the site navigation. 
@@ -81,7 +81,7 @@ Orginally there were plans to create a review model, however this feature was no
 
 The data schema was created using [drawSQL]( https://drawsql.app/ “drawsql website homepage”) before the project was started to get the flow and function of the models. Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
 
-![Data Schema Image](static/README-images/data-schema.png " Data Schema Image ")
+![Data Schema Image](documentation/readme-imagesdata-schema.png " Data Schema Image ")
 
 ## Typography
 
@@ -93,7 +93,7 @@ I chose this font for its tall height and wide proportions, making it a great ch
 
 I chose the colour #0d1a32 to remind people of the water and paired this with a white background for contrast and for a clean look and finish. As the swims will all have an image of a wild swim, either uploaded by the creator or using the default image, the blues in images from the water will match with #0d1a32 as the primary colour. 
 
-![Color Hexa Image](static/README-images/color-hexa.png " Color Hexa Image ")
+![Color Hexa Image](documentation/readme-images/color-hexa.png " Color Hexa Image ")
 
 ## Design Choices
 
@@ -101,7 +101,7 @@ I wanted the design of the site to feel fresh and clean, just like how a wild sw
 
 This is why I chose to display the swims as swim cards which have a very clean look.  
 
-![Swim Card](static/README-images/swimcard.png " Swim Card Image ")
+![Swim Card](documentation/readme-images/swimcard.png " Swim Card Image ")
 
 [Back to Top](#wild-swim-scotland)
 
@@ -113,7 +113,7 @@ This is why I chose to display the swims as swim cards which have a very clean l
 
 ### The Landing page And General Site Content
 
-![Homepage](static/README-images/homepage.png " Home page image ")
+![Homepage](documentation/readme-images/homepage.png " Home page image ")
 
 The landing page of the site shows a non logged in / non registered user the upcoming swims and gives and explination of what Wild Swim Scotland is about. 
 The text 
@@ -129,7 +129,7 @@ The landing page is responsive for different screen sizes and scales down for ea
 
 ### Login
 
-![login](static/README-images/login.png " login image ")
+![login](documentation/readme-images/login.png " login image ")
 
 The login page welcomes the user back to the site and has 2 clear options, username and password.
 The design is friendly and approacable by using rounded corners on the input boxes.
@@ -138,11 +138,11 @@ The text at the bottom of the login section lets users know they must be logged 
 
 If the username and password are not correct this error will show.
 
-![username error](static/README-images/username-error.png " username error image ")
+![username error](documentation/readme-imagess/username-error.png " username error image ")
 
 ### Register
 
-![register](static/README-images/register-form.png " register form image ")
+![register](documentation/readme-images/register-form.png " register form image ")
 
 The register page welcomes users to the site with a friendly greeting. It lets users know that in order to use the site functions they must reigster an account.
 
@@ -154,19 +154,19 @@ The text at the bottom lets users know who already have an account that they can
 
 ### Logout
 
-![logout](static/README-images/logout.png " logout image ")
+![logout](documentation/readme-images/logout.png " logout image ")
 
 The logout page checks if the user does wish to sign out of the site.
 
 ### Your Upcoming Swims
 
-![joined swims](static/README-images/joined-swim-page.png " joined-swim-page image ")
+![joined swims](documentation/readme-images/joined-swim-page.png " joined-swim-page image ")
 
 The 'Your Upcoming Swims' page lets users know what swims they have joined previously and allows them to remove swims from their swim list. 
 
 If the user has not yet joined an upcoming swim they will see the message "No swims joined yet"
 
-![no swims joined](static/README-images/no-swims-yet.png " no-swims-joined image ")
+![no swims joined](documentation/readme-images/no-swims-yet.png " no-swims-joined image ")
 
 ## Staff User
 
@@ -179,11 +179,11 @@ To prevent users from enterting the time in the wrong formate the 00:00:00 text 
 to prevent users from entering the swim difficulty incorrectly the 1-5 text has been added.
 If the above fields are not entered correctly a warning will show.
 
-![swim warning](static/README-images/swim-warning.png " swim warning image ")
+![swim warning](documentation/readme-images/swim-warning.png " swim warning image ")
 
-![time warning](static/README-images/time-warning.png " time warning image ")
+![time warning](documentation/readme-images/time-warning.png " time warning image ")
 
-![date warning](static/README-images/date-warning.png " date warning image ")
+![date warning](documentation/readme-images/date-warning.png " date warning image ")
 
 ## Edit and Delete buttons
 
@@ -193,7 +193,7 @@ When clicking on the edit swim button the form has the same functions as the add
 
 When clicking the delete swim buttton the user is asked if they are sure they want to delete the swim before the action is performed. 
 
-![delete warning](static/README-images/delete-swim.png " delete swim image ")
+![delete warning](documentation/readme-images/delete-swim.png " delete swim image ")
 
 ## Future Features
 
