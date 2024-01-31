@@ -23,15 +23,16 @@ class SwimList(generic.ListView):
 # AddSwim View
 class AddSwimView(LoginRequiredMixin, CreateView):
     """
-    Shows the AddSwimForm so that staff users can make new posts, once the post is added,
-    it will take you back to the homepage so that you can view your new post.
-    It adds a success message from the messages framework however if the form
-    is successful it will be redirector to home as outlined by the success_url
-    above so the message is not often shown.
-    If the form is not valid you will recieve an error message, it also renders
-    the response using the form and heading when the form is invalid, however there is
-    error handling with the form to now allow an invalid form to be submitted so this
-    error message is not often shown. 
+    Shows the AddSwimForm so that staff users can make new posts,
+    once the post is added, it will take you back to the homepage so
+    that you can view your new post. It adds a success message from the
+    messages framework however if the form is successful it will be
+    redirector to home as outlined by the success_url above so the message
+    is not often shown. If the form is not valid you will recieve an
+    error message, it also renders the response using the form and
+    heading when the form is invalid, however there is error handling with
+    the form to now allow an invalid form to be submitted so this
+    error message is not often shown.
     """
     model = SwimPosts
     template_name = "home/add_swim.html"
@@ -52,7 +53,7 @@ class AddSwimView(LoginRequiredMixin, CreateView):
 class SwimDeleteView(LoginRequiredMixin, DeleteView):
     """
     Shows the delete swim page so that the authenticated user can delete
-    their own swims. Once the swim has been delete it will redirect back 
+    their own swims. Once the swim has been delete it will redirect back
     to the homepage using the success_url
     """
     model = SwimPosts
@@ -85,7 +86,7 @@ class EditSwimView(LoginRequiredMixin, UpdateView):
 class JoinSwimView(generic.ListView):
     """
     Shows the user the swims they have chosen to join by taking them to
-    the joined_swims.html page. It filters the swims that only the user has 
+    the joined_swims.html page. It filters the swims that only the user has
     requested to join.
     """
     template_name = 'home/joined_swims.html'
@@ -103,13 +104,14 @@ class JoinSwimView(generic.ListView):
 # Join Swim List
 class JoinSwimList(View):
     """
-    This view handles the process of a user joining a swim and 
-    redirects them to the 'joined_swims' page by using the primary key of
-    the user that wants to join the swim. It checks if the user has already joined
-    the swim, if the user has not yet joined they will be taken to the joined_swims.html
-    page to see their joined swim.
+    This view handles the process of a user joining a swim and
+    redirects them to the 'joined_swims' page by using the primary
+    key of the user that wants to join the swim. It checks if the user
+    has already joined the swim, if the user has not yet joined
+    they will be taken to the joined_swims.html page to see
+    their joined swim.
     """
-    def get(self,request, pk):
+    def get(self, request, pk):
         pass
 
     def post(self, request, pk):
@@ -121,7 +123,7 @@ class JoinSwimList(View):
         else:
             JoinSwim.objects.create(user=user, swim=swim)
             messages.success(request, "You have joined this swim")
-    
+
         return HttpResponseRedirect(reverse("joined_swims"))
 
 
@@ -129,8 +131,9 @@ class JoinSwimList(View):
 class RemoveJoinedSwimView(View):
     """
     Allows users to removew a swim from their joined swims list.
-    When a user clicks on the 'Remove this swim' button, it triggers a POST request
-    to this view, which then removes the specified swim from the user's list.
+    When a user clicks on the 'Remove this swim' button, it
+    triggers a POST request to this view, which then removes the
+    specified swim from the user's list.
     """
     def post(self, request, pk):
         join_swim = JoinSwim.objects.filter(user=request.user, swim__pk=pk).first()  # noqa

@@ -34,7 +34,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-sarahgoodwin-p4wildswim-6jflfzmcfo4.ws-eu107.gitpod.io',
     '.herokuapp.com',
-    'wild-swim-scotland.herokuapp.com',]  # noqa
+    'wild-swim-scotland.herokuapp.com', ]  # noqa
 
 
 # Application definition
@@ -117,7 +117,7 @@ DATABASES = {
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
-    "https://*.8000-sarahgoodwin-p4wildswim-6jflfzmcfo4.ws-eu107.gitpod.io/accounts/login/','https://*.127.0.0.1"
+    "https://*.8000-sarahgoodwin-p4wildswim-6jflfzmcfo4.ws-eu107.gitpod.io/accounts/login/','https://*.127.0.0.1"  # noqa
 ]
 
 

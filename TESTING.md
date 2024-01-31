@@ -35,13 +35,13 @@ After testing all errors were fixed and document checking complete was shown for
 
 ![document checking complete](documentation/testing-images/document-ok.png "")
 
-| **SOURCE CODE TEMPLATE** | **RUN THROUGH W3C VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
+| **SOURCE CODE TEMPLATE** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
 | -------- | ---------- | --------------- | -----------|
 | swim_posts.html | Yes | No | N/A |
 | joined_swims.html | Yes | Yes - detailed image above | Yes, retested and all passed |
-| edit_swims.html | Yes | Yes - detailed image above | XXXX |
+| edit_swims.html | Yes | Yes - detailed image above | No, moved to bug section |
 | delete_swims.html | Yes | No | N/A |
-| add_swim.html | Yes | Yes - detailed image above | XXXX |
+| add_swim.html | Yes | Yes - detailed image above | No, moved to bug section |
 | signup.html | Yes | Yes - detailed image above | Yes, retested and all passed |
 | login.html | Yes | No | N/A |
 | logout.html | Yes | No | N/A |
@@ -63,6 +63,15 @@ All custom javascript code has been run through [JSHint](https://jshint.com/ "js
 ## CI Python Linter Validation Results
 
 All python code that was written for this project by Sarah Goodwin was developed following PEP8 guidelines and was run through the [CI Python Linter](https://pep8ci.herokuapp.com/ "ci python linter page")
+
+| **Python file** | **RUN THROUGH VALIDATOR** | **ANY ERRORS** | **ERRORS RESOLVED** |
+| -------- | ---------- | --------------- | -----------|
+| views.py | Yes | Some trailing white spaces | All clear, re-run and no error found |
+| urls.py | Yes | All clear, no errors found | N/A |
+| modles.py | Yes | 1 trailing white space | All clear, re-run and no error found |
+| forms.py | Yes | Line too long (89 > 79 characters) | Added   # noqa and all clear |
+| admin.py | Yes | All clear, no errors found | N/A |
+| settings.py | Yes | 1 trailing white space | All clear, re-run and no error found |
 
 ![CI Python Linter](documentation/testing-images/linter-no-errors.png "python linter image")
 
