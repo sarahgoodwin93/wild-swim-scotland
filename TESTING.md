@@ -56,9 +56,7 @@ No errors were found when running css through w3c validator
 
 ## JSHint Validation Results
 
-All custom javascript code has been run through [JSHint](https://jshint.com/ "js hint page").
-
-![js hint](documentation/testing-images/js-hint.png "js hint image")
+No javascript was used for this project.
 
 ## CI Python Linter Validation Results
 
@@ -79,26 +77,125 @@ Final testing showed:
 
 # Manaul Testing
 
+## Home Page
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| Swim Cards | Opened site url | Swim cards are visable | Worked as expected | N/A |
+| Nav Links | Opened site url | Only register and login nav links are visable | Worked as expected | N/A |
+| Join Swim Buttons | Opened site url | Cannot see Join Swim Buttons | Worked as expected | N/A |
+
+## Register Page
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| Registration Form | Clicked on reigster nav link | Register form is displaying | -----------| ------- |
+| Username | Typed in @£$%^ as username | Warning will show | Warning showed 'Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.' | Worked as expected |
+| Password 1 | Typed in password same as username | Warning will show | Warning showed 'The password is too similar to the username.' | Worked as expected |
+| Password 2 | ---------- | --------------- | -----------| ------- |
+| Register Button | ---------- | --------------- | -----------| ------- |
+| Login Button | ---------- | --------------- | -----------| ------- |
+
+## Login Page
+
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
 | -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
 
+## Homepage as Logged in user
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+## Upcoming Swims
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+## Logout
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+## Homepage as staff user
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+## Add Swim
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+## Edit Swim
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+## Delete Swim
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+
+## Other Testing
+
+| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| 404 Error | ---------- | --------------- | -----------| ------- |
+| URL Access | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
+| -------- | ---------- | --------------- | -----------| ------- |
 
 ## Responsivness testing
 
-| **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| **DEVICE** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
+| Samsung22 Ultra | ---------- | --------------- | -----------| ------- |
+| iPhone 15 | ---------- | --------------- | -----------| ------- |
+| Dev Tools for iPad | ---------- | --------------- | -----------| ------- |
 
 ## Browser Compatibility
+
+The site was tested on the following browser types
+
+* Google Chrome
+* Microsoft Edge
+* Safari
 
 ## User Testing
 
 A user testing form was sent to friends and family to test the site on their devices and get real world feedback from people who had not been involved in the creation of the site.
 
-You can view their responses here:
+Here is the form that was sent.
 
 ![user testing image](documentation/testing-images/user-testing-form.png "user testing form screenshot")
+
+Feedback from the form
+
+* Better responsivness for mobile - added media queries
+* User testing did not throw any errors as users followed instructions
+* Site was easy to use and user friendly 
 
 # Automated Testing
 

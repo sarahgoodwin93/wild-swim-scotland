@@ -15,6 +15,10 @@ body {
     border: none;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* Navigation menu */
 
 #menu ul {
@@ -69,6 +73,7 @@ nav {
 
 .welcome-text {
     font-size: 20px;
+    padding: 5px;
 }
 
 /* Swim Cards Page */
@@ -301,7 +306,7 @@ footer {
     margin-top: auto;
 }
 
-/* 404n & 500 Error pages */
+/* 404 & 500 Error pages */
 
 .page-error {
     display: flex;
