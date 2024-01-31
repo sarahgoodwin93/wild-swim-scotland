@@ -311,15 +311,6 @@ nav {
     padding: 10px;
 }
 
-/* Page Errors */
-
-.page-errors {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Footer */
 
 .fa-github {
@@ -329,4 +320,13 @@ nav {
 
 footer {
     margin-top: auto;
+}
+
+/* 404n & 500 Error pages */
+
+.page-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
