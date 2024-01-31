@@ -102,7 +102,7 @@ nav {
 
 .button-posts:hover,
 .button-posts:focus {
-    background-color: #7bbce1;
+    background-color: #d6e4f0;
     color: #0d1a32;
 }
 
@@ -120,6 +120,14 @@ nav {
 .btn {
     border-radius: 8px;
     padding: 10px 16px;
+    background-color: #d6e4f0;
+    color: #0d1a32;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #0d1a32;
+    color: white;
 }
 
 .remove-swim-btn {

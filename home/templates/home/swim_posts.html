@@ -33,29 +33,28 @@
                           <h2 class="card-title">{{SwimPosts.title}}</h2>
                           <p>Location: {{SwimPosts.location}}</p>
                           <p>Date: {{SwimPosts.date}}</p>
+                          <p>Time: {{SwimPosts.time}}</p>
                           <p class="card-text">{{SwimPosts.description}}</p>
                           <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
                         </div>
                         <!-- Post buttons -->
                         <div class="card-buttons">
                           {% if user.is_authenticated and SwimPosts.creator == user %}
-                            <a href="{% url 'edit_swim' SwimPosts.pk %}">
-                              <button class="btn btn-edit" post_id="SwimPosts.id">
-                                Edit
-                              </button>
+                            <a href="{% url 'edit_swim' SwimPosts.pk %}" class="btn btn-edit">
+                              Edit
                             </a>
                           {% endif %}
                           <!-- prettier-ignore -->
                           {% if user.is_authenticated %}
                             <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
                               {% csrf_token %}
-                              <button id="join-swim-btn-{{ joined_swim.swim.pk }}" class="button-posts">Join this swim</button>
+                              <button class="button-posts">Join this swim</button>
                             </form>
                           {% endif %}
                           <!-- prettier-ignore -->
                           {% if user.is_authenticated and SwimPosts.creator == user %}
-                            <a href="{% url 'delete_swim' SwimPosts.pk %}">
-                              <button class="btn btn-delete">Delete</button>
+                            <a href="{% url 'delete_swim' SwimPosts.pk %}" class="btn btn-delete">
+                              Delete
                             </a>
                             {% endif %}
                         </div>
