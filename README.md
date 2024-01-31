@@ -19,6 +19,7 @@ The site is aimed at all wild swimmers around Scotland and hopes to help build a
     - [Database Schema](#database-schema)
     - [Typography](#typography)
     - [Colour Palette](#colour-palette)
+    - [Logo](#logo)
     - [Design Choices](#design-choices)
 - [Features](#features)
     - [Existing Features](#existing-features)
@@ -39,6 +40,9 @@ The site is aimed at all wild swimmers around Scotland and hopes to help build a
     - [Deploying on GitHub Pages](#deploying-on-github-pages)
     - [The ElephantSQL Database](#the-elephantsql-database)
 - [Credits](#credits)
+    - [Content](#content)
+        - [Images](#images)
+    - [Education](#education)
 - [Acknowledgements](#acknoledgements)
 
 [Back to Top](#wild-swim-scotland)
@@ -79,13 +83,13 @@ For this project the Django User Model was used for user account and one custom 
 
 Orginally there were plans to create a review model, however this feature was not fully developed and has been moved to future developmeants.
 
-The data schema was created using [drawSQL]( https://drawsql.app/ “drawsql website homepage”) before the project was started to get the flow and function of the models. Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
+The data schema was created using [drawSQL](https://drawsql.app/ "drawsql website homepage") before the project was started to get the flow and function of the models. Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
 
-![Data Schema Image](documentation/readme-imagesdata-schema.png " Data Schema Image ")
+![Data Schema Image](documentation/readme-images/data-schema.png " Data Schema Image ")
 
 ## Typography
 
-The google font [Oswald]( https://fonts.google.com/specimen/Oswald “oswald font”) was used throughout the site with different weights for different heading and paragraphs.
+The google font [Oswald](https://fonts.google.com/specimen/Oswald/ "oswarld font") was used throughout the site with different weights for different heading and paragraphs.
 
 I chose this font for its tall height and wide proportions, making it a great choice for readability and also mimicking the swim cards height, making the site flow nicely. Oswald has rounded corners which give it a friendly appearance while still remaining bold and strong.  
 
@@ -94,6 +98,12 @@ I chose this font for its tall height and wide proportions, making it a great ch
 I chose the colour #0d1a32 to remind people of the water and paired this with a white background for contrast and for a clean look and finish. As the swims will all have an image of a wild swim, either uploaded by the creator or using the default image, the blues in images from the water will match with #0d1a32 as the primary colour. 
 
 ![Color Hexa Image](documentation/readme-images/color-hexa.png " Color Hexa Image ")
+
+### Logo
+
+The wild swim logo was created by Sarah Goodwin using Photoshop and the Oswald font. Waves were added to tie the site user back to the main purpose of the site, wild swimming.
+
+![Logo Image](documentation/readme-images/ws-logo.png " Logo Image ")
 
 ## Design Choices
 
@@ -219,8 +229,10 @@ In the future I would like to have the join swim button log which user has joine
 
 # Technologies Used
 
-- [Lucidchar](https://www.lucidchart.com// "link to Lucidchart homepage")
+- [Lucidchart](https://www.lucidchart.com/ "link to Lucidchart homepage")
 Lucidchart was used to create the wireframe in the planning stages of the project
+- [drawSQL](https://drawsql.app/ “drawsql website homepage”)
+Drawsql was used to create the data schema
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "link to html5 wikipedia")
 Used to create structure and content for the site.
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html "link to w3")
@@ -310,6 +322,17 @@ DATABASES = {
 
 # Credits
 
+## Content
+
+Wording for the site was all created by Sarah Goodwin
+
+### Images
+
+Images for swim posts were taken from google images of the swim location.
+The logo image was created by Sarah Goodwin on Photoshop
+
+## Education
+
 *Django models additional learning:*
 - [Making queries](https://docs.djangoproject.com/en/5.0/topics/db/queries/ 'django documention for making queries')
 To gain more understanding of making queries for my django modules this page was used, especially for the SwimPosts model.
@@ -344,6 +367,20 @@ To gain more understanding of how to created CRUD functionality, these sources w
 *Error Pages*
 - [Adding Error Pages, 404 & 500](https://www.makeuseof.com/create-custom-404-error-page-django/ 'make use of us webpage')
 
+*Additional Education*
+- [Stack Overflow](https://stackoverflow.com/ "Link to Stack Overflow webpage")
+Stack overflow was used to answer questions as to why certain code may not be performing as expected.
+
+- [ChatGPT](https://openai.com/blog/chatgpt "link to chatgpt page")
+  ChatGPT was used gain a better understanding of errors faced
+
+- [CluelessBiker/mentoring](https://github.com/CluelessBiker/mentoring "link to CluesslessBiker repo")
+  CluelessBiker mentoring github page was used to check examples of projects, access links to resources such as validators and w3schools, Am I Responsive.
+
 # Acknowledgements
+
+- Mentor, Lauren-Nicole, for all her help and support, the useful resources she provided and for being a friendly face throughout! Could not have done this project without her!!
+- Friends and family who helped test the site on different devices and give real world user feedback
+
 
 [Back to Top](#wild-swim-scotland)
