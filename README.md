@@ -4,7 +4,7 @@
 
 # Introduction
 
-Wild Swim Scotland is a site for the community of wild swimmers within Scotland to connect and to organise group swim. The staff users will post upcoming swims so that their community can sign up for a swim, view their upcoming swims and connect with each other through reviews. 
+Wild Swim Scotland is a site for the community of wild swimmers within Scotland to connect and find out about upcoming swims they may wish to participate in. The staff users will post upcoming swims so that their community can join a swim, and site users can go back to the site to view their upcoming swims.
 
 The site is aimed at all wild swimmers around Scotland and hopes to help build a sense of community for these lovers of the cold!
 
@@ -20,10 +20,9 @@ The site is aimed at all wild swimmers around Scotland and hopes to help build a
     - [Typography](#typography)
     - [Colour Palette](#colour-palette)
     - [Design Choices](#design-choices)
-- [Site Structure](#site-structure)
 - [Features](#features)
     - [Existing Features](#existing-features)
-        -[Non logged in user](#non-logged-in-user)
+        - [Non logged in user](#non-logged-in-user)
             - [The Landing page And General Site Content](#the-landing-page-and-general-site-content)
             - [Login](#login)
             - [Register](#register)
@@ -55,7 +54,6 @@ The goals of the sites functionality are:
 - Logged In: users have the ability to join a swim and view their upcoming joined swims
 - Logged Out: users are asked if they wish to sign out of the site
 - Staff login: staff users can add new swims, read edit and delete the swims they have created from their staff account
-- Reviews: users can write a review on the swim location to let other users know what their experience was, users can read, edit and delete the reviews they personally write from their account
 
 # Agile Development
 
@@ -79,7 +77,9 @@ Logo was moved to middle of page to have more impact.
 
 ## Database Schema
 
-For this project the Django User Model was used for user account and two custom models with full CRUD were created for creating swims and leaving reviews. A third custom model was created for joining a swim, however due to the function of the site this does not have full CRUD as users can only edit and delete their joined swim, rather than create and update.
+For this project the Django User Model was used for user account and one custom models with full CRUD were created for creating swims. A second custom model was created for joining a swim, however due to the function of the site this does not have full CRUD as users can only edit and delete their joined swim, rather than create and update.
+
+Orginally there were plans to create a review model, however this feature was not fully developed and has been moved to future developmeants.
 
 The data schema was created using [drawSQL]( https://drawsql.app/ “drawsql website homepage”) before the project was started to get the flow and function of the models. Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
 
@@ -107,13 +107,11 @@ This is why I chose to display the swims as swim cards which have a very clean l
 
 [Back to Top](#wild-swim-scotland)
 
-# Site Structure
-
 # Features
 
 ## Existing Features
 
-# Non-Logged in User
+## Non-Logged in User
 
 ### The Landing page And General Site Content
 
@@ -122,8 +120,9 @@ This is why I chose to display the swims as swim cards which have a very clean l
 The landing page of the site shows a non logged in / non registered user the upcoming swims and gives and explination of what Wild Swim Scotland is about. 
 The text 
 *Please see our upcoming swims, with times, dates and difficulty level.
-Register an account with us and let us know your interest in joining a specific swim or 
-leave a review on places you have been before.*
+Register an account with us and save your swims so that you can come back to see them.
+There is no limit on the number of swims you can join, or how many people can join them.
+We'd love to see you there!*
 Gives users a clear indication on what the site offers them and what actions they should next perform.
 
 It has 2 call to actions, Reigster and Login. 
@@ -167,6 +166,10 @@ The logout page checks if the user does wish to sign out of the site.
 
 The 'Your Upcoming Swims' page lets users know what swims they have joined previously and allows them to remove swims from their swim list. 
 
+If the user has not yet joined an upcoming swim they will see the message "No swims joined yet"
+
+![no swims joined](static/README-images/no-swims-yet.png " no-swims-joined image ")
+
 ## Staff User
 
 ### Add Swim
@@ -196,9 +199,54 @@ When clicking the delete swim buttton the user is asked if they are sure they wa
 
 ## Future Features
 
+There are some future features that I would like to add to the project to improve user functions.
+
+- Reviews
+I began to create the review function of the site, where users could come in and add reviews for different swim locations so that others could make a more informed decision on if they wanted to join a particular swim.
+
+- Community Board
+It would be good to have a community board for wild swimmers to chat to each other and post stories and photos from their swims and connect together
+
+- Date Picker
+Currently the date picker allows staff users to pick any date, a future implimentation would be to restrict the date picker to only have future dates
+
+- Past Swims
+A section of the community page where past swims would automatically go after their date was passed so users could see what type of swims they had done previously
+
+- Joined Swims saved to staff dashboard
+In the future I would like to have the join swim button log which user has joined which swim and have a staff dashboard area so that staff users could see how many people had signed up to that particular swim. 
+
+
 [Back to Top](#wild-swim-scotland)
 
 # Technologies Used
+
+- [Lucidchar](https://www.lucidchart.com// "link to Lucidchart homepage")
+Lucidchart was used to create the wireframe in the planning stages of the project
+- [HTML5](https://en.wikipedia.org/wiki/HTML5 "link to html5 wikipedia")
+Used to create structure and content for the site.
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html "link to w3")
+Used to add custom styles to the site.
+- [Django](https://www.djangoproject.com/ "link to django docs homepage")
+The python framework used to develop the site.
+- [Bootstrap](https://getbootstrap.com/ "link to bootstrap homepage")
+The CSS framework used to add styles and structure to the site.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language) "link to Python wikipedia")
+Used to provide functionality to the site.
+- [Cloudinary](https://cloudinary.com/ "link to cloudinary homepage")
+Used to host images for the swim cards
+- [ElephantSQL](https://www.elephantsql.com/ "link to elephantsql homepage")
+Used to host the database used for the site.
+- [Am I Responsive?](https://ui.dev/amiresponsive "Link to Am I responsive webpage")
+Am I Responsive was used to see the responsive design and create screenshots of the final page on different devices.
+- [Codeanywhere](https://app.codeanywhere.com/ "Link to Codeanywhere webpage")
+Codeanywhere was used for writing code, adding, committing and pushing to GitHub before issues were faced and moved to GitPod.
+- [Gitpod](https://www.gitpod.io/#get-started "Link to gitpod webpage")
+Used to continue to create code and file structure for the respository.
+- [GitHub](https://github.com/ "Link to github webpage")
+GitHub was used to store the code files, README files and asset files after pushing
+- [Heroku](https://id.heroku.com/login "Link to Heroku login")
+Heroku was used to deploy the project. 
 
 ## Testing
 
@@ -242,7 +290,7 @@ To deploy this page to Heroku from its Codeanywhere repository, the following st
 To gain more understanding of making queries for my django modules this page was used, especially for the SwimPosts model.
 
 - [Start Ratings for reviews](https://django-star-ratings.readthedocs.io/en/latest/?badge=latest/ 'how to use start ratings in django')
-I wanted to encorporate star ratings in the review section of the site so this page was used to learn about star ratings in Django.
+I wanted to encorporate star ratings in the review section of the site so this page was used to learn about star ratings in Django. This has been kept in for future implimentation
 
 - [Django Validators](https://studygyaan.com/django/how-to-implement-validators-in-django-models?utm_content=cmp-true 'how to use django validators')
 - [BuyBytes Youtube video on Validators](https://www.youtube.com/watch?v=1x0Zdukpjrs 'BugBytes youtube on Django ORM - Model Field Validators')
