@@ -209,7 +209,7 @@ A user testing form was sent to friends and family to test the site on their dev
 
 Here is the form that was sent.
 
-![user testing image](documentation/testing-images/user-testing-form.png "user testing form screenshot")
+![user testing image](documentation/testing-images/user-testing-form-tempalate.png "user testing form screenshot")
 
 Feedback from the form
 
