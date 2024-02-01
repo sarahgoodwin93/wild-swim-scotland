@@ -148,7 +148,7 @@ The text at the bottom of the login section lets users know they must be logged 
 
 If the username and password are not correct this error will show.
 
-![username error](documentation/readme-imagess/username-error.png " username error image ")
+![username error](documentation/readme-images/username-error.png " username error image ")
 
 ### Register
 
@@ -260,7 +260,7 @@ GitHub was used to store the code files, README files and asset files after push
 - [Heroku](https://id.heroku.com/login "Link to Heroku login")
 Heroku was used to deploy the project. 
 
-## Testing
+# Testing
 
 Testing detail can be found [here](TESTING.md)
 

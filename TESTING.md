@@ -23,7 +23,7 @@ add_swim.html
 
 edit_swim.html
 
-![edit_swim errors](documentation/testing-images/edit-swim-error.png "edit swim error image")
+![edit_swim errors](documentation/testing-images/edit-swim-errors.png "edit swim error image")
 
 signup.html
 
@@ -213,11 +213,18 @@ Here is the form that was sent.
 
 Feedback from the form
 
-* Better responsivness for mobile - added media queries
-* User testing did not throw any errors as users followed instructions
-* Site was easy to use and user friendly 
+* Better responsivness for mobile - added media queries after this feedback
+* User testing did not throw many errors as users followed instructions
+* Users found it easy to add, edit, and delete a swim
+* Users found it easy to create an account and navigate the website 
 
-# Automated Testing
+### Things to implement from user testing
+
+* Uer reported that "I put in a none matching password and it didn't warn me" so password errors were added to form to ensure this cannot happen
+
+* User reported "Had a problem with the time field. Would be good to know the format it was looking for." so placeholder text was added
+
+* User reported "It would be good if errors popped up in a different colour. I entered something incorrectly when creating an account and it took me a second to notice because it was the same colour font" - this would be a good feature for future implementation 
 
 # Accessibility Testing
 
