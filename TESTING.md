@@ -223,17 +223,63 @@ Feedback from the form
 
 ## Lighthouse
 
+Google Lighthouse test from the dev tools was used to test the pages on the site for 
+
+* Performance
+* Accessibility
+* Best Practices
+* SEO
+
+Examples of results are as follows:
+
+<details>
+<summary> Home </summary>
+
+![home lighthouse](documentation/testing-images/lighthouse-home.png " hoem lighthouse image")
+
+</details>
+
+<details>
+<summary> Upcoming Swims </summary>
+
+![joined_swmis lighthouse](documentation/testing-images/lighthouse-joined-swim.png "joined swim lighthouse image")
+
+
+</details>
+
+<details>
+<summary> Add Swim </summary>
+
+![Add Swim lighthouse](documentation/testing-images/lighthouse-add-swim.png "add swim lighthouse image")
+
+</details>
+
+<details>
+<summary> Logout </summary>
+
+![logout lighthouse](documentation/testing-images/lighthouse-logout.png"logout lighthouse image")
+
+</details>
+
 # Known Bugs
 
 ## Resolved
 
-- HTML
+Error in the console was showing a Mixed Content Error
 
-- Python
+![mixed content error](documentation/testing-images/mixed-content-error.png "mixed content error image")
 
-- Other
+This error was typed into Google and the [Stack Overflow](https://stackoverflow.com/questions/67765238/mixed-content-the-page-at-was-loaded-over-https-but-requested-an-insecure-resour "stack overflow mixed content error") question for the error gave the answer.
+
+The meta tag <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> was added to the base.html and the error was resolved.
 
 - Unresolved 
+
+Errors for the add swim and edit swim forms from W3C were flagged however as this is needed for the site function they have been left in.
+
+![add_swim errors2](documentation/testing-images/add-swim2-error.png "add swim 2nd error image")
+
+![edit_swim errors](documentation/testing-images/edit-swim-error.png "edit swim error image")
 
 Return to [README.md](README.md)
 
