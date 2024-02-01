@@ -141,57 +141,59 @@ Final testing showed:
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| Add Swim | Clicked Add Swim nav link | Add swim form showed | -----------| ------- |
-| Title | Tried to type title | --------------- | -----------| ------- |
-| Description | ---------- | --------------- | -----------| ------- |
-| Date | ---------- | --------------- | -----------| ------- |
-| Time | ---------- | --------------- | -----------| ------- |
-| Swim Difficulty | ---------- | --------------- | -----------| ------- |
-| Location | ---------- | --------------- | -----------| ------- |
-| With image | ---------- | --------------- | -----------| ------- |
-| No image | ---------- | --------------- | -----------| ------- |
-| Submit | ---------- | --------------- | -----------| ------- |
-| New swim added to homepage | ---------- | --------------- | -----------| ------- |
+| Add Swim | Clicked Add Swim nav link | Add swim form showed | Worked as expected | N/A |
+| Title | Tried to type unending title  | Form stops user from typing further | Worked as expected | N/A |
+| Description | Tired to type more than 250 characters | Form stops typing further | Worked as expected | N/A |
+| Date | Tried to input wrong date format | Date Picker stops form with error message | Worked as expected | N/A |
+| Date | Tried to type 45 in day section | Date Picker automcatically moves user forward | Worked as expected | N/A |
+| Time | Tried to input 19.20 as time | Error message show | Error message showed 'Enter a valid time.' | Worked as expected |
+| Swim Difficulty | Tried to put 10 as swim level | Error message to show | Error message showed 'Ensure this value is less than or equal to 5.' | Worked as expected |
+| Location | Tried to type unending location | Form stops user from typing further | Worked as expected | N/A |
+| With image | Submitted large image | Image to be resized to fit swim card | Worked as expected | N/A |
+| No image | Submitted no image | Image to be replaced with palceholder | Worked as expected | N/A |
+| Submit | Clicked submit button | Form to be submitted and new swim card created | Worked as expected | N/A |
+| New swim added to homepage | Can see swim on homepage | Showing edit and delete buttons for new swim | Worked as expected | N/A |
 
 ## Edit Swim
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| Data prefilled | ---------- | --------------- | -----------| ------- |
-| Submit | ---------- | --------------- | -----------| ------- |
-| Title | ---------- | --------------- | -----------| ------- |
-| Description | ---------- | --------------- | -----------| ------- |
-| Date | ---------- | --------------- | -----------| ------- |
-| Time | ---------- | --------------- | -----------| ------- |
-| Swim Difficulty | ---------- | --------------- | -----------| ------- |
-| Location | ---------- | --------------- | -----------| ------- |
-| With image | ---------- | --------------- | -----------| ------- |
-| No image | ---------- | --------------- | -----------| ------- |
-| Submit | ---------- | --------------- | -----------| ------- |
-| New swim added to homepage | ---------- | --------------- | -----------| ------- |
+| Data prefilled | Clicked Edit Swim | Data from swim is prefilled | Worked as expected | N/A |
+| Title | Tried to type unending title  | Form stops user from typing further | Worked as expected | N/A |
+| Description | Tired to type more than 250 characters | Form stops typing further | Worked as expected | N/A |
+| Date | Tried to input wrong date format | Date Picker stops form with error message | Worked as expected | N/A |
+| Date | Tried to type 45 in day section | Date Picker automcatically moves user forward | Worked as expected | N/A |
+| Time | Tried to input 19.20 as time | Error message show | Error message showed 'Enter a valid time.' | Worked as expected |
+| Swim Difficulty | Tried to put 10 as swim level | Error message to show | Error message showed 'Ensure this value is less than or equal to 5.' | Worked as expected |
+| Location | Tried to type unending location | Form stops user from typing further | Worked as expected | N/A |
+| With image | Submitted large image | Image to be resized to fit swim card | Worked as expected | N/A |
+| No image | Submitted no image | Image to be replaced with palceholder | Worked as expected | N/A |
+| Submit | Clicked submit | New edits show on homepage | Worked as expected | N/A |
+| New swim added to homepage | Clicked Home | New edits show on homepage | Worked as expected | N/A |
 
 ## Delete Swim
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| Delete Swim | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
-| -------- | ---------- | --------------- | -----------| ------- |
+| Delete Swim | Clicked Delete Swim button on swim card | Message shows asking if swim should be deleted | Worked as expected | N/A |
+| Delete Swim on delete page | Clicked delete | Swim is removed from homepage and user redirected back home | Worked as expected | N/A |
+
 
 ## Other Testing
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| 404 Error | ---------- | --------------- | -----------| ------- |
-| URL Access | ---------- | --------------- | -----------| ------- |
+| 404 Error | Typed /hello at end of url | 404 error page to show | Worked as expected | N/A |
+| URL Access | Typed /swim/add at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
+| URL Access | Typed /atricle/add at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
 
 ## Responsivness testing
 
 | **DEVICE** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| Samsung22 Ultra | ---------- | --------------- | -----------| ------- |
-| iPhone 15 | ---------- | --------------- | -----------| ------- |
-| Dev Tools for iPad | ---------- | --------------- | -----------| ------- |
+| Samsung22 Ultra | Tested site on mobile | Site functions and is responsive | Worked as expected | N/A |
+| iPhone 15 | Tested site on mobile | Site functions and is responsive | Worked as expected | N/A |
+| Dev Tools for iPad | Tested site for iPad Pro via dev tools | Site functions and is responsive | Worked as expected | N/A |
 
 ## Browser Compatibility
 
