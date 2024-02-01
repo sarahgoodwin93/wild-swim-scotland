@@ -5,23 +5,23 @@ Return to [README.md](README.md)
 # Table of Contents
 
 - [Code Validation](#code-validation)
-- [W3C HTML Validation Results](#w3c-html-validation-results)
-- [W3C CSS Validation Results](#w3c-css-validation-results)
-- [JSHint Validation Results](#jshint-validation-results)
-- [CI Python Linter Validation Resu](#ci-python-linter-validation-results)
-- [Manaul Testing](#manaul-testing)
-- [Home Page](#home-page)
-- [Register Page](#register-page)
-- [Login Page](#login-page)
-- [Homepage as Logged in user](#homepage-as-logged-in-user)
-- [Upcoming Swims](#upcoming-swims)
-- [Logout](#logout)
-- [Homepage as staff user](#homepage-as-staff-user)
-- [Add Swim](#add-swim)
-- [Edit Swim](#edit-swim)
-- [Delete Swim](#delete-swim)
-- [Other Testing](#other-testing)
-- [Responsivness testing](#responsivness-testing)
+    - [W3C HTML Validation Results](#w3c-html-validation-results)
+    - [W3C CSS Validation Results](#w3c-css-validation-results)
+    - [JSHint Validation Results](#jshint-validation-results)
+    - [CI Python Linter Validation Results](#ci-python-linter-validation-results)
+- [Manual Testing](#manaul-testing)
+    - [Home Page](#home-page)
+    - [Register Page](#register-page)
+    - [Login Page](#login-page)
+    - [Homepage as Logged in user](#homepage-as-logged-in-user)
+    - [Upcoming Swims](#upcoming-swims)
+    - [Logout](#logout)
+    - [Homepage as staff user](#homepage-as-staff-user)
+    - [Add Swim](#add-swim)
+    - [Edit Swim](#edit-swim)
+    - [Delete Swim](#delete-swim)
+    - [Other Testing](#other-testing)
+    - [Responsiveness testing](#responsivness-testing)
 - [Browser Compatibility](#browser-compatibility)
 - [User Testing](#user-testing)
 - [Accessibility Testing](#accessibility-testing)
@@ -76,7 +76,7 @@ After testing all errors were fixed and document checking complete was shown for
 
 All custom CSS has been run through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "jigsaw w3 page")
 
-No errors were found when running css through w3c validator
+No errors were found when running CSS through w3c validator
 
 ![css w3c](documentation/testing-images/css-errors.png "css validator image")
 
@@ -101,21 +101,21 @@ Final testing showed:
 
 ![CI Python Linter](documentation/testing-images/linter-no-errors.png "python linter image")
 
-# Manaul Testing
+# Manual Testing
 
 ## Home Page
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| Swim Cards | Opened site url | Swim cards are visable | Worked as expected | N/A |
-| Nav Links | Opened site url | Only register and login nav links are visable | Worked as expected | N/A |
+| Swim Cards | Opened site url | Swim cards are visible | Worked as expected | N/A |
+| Nav Links | Opened site url | Only register and login nav links are visible | Worked as expected | N/A |
 | Join Swim Buttons | Opened site url | Cannot see Join Swim Buttons | Worked as expected | N/A |
 
 ## Register Page
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
-| Registration Form | Clicked on reigster nav link | Register form is displaying | Worked as expected | N/A |
+| Registration Form | Clicked on register nav link | Register form is displaying | Worked as expected | N/A |
 | Username | Typed in @£$%^ as username | Warning will show | Warning showed 'Enter a valid username. This value may contain only letters, numbers, and @/./+/-/_ characters.' | Worked as expected |
 | Username | Typed in admin as username | Warning will show | Warning showed 'A user with that username already exists.' | Worked as expected |
 | Password 1 | Typed in password same as username | Warning will show | Warning showed 'The password is too similar to the username.' | Worked as expected |
@@ -139,7 +139,7 @@ Final testing showed:
 | Join Swim Button | Clicked Join Swim | Swim added to upcoming swims page | Worked as expected | N/A |
 | Your Upcoming Swims | Left page and re-clicked on upcoming swims | Previous swims that had been added still there | Worked as expected | N/A |
 | Logout | Logout button replaced login button | No login button | Worked as expected | N/A |
-| Register | Register button no longer avaliable | No register button | Worked as expected | N/A |
+| Register | Register button no longer available | No register button | Worked as expected | N/A |
 
 ## Upcoming Swims
 
@@ -171,12 +171,12 @@ Final testing showed:
 | Title | Tried to type unending title  | Form stops user from typing further | Worked as expected | N/A |
 | Description | Tired to type more than 250 characters | Form stops typing further | Worked as expected | N/A |
 | Date | Tried to input wrong date format | Date Picker stops form with error message | Worked as expected | N/A |
-| Date | Tried to type 45 in day section | Date Picker automcatically moves user forward | Worked as expected | N/A |
+| Date | Tried to type 45 in day section | Date Picker automatically moves user forward | Worked as expected | N/A |
 | Time | Tried to input 19.20 as time | Error message show | Error message showed 'Enter a valid time.' | Worked as expected |
 | Swim Difficulty | Tried to put 10 as swim level | Error message to show | Error message showed 'Ensure this value is less than or equal to 5.' | Worked as expected |
 | Location | Tried to type unending location | Form stops user from typing further | Worked as expected | N/A |
 | With image | Submitted large image | Image to be resized to fit swim card | Worked as expected | N/A |
-| No image | Submitted no image | Image to be replaced with palceholder | Worked as expected | N/A |
+| No image | Submitted no image | Image to be replaced with placeholder | Worked as expected | N/A |
 | Submit | Clicked submit button | Form to be submitted and new swim card created | Worked as expected | N/A |
 | New swim added to homepage | Can see swim on homepage | Showing edit and delete buttons for new swim | Worked as expected | N/A |
 
@@ -188,12 +188,12 @@ Final testing showed:
 | Title | Tried to type unending title  | Form stops user from typing further | Worked as expected | N/A |
 | Description | Tired to type more than 250 characters | Form stops typing further | Worked as expected | N/A |
 | Date | Tried to input wrong date format | Date Picker stops form with error message | Worked as expected | N/A |
-| Date | Tried to type 45 in day section | Date Picker automcatically moves user forward | Worked as expected | N/A |
+| Date | Tried to type 45 in day section | Date Picker automatically moves user forward | Worked as expected | N/A |
 | Time | Tried to input 19.20 as time | Error message show | Error message showed 'Enter a valid time.' | Worked as expected |
 | Swim Difficulty | Tried to put 10 as swim level | Error message to show | Error message showed 'Ensure this value is less than or equal to 5.' | Worked as expected |
 | Location | Tried to type unending location | Form stops user from typing further | Worked as expected | N/A |
 | With image | Submitted large image | Image to be resized to fit swim card | Worked as expected | N/A |
-| No image | Submitted no image | Image to be replaced with palceholder | Worked as expected | N/A |
+| No image | Submitted no image | Image to be replaced with placeholder | Worked as expected | N/A |
 | Submit | Clicked submit | New edits show on homepage | Worked as expected | N/A |
 | New swim added to homepage | Clicked Home | New edits show on homepage | Worked as expected | N/A |
 
@@ -211,9 +211,9 @@ Final testing showed:
 | -------- | ---------- | --------------- | -----------| ------- |
 | 404 Error | Typed /hello at end of url | 404 error page to show | Worked as expected | N/A |
 | URL Access | Typed /swim/add at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
-| URL Access | Typed /atricle/add at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
+| URL Access | Typed /article/add at end of url | 404 error page to show | Taken back to login page | Warning could be added to show to user what happened rather than redirect |
 
-## Responsivness testing
+## Responsiveness testing
 
 | **DEVICE** | **ACTION** | **EXPECTATION** | **RESULT** | **FIX** |
 | -------- | ---------- | --------------- | -----------| ------- |
@@ -239,14 +239,14 @@ Here is the form that was sent.
 
 Feedback from the form
 
-* Better responsivness for mobile - added media queries after this feedback
+* Better responsiveness for mobile - added media queries after this feedback
 * User testing did not throw many errors as users followed instructions
 * Users found it easy to add, edit, and delete a swim
 * Users found it easy to create an account and navigate the website 
 
 ### Things to implement from user testing
 
-* Uer reported that "I put in a none matching password and it didn't warn me" so password errors were added to form to ensure this cannot happen
+* User reported that "I put in a non matching password and it didn't warn me" so password errors were added to form to ensure this cannot happen
 
 * User reported "Had a problem with the time field. Would be good to know the format it was looking for." so placeholder text was added
 
@@ -290,7 +290,7 @@ Examples of results are as follows:
 <details>
 <summary> Logout </summary>
 
-![logout lighthouse](documentation/testing-images/lighthouse-logout.png"logout lighthouse image")
+![logout lighthouse](documentation/testing-images/lighthouse-logout.png "logout lighthouse image")
 
 </details>
 
@@ -306,7 +306,7 @@ This error was typed into Google and the [Stack Overflow](https://stackoverflow.
 
 The meta tag <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> was added to the base.html and the error was resolved.
 
-- Unresolved 
+## Unresolved 
 
 Errors for the add swim and edit swim forms from W3C were flagged however as this is needed for the site function they have been left in.
 

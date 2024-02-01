@@ -181,14 +181,11 @@ nav {
     margin-top: 20px;
 }
 
-#id_remember {
+#id_remember,
+#id_remember input,
+#id_remember label {
     display: none;
 }
-
-#id_remember input {
-    display: none;
-}
-
 
 #signup_form button {
     margin-top: 10px;
@@ -318,13 +315,21 @@ footer {
     margin-top: auto;
 }
 
-/* 404 & 500 Error pages */
+/* Error pages */
 
 .page-error {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.errorlist {
+    color: red;
+}
+
+.errorlist nonfield {
+    color: red;
 }
 
 /* Mobile Adjustments */

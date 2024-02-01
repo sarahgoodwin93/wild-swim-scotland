@@ -33,6 +33,7 @@ The site is aimed at all wild swimmers around Scotland and hopes to help build a
         - [Staff User](#staff-user)
             - [Add Swim](#add-swim)
             - [Edit and Delete buttons](#edit-and-delete-buttons)
+            - [Delete Swims](#delete-swim)
     - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
@@ -55,7 +56,8 @@ The goals of the sites functionality are:
 - Register: users can register to the site so that they can use the sites functionality 
 - Logged In: users have the ability to join a swim and view their upcoming joined swims
 - Logged Out: users are asked if they wish to sign out of the site
-- Staff login: staff users can add new swims, read edit and delete the swims they have created from their staff account
+- Staff login: staff users can create a new swims, read, edit and delete the swims they have created from their staff account
+- Admin: can create new staff users
 
 # Agile Development
 
@@ -72,20 +74,21 @@ User stories were labelled using the MoSCoW method.
 ![Wireframe Image](documentation/readme-images/wireframe.png "wireframe image")
 
 Site structure was created before the site was created to test layout idea.
-After testing UX a different approach was taken for better flow of the site navigation. 
+After testing UX, a different approach was taken for better flow of the site navigation. 
 Nav bar was moved to middle of page with clear call to actions.
 Main image was removed to create focus on swim card images rather than a header iamge.
 Logo was moved to middle of page to have more impact. 
 
 ## Database Schema
 
-For this project the Django User Model was used for user account and one custom models with full CRUD were created for creating swims. A second custom model was created for joining a swim, however due to the function of the site this does not have full CRUD as users can only edit and delete their joined swim, rather than create and update.
+For this project the Django User Model was used for user account and one custom models with full CRUD were created for creating swims, this model is avaliable for staff users only. 
+A second custom model was created for joining a swim, however this does not have full CRUD as users can only edit and delete their joined swim, rather than create and update.
 
-Orginally there were plans to create a review model, however this feature was not fully developed and has been moved to future developmeants.
+The data schema was created using [drawSQL](https://drawsql.app/ "drawsql website homepage") before the project was started to get the flow and function of the models. 
 
-The data schema was created using [drawSQL](https://drawsql.app/ "drawsql website homepage") before the project was started to get the flow and function of the models. Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
+Some of the fields in the below image do not reflect the final data types used (such as Cloudinary) – please see the app for the true data types. 
 
-![Data Schema Image](documentation/readme-images/data-schema.png " Data Schema Image ")
+![Data Schema Image](documentation/readme-images/new-data-schema.png " Data Schema Image ")
 
 ## Typography
 
@@ -95,9 +98,11 @@ I chose this font for its tall height and wide proportions, making it a great ch
 
 ## Colour Palette
 
-I chose the colour #0d1a32 to remind people of the water and paired this with a white background for contrast and for a clean look and finish. As the swims will all have an image of a wild swim, either uploaded by the creator or using the default image, the blues in images from the water will match with #0d1a32 as the primary colour. 
+I chose the colour #0d1a32 as the primary colour to remind people of the water and paired this with a white background for contrast and for a clean look and finish. As the swims will all have an image of a wild swim, either uploaded by the creator or using the default image, the blues in images from the water will help tie in with #0d1a32 as the primary colour. 
 
-![Color Hexa Image](documentation/readme-images/color-hexa.png " Color Hexa Image ")
+Secondary colours #327ab7 and #d6e4f0 were chosen as a continueation of #0d1a32 with an accent colour of #b5e2e0. These blues all represent the water that draws all swimmers to it. 
+
+![Color palette Image](documentation/readme-images/colour-palette.png" Color palette Image ")
 
 ### Logo
 
@@ -125,15 +130,15 @@ This is why I chose to display the swims as swim cards which have a very clean l
 
 ![Homepage](documentation/readme-images/homepage.png " Home page image ")
 
-The landing page of the site shows a non logged in / non registered user the upcoming swims and gives and explination of what Wild Swim Scotland is about. 
+The landing page of the site shows a non logged in / non registered user the swims cards and gives and explination of what Wild Swim Scotland is about. 
 The text 
 *Please see our upcoming swims, with times, dates and difficulty level.
-Register an account with us and save your swims so that you can come back to see them.
+Register an account with us and save your swims so that you can come back to see the details.
 There is no limit on the number of swims you can join, or how many people can join them.
 We'd love to see you there!*
 Gives users a clear indication on what the site offers them and what actions they should next perform.
 
-It has 2 call to actions, Reigster and Login. 
+The landing page has 2 call to actions, Reigster and Login. 
 
 The landing page is responsive for different screen sizes and scales down for easy mobile or tablet use. 
 
@@ -157,6 +162,9 @@ If the username and password are not correct this error will show.
 The register page welcomes users to the site with a friendly greeting. It lets users know that in order to use the site functions they must reigster an account.
 
 It offers them space for a username, password and then rechecks the password to ensure it matches and there were no errors.
+An example of some of the errors:
+
+![register form errors](documentation/readme-images/register-form-errors.png " register form errorsimage ")
 
 The text at the bottom lets users know who already have an account that they can sign in using the login page.
 
@@ -184,24 +192,27 @@ The page is soley for the user themselves and does not link to the staff user se
 
 ### Add Swim
 
+![add swim form](documentation/readme-images/add-swim-form.png " add swim form image ")
+
 The add swim page allows staff users to add new swism to the swim list. If they have not provided an image for their swim, the placeholder image will be added for them.
 The Add Swim page has warnings for both the date, time and swim difficulty fields if they are not entered correctly.
-To prevent users from entering the date in the wrong format the YYYY-MM-DD text has been added.
-To prevent users from enterting the time in the wrong formate the 00:00:00 text has been added.
-to prevent users from entering the swim difficulty incorrectly the 1-5 text has been added.
+To prevent users from entering the date in the wrong format the placeholder text 'YYYY-MM-DD' has been added.
+To prevent users from enterting the time in the wrong formate the placeholder text '00:00:00' has been added.
+to prevent users from entering the swim difficulty incorrectly the 'Between 1-5 text' has been added.
 If the above fields are not entered correctly a warning will show.
 
-![swim warning](documentation/readme-images/swim-warning.png " swim warning image ")
+![add swim warnings](documentation/readme-images/add-swim-warnings.png " add swim warnings image ")
 
-![time warning](documentation/readme-images/time-warning.png " time warning image ")
-
-![date warning](documentation/readme-images/date-warning.png " date warning image ")
 
 ## Edit and Delete buttons
+
+![edit and delete buttons](documentation/readme-images/edit-and-delete-button.png " edit and delete button image ")
 
 The edit and delete buttons only appear to a swim that the specific staff user has added, they cannot edit or delete swims other staff members have created.
 
 When clicking on the edit swim button the form has the same functions as the add swim form, however the swim details are already populated so that the staff user can edit them according. The same error warning functions as the add swim form.
+
+## Delete Swim
 
 When clicking the delete swim buttton the user is asked if they are sure they want to delete the swim before the action is performed. 
 
@@ -211,19 +222,19 @@ When clicking the delete swim buttton the user is asked if they are sure they wa
 
 There are some future features that I would like to add to the project to improve user functions.
 
-- Reviews
-I began to create the review function of the site, where users could come in and add reviews for different swim locations so that others could make a more informed decision on if they wanted to join a particular swim.
+- Reviews:
+I began to create the review feature of the site, where users could come in and add reviews for different swim locations so that others could make a more informed decision on if they wanted to join a particular swim. However this feature was moved to future implimentation as it could not be fully realised to the standard of the project at this time.
 
-- Community Board
+- Community Board:
 It would be good to have a community board for wild swimmers to chat to each other and post stories and photos from their swims and connect together
 
-- Date Picker
+- Date Picker:
 Currently the date picker allows staff users to pick any date, a future implimentation would be to restrict the date picker to only have future dates
 
-- Past Swims
+- Past Swims:
 A section of the community page where past swims would automatically go after their date was passed so users could see what type of swims they had done previously
 
-- Joined Swims saved to staff dashboard
+- Joined Swims saved to staff dashboard:
 In the future I would like to have the join swim button log which user has joined which swim and have a staff dashboard area so that staff users could see how many people had signed up to that particular swim. 
 
 
@@ -233,7 +244,7 @@ In the future I would like to have the join swim button log which user has joine
 
 - [Lucidchart](https://www.lucidchart.com/ "link to Lucidchart homepage")
 Lucidchart was used to create the wireframe in the planning stages of the project
-- [drawSQL](https://drawsql.app/ “drawsql website homepage”)
+- [drawSQL](https://drawsql.app/ "Drawsql homepage")
 Drawsql was used to create the data schema
 - [HTML5](https://en.wikipedia.org/wiki/HTML5 "link to html5 wikipedia")
 Used to create structure and content for the site.
@@ -266,8 +277,8 @@ Testing detail can be found [here](TESTING.md)
 
 # Deployment
 
-This project was developed using [Codeanywhere](https://app.codeanywhere.com/ "Link to Codeanywhere login") at the start until issues with codeanywhere occured. It was committed and pushed to GitHub using the Codeanywehere terminals.
-After the issues with codeanywhere the project was moved to [GitPod](https://www.gitpod.io/ "link to gitpod homepage") and continuted from there. The projected had deployed at the start so the following is a step by step of how it was first deployed.
+This project was developed using [Codeanywhere](https://app.codeanywhere.com/ "Link to Codeanywhere login") to begin with until issues with codeanywhere occured. It was committed and pushed to GitHub using the Codeanywehere terminals.
+After the issues with codeanywhere, the project was moved to [GitPod](https://www.gitpod.io/ "link to gitpod homepage") and continuted from there. The projected had deployed at the start so the following is a step by step of how it was first deployed.
 
 ## Cloning The Repository
 
