@@ -2,6 +2,32 @@
 
 Return to [README.md](README.md)
 
+# Table of Contents
+
+- [Code Validation](#code-validation)
+- [W3C HTML Validation Results](#w3c-html-validation-results)
+- [W3C CSS Validation Results](#w3c-css-validation-results)
+- [JSHint Validation Results](#jshint-validation-results)
+- [CI Python Linter Validation Resu](#ci-python-linter-validation-results)
+- [Manaul Testing](#manaul-testing)
+- [Home Page](#home-page)
+- [Register Page](#register-page)
+- [Login Page](#login-page)
+- [Homepage as Logged in user](#homepage-as-logged-in-user)
+- [Upcoming Swims](#upcoming-swims)
+- [Logout](#logout)
+- [Homepage as staff user](#homepage-as-staff-user)
+- [Add Swim](#add-swim)
+- [Edit Swim](#edit-swim)
+- [Delete Swim](#delete-swim)
+- [Other Testing](#other-testing)
+- [Responsivness testing](#responsivness-testing)
+- [Browser Compatibility](#browser-compatibility)
+- [User Testing](#user-testing)
+- [Accessibility Testing](#accessibility-testing)
+- [Known Bugs](#known-bugs)
+
+
 # Code Validation 
 
 ## W3C HTML Validation Results
@@ -286,7 +312,7 @@ Errors for the add swim and edit swim forms from W3C were flagged however as thi
 
 ![add_swim errors2](documentation/testing-images/add-swim2-error.png "add swim 2nd error image")
 
-![edit_swim errors](documentation/testing-images/edit-swim-error.png "edit swim error image")
+![edit_swim errors](documentation/testing-images/edit-swim-errors.png "edit swim error image")
 
 Return to [README.md](README.md)
 
