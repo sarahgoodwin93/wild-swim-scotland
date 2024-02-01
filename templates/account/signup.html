@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
@@ -9,48 +8,39 @@
 
 <div class="container">
   <div class="signup-form">
-    <div class="row login account-form">
-      <h1>{% trans "Welcome to Wild Swim" %}</h1>                    
-      <h4>We are excited you are here!</h4>
-      <p>In order to join a swim or leave a review, you must be registered with us first.</p>
-      <p>Please create a username and password in order to login.</p>
-      <form
-        class="signup"
-        id="signup_form"
-        method="post"
-        action="{% url 'account_signup' %}"
-      >
-        {% csrf_token %}
-      <p>
-        {{ form.username.label_tag }}
-        {{ form.username }}
-        {{ form.username.errors }}
-      </p>
-      <p>
-        {{ form.password1.label_tag }}
-        {{ form.password1 }}
-        {{ form.password1.errors }}
-      </p>
-      <p>
-        {{ form.password2.label_tag }}
-        {{ form.password2 }}
-        {{ form.password2.errors }}
-      </p>
-        {% if redirect_field_value %}
-        <input
-          type="hidden"
-          name="{{ redirect_field_name }}"
-          value="{{ redirect_field_value }}"
-      />
-        {% endif %}
-      <button type="submit">{% trans "Register" %} &raquo;</button>
-      </form>
-      <hr>
-      <p>
-        {% blocktrans %}Already have an account? Then please
-        <a href="{{ login_url }}">login</a>.{% endblocktrans %}
-      </p>
-    </div>
+      <div class="row login account-form">
+          <h1>{% trans "Welcome to Wild Swim" %}</h1>
+          <h4>We are excited you are here!</h4>
+          <p>In order to join a swim or leave a review, you must be registered with us first.</p>
+          <p>Please create a username and password in order to login.</p>
+          <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+              {% csrf_token %}
+              <p>
+                {{ form.username.label_tag }}
+                {{ form.username }}
+                {{ form.username.errors }}
+              </p>
+              <p>
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+              </p>
+              <p>
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+              </p>
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+              {% endif %}
+              <button type="submit">{% trans "Register" %} &raquo;</button>
+          </form>
+          <hr />
+          <p>
+            {% blocktrans %}Already have an account? Then please
+            <a href="{{ login_url }}">login</a>.{% endblocktrans %}
+          </p>
+      </div>
   </div>
 </div>
 

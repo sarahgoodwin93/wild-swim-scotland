@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -9,63 +8,59 @@
 <!-- Edit Swim Posts -->
 <div class="edit-swim-form-html">
   <div class="fill-screen container">
-    <div class="row">
-       <div class="col-lg-9 col-12 below-nav mx-auto">
-        <div class="form edit-swim-form">
-          <h1>Edit Swim</h1>
-            <hr />
-            <!-- Edit Swim Form -->
-            <form class="mb-5" method="POST" enctype="multipart/form-data">
-              {% csrf_token %}
-              <p>
-                {{ form.title.label_tag}}
-                {{ form.title }}
-                {{ form.title.errors}}
-              </p>
-              <p>
-                {{ form.description.label_tag }}
-                {{ form.description }}
-                {{ form.description.errors }}
-              </p>
-              <p>
-                {{ form.date.label_tag }}
-                {{ form.date }}
-                {{ form.date.errors }}
-              </p>
-              <p>
-                {{ form.time.label_tag }}
-                {{ form.time }}
-                {{ form.time.errors}}
-              </p>
-              <p>
-                {{ form.swim_difficulty.label_tag }}
-                <br>
-                Between 1-5
-                <br>
-                {{ form.swim_difficulty }}
-                {{ form.swim_difficulty.errors }}
-              </p>
-              <p>
-                {{ form.location.label_tag }}
-                {{ form.location }}
-                {{ form.location.errors }}
-              </p>
-              <p>
-                {{ form.post_image.label_tag }}
-                {{ form.post_image }}
-                {{ form.post_image.errors }}
-              </p>
-              <!-- Edit Swim Button -->
-              <input
-                class="btn btn-secondary"
-                type="submit"
-                name="Update"
-            />
-            </form>
+      <div class="row">
+          <div class="col-lg-9 col-12 below-nav mx-auto">
+              <div class="form edit-swim-form">
+                  <h1>Edit Swim</h1>
+                  <hr />
+                  <!-- Edit Swim Form -->
+                  <form class="mb-5" method="POST" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <p>
+                        {{ form.title.label_tag}}
+                        {{ form.title }}
+                        {{ form.title.errors}}
+                      </p>
+                      <p>
+                        {{ form.description.label_tag }}
+                        {{ form.description }}
+                        {{ form.description.errors }}
+                      </p>
+                      <p>
+                        {{ form.date.label_tag }}
+                        {{ form.date }}
+                        {{ form.date.errors }}
+                      </p>
+                      <p>
+                        {{ form.time.label_tag }}
+                        {{ form.time }}
+                        {{ form.time.errors}}
+                      </p>
+                      <p>
+                        {{ form.swim_difficulty.label_tag }}
+                        <br>
+                        Between 1-5
+                        <br>
+                        {{ form.swim_difficulty }}
+                        {{ form.swim_difficulty.errors }}
+                      </p>
+                      <p>
+                        {{ form.location.label_tag }}
+                        {{ form.location }}
+                        {{ form.location.errors }}
+                      </p>
+                      <p>
+                        {{ form.post_image.label_tag }}
+                        {{ form.post_image }}
+                        {{ form.post_image.errors }}
+                      </p>
+                      <!-- Edit Swim Button -->
+                      <input class="btn btn-secondary" type="submit" name="Update" />
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <!-- add_swim.html content ends here -->

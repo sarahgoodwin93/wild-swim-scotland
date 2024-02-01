@@ -7,13 +7,23 @@ class AddSwimForm(forms.ModelForm):
     """
     FORM: Add Swim.
     """
+
     class Meta:
         model = SwimPosts
-        fields = ['title', 'description', 'date', 'time',
-                  'swim_difficulty', 'location', 'post_image']
+        fields = [
+            "title",
+            "description",
+            "date",
+            "time",
+            "swim_difficulty",
+            "location",
+            "post_image",
+        ]
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd'}),  # noqa
-            'time': forms.TimeInput(attrs={'placeholder': '00:00:00'})
+            "date": forms.DateInput(
+                attrs={"type": "date", "placeholder": "yyyy-mm-dd"}
+            ),
+            "time": forms.TimeInput(attrs={"placeholder": "00:00:00"}),
         }
 
 
@@ -21,11 +31,21 @@ class EditSwimForm(forms.ModelForm):
     """
     FORM: Edit Swim.
     """
+
     class Meta:
         model = SwimPosts
-        fields = ['title', 'description', 'date', 'time',
-                  'swim_difficulty', 'location', 'post_image']
+        fields = [
+            "title",
+            "description",
+            "date",
+            "time",
+            "swim_difficulty",
+            "location",
+            "post_image",
+        ]
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'yyyy-mm-dd'}),  # noqa
-            'time': forms.TimeInput(attrs={'placeholder': '00:00:00'})
+            "date": forms.DateInput(
+                attrs={"type": "date", "placeholder": "yyyy-mm-dd"}
+            ),
+            "time": forms.TimeInput(attrs={"placeholder": "00:00:00"}),
         }

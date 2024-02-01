@@ -5,7 +5,7 @@ from django.views import generic
 from django.http import HttpResponseRedirect
 from .models import SwimPosts, JoinSwim
 from .forms import AddSwimForm, EditSwimForm
-from django.views.generic.edit import CreateView, DeleteView, UpdateView, View  # noqa
+from django.views.generic.edit import CreateView, DeleteView, UpdateView, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -15,6 +15,7 @@ class SwimList(generic.ListView):
     Returns swim list in :model:`home.SwimPosts``
     and displays them to the home page
     """
+
     queryset = SwimPosts.objects.all()
     model = SwimPosts
     template_name = "home/swim_posts.html"
@@ -34,10 +35,11 @@ class AddSwimView(LoginRequiredMixin, CreateView):
     the form to now allow an invalid form to be submitted so this
     error message is not often shown.
     """
+
     model = SwimPosts
     template_name = "home/add_swim.html"
     form_class = AddSwimForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy("home")
 
     def form_valid(self, form):
         form.instance.creator = self.request.user
@@ -46,7 +48,9 @@ class AddSwimView(LoginRequiredMixin, CreateView):
 
     def form_invalid(self, form):
         messages.error(self.request, "There was an error with the form.")
-        return self.render_to_response(self.get_context_data(form=form, heading='Add Swim'))  # noqa
+        return self.render_to_response(
+            self.get_context_data(form=form, heading="Add Swim")
+        )
 
 
 # Delete Swim View
@@ -56,9 +60,10 @@ class SwimDeleteView(LoginRequiredMixin, DeleteView):
     their own swims. Once the swim has been delete it will redirect back
     to the homepage using the success_url
     """
+
     model = SwimPosts
     template_name = "home/delete_swim.html"
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy("home")
 
     def swim_delete(self, request):
         messages.success(self, request, "Swim has been deleted")
@@ -72,10 +77,11 @@ class EditSwimView(LoginRequiredMixin, UpdateView):
     their own swims, once the user has edited the swim sucssefully it will
     redirect back to the homepage using the success_url
     """
+
     model = SwimPosts
     template_name = "home/edit_swim.html"
     form_class = EditSwimForm
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy("home")
 
     def swim_edit(self, request):
         messages.success(self, request, "Swim has been updated")
@@ -89,8 +95,9 @@ class JoinSwimView(generic.ListView):
     the joined_swims.html page. It filters the swims that only the user has
     requested to join.
     """
-    template_name = 'home/joined_swims.html'
-    context_object_name = 'joined_swims'
+
+    template_name = "home/joined_swims.html"
+    context_object_name = "joined_swims"
     model = JoinSwim
 
     def get(self, request):
@@ -111,6 +118,7 @@ class JoinSwimList(View):
     they will be taken to the joined_swims.html page to see
     their joined swim.
     """
+
     def get(self, request, pk):
         pass
 
@@ -135,8 +143,9 @@ class RemoveJoinedSwimView(View):
     triggers a POST request to this view, which then removes the
     specified swim from the user's list.
     """
+
     def post(self, request, pk):
-        join_swim = JoinSwim.objects.filter(user=request.user, swim__pk=pk).first()  # noqa
+        join_swim = JoinSwim.objects.filter(user=request.user, swim__pk=pk).first()
         if join_swim:
             join_swim.delete()
         return HttpResponseRedirect(reverse("joined_swims"))
@@ -147,7 +156,7 @@ def handle404(request, exception):
     """
     404 error page.
     """
-    return render(request, '404.html', status=404)
+    return render(request, "404.html", status=404)
 
 
 # Handle 500 View
@@ -155,4 +164,4 @@ def handle500(request):
     """
     500 error page.
     """
-    return render(request, '500.html', status=500)
+    return render(request, "500.html", status=500)

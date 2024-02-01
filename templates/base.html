@@ -8,126 +8,88 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
-      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
-      crossorigin="anonymous"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
-    <!-- Title -->
-    <title>Wild Swim Scotland</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+        <!-- Title -->
+        <title>Wild Swim Scotland</title>
+    </head>
 
-  <body>
-    <!-- Logo -->
-    <header>
-      <div class="logo">
-        <a
-          class="nav-link {% if request.path == home %}active site-logo"
-          aria-current="page{% endif %}"
-          href="{% url 'home' %}"
-        >
-        <img src="{% static 'images/logo.png' %}" alt="wild swim scotland logo image">
-        </a>
-    </div>
-      <!-- Navigation Bar -->
-      <nav id="menu">
-        <ul>
-          <!-- Home Nav Link -->
-          <li>
-            <a
-              class="nav-link {% if request.path == home %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'home' %}"
-              >Home</a
-            >
-          </li>
-          <!-- Logout Nav Link only to show if logged in -->
-          {% if user.is_authenticated %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if request.path == joined_swims %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'joined_swims' %}"
-              >Your Upcoming Swims</a
-            >
-          </li>
-          <!-- Add Swim Nav Link only to show if logged in -->
-          {% if user.is_staff %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if request.path == add_swim %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'add_swim' %}"
-              >Add Swim</a
-            >
-          </li>
-          {% endif %}
-          <li class="nav-item">
-            <a
-              class="nav-link {% if request.path == logout_url %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'account_logout' %}"
-              >Logout</a
-            >
-          </li>
-          {% else %}
-          <!-- Register Nav Link -->
-          <li>
-            <a
-              class="nav-link {% if request.path == signup_url %}active"
-              aria-current="page{% endif %}"
-              href="{% url 'account_signup' %}"
-              >Register</a
-            >
-          </li>
-          <!-- Login Nav Link -->
-          <li>
-            <a
-              class="nav-link {% if request.path == login_url %}active{% endif %}"
-              aria-current="page"
-              href="{% url 'account_login' %}"
-              >Login</a
-            >
-          </li>
-          {% endif %}
-        </ul>
-      </nav>
-    </header>
-    <main class="flex-shrink-0">
-      {% block content %}
-      <!-- Content Goes here -->
-      {% endblock content %}
-    </main>
+    <body>
+        <!-- Logo -->
+        <header>
+            <div class="logo">
+                <a class="nav-link {% if request.path == home %}active site-logo" aria-current="page{% endif %}" href="{% url 'home' %}">
+                    <img src="{% static 'images/logo.png' %}" alt="wild swim scotland logo image" />
+                </a>
+            </div>
+            <!-- Navigation Bar -->
+            <nav id="menu">
+                <ul>
+                    <!-- Home Nav Link -->
+                    <li>
+                        <a class="nav-link {% if request.path == home %}active" aria-current="page{% endif %}" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <!-- Logout Nav Link only to show if logged in -->
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == joined_swims %}active" aria-current="page{% endif %}" href="{% url 'joined_swims' %}">Your Upcoming Swims</a>
+                    </li>
+                    <!-- Add Swim Nav Link only to show if logged in -->
+                    {% if user.is_staff %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == add_swim %}active" aria-current="page{% endif %}" href="{% url 'add_swim' %}">Add Swim</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <!-- Register Nav Link -->
+                    <li>
+                        <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <!-- Login Nav Link -->
+                    <li>
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <main class="flex-shrink-0">
+            {% block content %}
+            <!-- Content Goes here -->
+            {% endblock content %}
+        </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-      <p class="m-0 text-center text-white">
-        {% block copyright %}Made by Sarah Goodwin{% endblock copyright %}
-      </p>
-      <p class="m-0 text-center text-white">
-        Connect with us: <a href="https://github.com/sarahgoodwin93/wild-swim-scotland" target="_blank" rel="noopener"
-        aria-label="Github Page"><i class="fa-brands fa-github"></i></a>
-      </p>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer mt-auto py-3 dark-bg">
+            <p class="m-0 text-center text-white">
+                {% block copyright %}Made by Sarah Goodwin{% endblock copyright %}
+            </p>
+            <p class="m-0 text-center text-white">
+                Connect with us: <a href="https://github.com/sarahgoodwin93/wild-swim-scotland" target="_blank" rel="noopener" aria-label="Github Page"><i class="fa-brands fa-github"></i></a>
+            </p>
+        </footer>
 
-<!-- Link to custom js -->
-<script src="{% static 'js/script.js' %}"></script>
-<!-- Font Awesome Script -->
-<script src="https://kit.fontawesome.com/17e7a6d47c.js" crossorigin="anonymous"></script>
+        <!-- Link to custom js -->
+        <script src="{% static 'js/script.js' %}"></script>
+        <!-- Font Awesome Script -->
+        <script src="https://kit.fontawesome.com/17e7a6d47c.js" crossorigin="anonymous"></script>
 
-    <!-- prettier-ignore -->
-    {% block extras %}
+        <!-- prettier-ignore -->
+        {% block extras %}
     {% endblock %}
-  </body>
+    </body>
 </html>

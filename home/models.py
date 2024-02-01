@@ -12,14 +12,23 @@ class SwimPosts(models.Model):
     its title, creator, image, description, date, time, location,
     swim difficulty, and timestamps.
     """
+
     title = models.CharField(max_length=100, unique=True)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='swim_post')  # noqa
-    post_image = CloudinaryField('image', default='placeholder')
+    creator = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="swim_post"
+    )
+    post_image = CloudinaryField("image", default="placeholder")
     description = models.TextField(max_length=250)
     date = models.DateField()
     time = models.TimeField()
     location = models.CharField(max_length=300)
-    swim_difficulty = models.IntegerField(default=0, validators=[MaxValueValidator(5), MinValueValidator(0), ])  # noqa
+    swim_difficulty = models.IntegerField(
+        default=0,
+        validators=[
+            MaxValueValidator(5),
+            MinValueValidator(0),
+        ],
+    )
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.BooleanField(default=False)
 
@@ -34,8 +43,13 @@ class JoinSwim(models.Model):
     the user who joined, and the timestamp when they joined.
 
     """
-    swim = models.ForeignKey('SwimPosts', on_delete=models.CASCADE, related_name='swims_joined')  # noqa
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='joined_swim')  # noqa
+
+    swim = models.ForeignKey(
+        "SwimPosts", on_delete=models.CASCADE, related_name="swims_joined"
+    )
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="joined_swim"
+    )
     joined_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

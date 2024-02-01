@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
@@ -7,11 +6,13 @@
 <div class="container-fluid">
   <div class="row">
     <div class="welcome-text">
-        <h3>Welcome to Wild Swim Scotland.</h3>
-        <p>Please see our upcoming swims, with times, dates and difficulty level.</p>
-        <p>Register an account with us and save your swims so that you can come back to see them.</p>
-        <p>There is no limit on the number of swims you can join, or how many people can join them.</p>
-        <p>We'd love to see you there!</p>
+      <h3>Welcome to Wild Swim Scotland.</h3>
+      <p>Please see our upcoming swims, with times, dates and difficulty level.</p>
+      <p>Register an account with us and save your swims so that you can come
+        back to see them.</p>
+      <p>There is no limit on the number of swims you can join, or how many
+        people can join them.</p>
+      <p>We'd love to see you there!</p>
     </div>
     <!-- Posts Cards -->
     <div class="col-12 mt-3">
@@ -24,52 +25,54 @@
                 <!-- Post image -->
                 <div class="image-container">
                   {% if "placeholder" in SwimPosts.post_image.url %}
-                    <img class="card-img-top" src="{% static 'images/wild-swim-placeholder.png' %}" alt="placeholder image">
-                    {% else %}
-                    <img class="card-img-top" src=" {{ SwimPosts.post_image.url }}" alt="image of loch">
-                    {% endif %}
-                      <div class="image-flash">
-                        <!-- Post details -->
-                        <div class="card-content">
-                          <h2 class="card-title">{{SwimPosts.title}}</h2>
-                          <p>Location: {{SwimPosts.location}}</p>
-                          <p>Date: {{SwimPosts.date}}</p>
-                          <p>Time: {{SwimPosts.time}}</p>
-                          <p class="card-text">{{SwimPosts.description}}</p>
-                          <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
-                        </div>
-                        <!-- Post buttons -->
+                  <img class="card-img-top"
+                    src="{% static 'images/wild-swim-placeholder.png' %}"
+                    alt="placeholder image">
+                  {% else %}
+                  <img class="card-img-top"
+                    src=" {{ SwimPosts.post_image.url }}" alt="image of loch">
+                  {% endif %}
+                  <div class="image-flash">
+                    <!-- Post details -->
+                    <div class="card-content">
+                      <h2 class="card-title">{{SwimPosts.title}}</h2>
+                      <p>Location: {{SwimPosts.location}}</p>
+                      <p>Date: {{SwimPosts.date}}</p>
+                      <p>Time: {{SwimPosts.time}}</p>
+                      <p class="card-text">{{SwimPosts.description}}</p>
+                      <p>Swim Difficulity: {{SwimPosts.swim_difficulty}}</p>
+                    </div>
+                        <!-- Edit button -->
                         <div class="card-buttons">
                           {% if user.is_authenticated and SwimPosts.creator == user %}
                             <a href="{% url 'edit_swim' SwimPosts.pk %}" class="btn btn-edit">
                               Edit
                             </a>
                           {% endif %}
-                          <!-- prettier-ignore -->
+                          <!-- Join Swim Button -->
                           {% if user.is_authenticated %}
                             <form method="POST" action="{% url 'join_swim' SwimPosts.pk %}">
                               {% csrf_token %}
                               <button class="button-posts">Join this swim</button>
                             </form>
                           {% endif %}
-                          <!-- prettier-ignore -->
+                          <!-- Delete Button -->
                           {% if user.is_authenticated and SwimPosts.creator == user %}
                             <a href="{% url 'delete_swim' SwimPosts.pk %}" class="btn btn-delete">
                               Delete
                             </a>
                             {% endif %}
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
         {% endfor %}
       </div>
     </div>
   </div>
 </div>
-
-  <!-- swim_posts.html content ends here -->
-  {% endblock %}
+<!-- swim_posts.html content ends here -->
+{% endblock %}
