@@ -269,11 +269,13 @@ The text at the bottom lets users know who already have an account that they can
 
 ## Logged in User
 
-### Logout
+### Swim Cards
 
-![logout](documentation/readme-images/logout.png " logout image ")
+The first thing the user will notice when the have logged in is that there is now a Join Swim button on the swim cards. This allows users to 'save' swims they are interested in and these swims will appear in their upcoming swims page.
 
-The logout page checks if the user does wish to sign out of the site.
+When clicking join swim the user is redirected to the Upcoming Swims page.
+
+I would have liked to change the Join Swim button to say Swim Joined however due to time time constraint this was not possible.
 
 ### Your Upcoming Swims
 
@@ -286,6 +288,12 @@ If the user has not yet joined an upcoming swim they will see the message "No sw
 ![no swims joined](documentation/readme-images/no-swims-yet.png " no-swims-joined image ")
 
 The page is solely for the user themselves and does not link to the staff user section of the site. As stated on the homepage, there is no limit to the number of people who can join a swim so therefore staff do not need to know who exactly will be attending. This section of the site is so that users can come back and quickly see what swims they were interested in and check the details easily. 
+
+### Logout
+
+![logout](documentation/readme-images/logout.png " logout image ")
+
+The logout page checks if the user does wish to sign out of the site.
 
 ## Staff User
 
@@ -335,6 +343,12 @@ A section of the community page where past swims would automatically go after th
 
 - Joined Swims saved to staff dashboard:
 In the future I would like to have the join swim button log which user has joined which swim and have a staff dashboard area so that staff users could see how many people had signed up to that particular swim. 
+
+- Join Swim button change to 'Swim Joined':
+In the future I would like to add some jinja templating to change the 'Join Swim' button to say 'Swim Joined' - this was wanted for this version of the project however due to time constraints it was not able to be tested properly and applied.
+
+- Message alerts:
+Messages have been added into the views for both succesfful actions and unsuccessful actions, in the future I would like to use jinja templating to display these messages to the use rather than just redirecting them - this was wanted for this version of the project however due to time constraints it was not able to be tested properly and applied.
 
 
 [Back to Top](#wild-swim-scotland)
