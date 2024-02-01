@@ -308,11 +308,7 @@ The meta tag <meta http-equiv="Content-Security-Policy" content="upgrade-insecur
 
 ## Unresolved 
 
-Errors for the add swim and edit swim forms from W3C were flagged however as this is needed for the site function they have been left in.
-
-![add_swim errors2](documentation/testing-images/add-swim2-error.png "add swim 2nd error image")
-
-![edit_swim errors](documentation/testing-images/edit-swim-errors.png "edit swim error image")
+No known unresolved bugs
 
 Return to [README.md](README.md)
 

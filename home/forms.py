@@ -21,7 +21,7 @@ class AddSwimForm(forms.ModelForm):
         ]
         widgets = {
             "date": forms.DateInput(
-                attrs={"type": "date", "placeholder": "yyyy-mm-dd"}
+                attrs={"type": "date"}
             ),
             "time": forms.TimeInput(attrs={"placeholder": "00:00:00"}),
         }
@@ -45,7 +45,7 @@ class EditSwimForm(forms.ModelForm):
         ]
         widgets = {
             "date": forms.DateInput(
-                attrs={"type": "date", "placeholder": "yyyy-mm-dd"}
+                attrs={"type": "date"}
             ),
             "time": forms.TimeInput(attrs={"placeholder": "00:00:00"}),
         }
