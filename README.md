@@ -271,6 +271,8 @@ The text at the bottom lets users know who already have an account that they can
 
 ### Swim Cards
 
+![joined swims button](documentation/readme-images/join-swim-button.png" joined-swim-button image ")
+
 The first thing the user will notice when the have logged in is that there is now a Join Swim button on the swim cards. This allows users to 'save' swims they are interested in and these swims will appear in their upcoming swims page.
 
 When clicking join swim the user is redirected to the Upcoming Swims page.
