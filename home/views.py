@@ -145,7 +145,8 @@ class RemoveJoinedSwimView(View):
     """
 
     def post(self, request, pk):
-        join_swim = JoinSwim.objects.filter(user=request.user, swim__pk=pk).first()
+        join_swim = JoinSwim.objects.filter(
+            user=request.user, swim__pk=pk).first()
         if join_swim:
             join_swim.delete()
         return HttpResponseRedirect(reverse("joined_swims"))

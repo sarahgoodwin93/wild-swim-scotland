@@ -220,6 +220,7 @@ nav {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+    padding: 20px;
 }
 
 .add-swim-form label {
@@ -275,6 +276,7 @@ nav {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+    padding: 20px;
 }
 
 .edit-swim-form label {

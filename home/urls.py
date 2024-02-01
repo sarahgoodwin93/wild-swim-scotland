@@ -14,7 +14,8 @@ urlpatterns = [
     path("", views.SwimList.as_view(), name="home"),
     path("swim/add", AddSwimView.as_view(), name="add_swim"),
     path(
-        "article/delete/<int:pk>/", SwimDeleteView.as_view(), name="delete_swim"
+        "article/delete/<int:pk>/",
+        SwimDeleteView.as_view(), name="delete_swim"
     ),
     path("article/edit/<int:pk>/", EditSwimView.as_view(), name="edit_swim"),
     path("swim/join/<int:pk>/", JoinSwimList.as_view(), name="join_swim"),
