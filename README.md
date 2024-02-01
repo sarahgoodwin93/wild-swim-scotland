@@ -67,6 +67,103 @@ User stories were labelled using the MoSCoW method.
 
 [Back to Top](#wild-swim-scotland)
 
+## User Stories
+
+4 Epics were created broken down into user stories, the epics included
+
+1. Admin
+2. Staff
+3. Site Access
+4. User Functions
+
+The user stories are as follows:
+
+### Epic - Admin
+
+#### Create staff users
+
+- As an admin, I can use the Django admin panel to create new staff users so that they can create new swims
+    - AC1 - Admin can access the Django admin panel
+    - AC2 - Admin can create staff users in the Django admin panel
+    - AC 3 - New staff users can create, read, edit and delete swims
+
+Tasks 
+- Create staff users
+- Ensure new staff members can create, read, edit and delete swims
+
+### Epic - Staff
+
+#### Create Swim Posts (Full CRUD)
+
+- As a site staff member, I can make new swim posts so that my users can see upcoming swims
+    - AC1 - Create new swims by filling out the 'Add Swim' form
+    - AC2 - Read the new swim that has been created on the homepage
+    - AC 3 - Update/ edit the swim that I have created
+    - AC 4 - Delete the swim I have created
+
+Tasks
+-  Create 'Add Swim' form on user interface for staff members only to be able to add swims
+- Create view so that the added swims will be added to the homepage
+- Create authenticated users for that specific swim so that only that staff member can edit the swims they have added
+- Create a delete warning message so that staff can confirm they want to delete the swim
+
+### Epic - Site Access
+
+#### Log-in and log-out
+
+- As a site user, I can log in with my created username and password to access the site and see my previous actions
+    - AC1 - Site user can log in with their created username and password after they have registered to the site
+    - AC2 - Site users can see the swims they have registered from a previous login
+    - AC 3 - Site user can log out when they have finished their session and confirm they want to log out
+
+Tasks
+- Link accounts/login template so that users can sign into the site
+- Link accounts/logout template so that users can sign out of the site
+- Ensure data is saved from previous login so that users can see their previous swim actions
+
+#### Register an account
+
+- As a site user I can register an account so that I can return to see the swims I have booked to join
+    - AC1 - User can register account and see site functionality
+
+Tasks
+- Create a Register nav link button
+- Link 'accounts/sign_up.html' template so that new users can register to the site
+- Ensure registered users can see site functionality changed from being logged in vs logged out
+
+### Epic - User Functions
+
+#### View wild swim list
+
+- As a site user I can view the wild swims around Scotland so that I can decided if I wish to register and sign up to a swim
+    - AC1 - When the site loads, the list of swims is visible to the user both logged and and not.
+    - AC2 - User can view swim detail without logged in
+    - AC 3 - User can join the swim once logged in
+
+Tasks
+- Create a swim model to pull data from added swims and view to show the swims on the homepage
+- Create user authentication so that only logged-in users can join swims
+
+#### Join a swim
+
+- As a logged-in site user, I can click to join a swim so I can make sure there is a place for me on that time and date
+    - AC1 - The site can be logged into and the join swim button is not visible to users who are not logged in or registered
+    - AC2 - The join swim button then moves that swim card to the Upcoming Swims page where users can revisit their upcoming swims
+    - AC 3 - Users can cancel their swim reservation
+
+Tasks
+- Ensure the 'Join Swim' button is not visible to unauthorised users
+- Create model and view for moving joined swim into upcoming swim page
+- Create cancel button which removes the swim from the upcoming swim page
+
+
+Future user stories were also created for the following:
+
+- Commenting on swims
+- Adding reviews to site
+- Editing account details
+
+
 # User Experience
 
 ## Wireframes
@@ -102,7 +199,7 @@ I chose the colour #0d1a32 as the primary colour to remind people of the water a
 
 Secondary colours #327ab7 and #d6e4f0 were chosen as a continueation of #0d1a32 with an accent colour of #b5e2e0. These blues all represent the water that draws all swimmers to it. 
 
-![Color palette Image](documentation/readme-images/colour-palette.png" Color palette Image ")
+![Color palette Image](documentation/readme-images/colour-palette.png "Color palette Image ")
 
 ### Logo
 
